@@ -7,48 +7,299 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <!-- HEADER -->
     <header class="page-header">
         <h1 class="header-title">Manellopgar 3D Stuff</h1>
+        
         <div class="header-tools">
             <div class="search-wrapper">
                 <input type="text" id="search-input" placeholder="🔍 Search..." autocomplete="off">
                 <div id="search-results" class="search-results"></div>
             </div>
-            <button id="theme-toggle" class="theme-toggle">☀️</button>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar modo claro/oscuro">
+                <span class="toggle-icon">☀️</span>
+            </button>
         </div>
     </header>
 
+    <!-- Main container -->
     <div class="container">
+
+        <!-- SIDEBAR -->
         <aside class="sidebar">
-            <nav>
+            <nav role="navigation" aria-label="Main navigation">
                 <ul class="nav-menu">
+                    
+                    <!-- 🆕 NUEVO: Panel principal "B4D Tools" -->
                     <li class="nav-item">
-                        <details class="nav-group" open>
-                            <summary class="nav-link">🚀 Getting Started</summary>
-                            <ul class="sub-menu">
-                                <!-- ✅ Enlaces con HASH, no Markdown -->
-                                <li><a href="#0_start/0_home" class="nav-link active" aria-current="page"> About B4D Tools</a></li>
-                                <li><a href="#0_start/1_installation" class="nav-link">Installation</a></li>
+                        <details class="nav-group nav-root" open>
+                            <summary class="nav-link nav-root-title">
+                                <strong>B4D Tools</strong>
+                            </summary>
+                            <ul class="sub-menu sub-menu-root">
+                                
+                                <!-- Getting Started (ahora sub-nivel) -->
+                                <li class="nav-item">
+                                    <details class="nav-group">
+                                        <summary class="nav-link">🚀 Getting Started</summary>
+                                        <ul class="sub-menu">
+                                            <!-- ✅ Enlaces con HASH (#nombre) -->
+                                            <li><a href="#/0_start/0_home" class="nav-link active" aria-current="page">About B4D Tools</a></li>
+                                            <li><a href="#/0_start/1_installation" class="nav-link">Installation & Updating</a></li>
+                                            <li><a href="#/0_start/2_beginners-video" class="nav-link">Beginner's Guide Video</a></li>
+                                            <li><a href="#/0_start/3_preferences" class="nav-link">Addon Preferences</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <!-- Using BCloners -->
+                                <li class="nav-item">
+                                    <details class="nav-group">
+                                        <summary class="nav-link">🔗 Using BCloners</summary>
+                                        <ul class="sub-menu">
+                                            <li class="nav-item">
+                                                <details class="nav-subgroup">
+                                                    <summary class="nav-link">BCloner</summary>
+                                                    <ul class="sub-menu">
+                                                        <li class="nav-item"><a href="#/1_bcloners/1_grid-array" class="nav-link">Grid Array</a></li>
+                                                        <li class="nav-item"><a href="#/1_bcloners/2_linear" class="nav-link">Linear</a></li>
+                                                        <li class="nav-item"><a href="#/1_bcloners/3_radial" class="nav-link">Radial</a></li>
+                                                        <li class="nav-item"><a href="#/1_bcloners/4_honeycomb-array" class="nav-link">HoneyComb Array</a></li>
+                                                        <li class="nav-item"><a href="#/1_bcloners/5_object" class="nav-link">Object</a></li>
+                                                        <li class="nav-item"><a href="#/1_bcloners/6_spline" class="nav-link">Spline</a></li>
+                                                        <li class="nav-item"><a href="#/1_bcloners/7_advanced-distribution" class="nav-link">Advanced Distribution</a></li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                            <li class="nav-item">
+                                                <details class="nav-subgroup">
+                                                    <summary class="nav-link">+ Tools</summary>
+                                                    <ul class="sub-menu">
+                                                        <li class="nav-item"><a href="#/1_bcloners/8_bmograph-selection" class="nav-link">BMograph Selection</a></li>
+                                                        <li class="nav-item"><a href="#/1_bcloners/9_bclonertomatrix" class="nav-link">BCloner To Matrix</a></li>
+                                                        <li class="nav-item"><a href="#/1_bcloners/10_matrixtoinstances" class="nav-link">Matrix to Instances</a></li>
+                                                        <li class="nav-item"><a href="#/1_bcloners/11_bcloner-mirror" class="nav-link">BCloner Mirror</a></li>
+                                                        <li class="nav-item"><a href="#/1_bcloners/12_realize-instances" class="nav-link">Realize Instances</a></li>
+                                                        <li class="nav-item"><a href="#/1_bcloners/13_split-to-instances" class="nav-link">Split To Instances</a></li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <!-- Using Effectors -->
+                                <li class="nav-item">
+                                    <details class="nav-group">
+                                        <summary class="nav-link">🔬 Using Effectors</summary>
+                                        <ul class="sub-menu">
+                                            <li class="nav-item">
+                                                <details class="nav-subgroup">
+                                                    <summary class="nav-link">Effector</summary>
+                                                    <ul class="sub-menu">
+                                                        <li class="nav-item"><a href="#/2_effectors/1_plain" class="nav-link">Plain</a></li>
+                                                        <li class="nav-item"><a href="#/2_effectors/2_random" class="nav-link">Random</a></li>
+                                                        <li class="nav-item"><a href="#/2_effectors/3_step" class="nav-link">Step</a></li>
+                                                        <li class="nav-item"><a href="#/2_effectors/4_target" class="nav-link">Target</a></li>
+                                                        <li class="nav-item"><a href="#/2_effectors/5_delay" class="nav-link">Delay</a></li>
+                                                        <li class="nav-item"><a href="#/2_effectors/6_image-tex" class="nav-link">Image Tex</a></li>
+                                                        <li class="nav-item"><a href="#/2_effectors/7_noise-tex" class="nav-link">Noise Tex</a></li>
+                                                        <li class="nav-item"><a href="#/2_effectors/8_sound" class="nav-link">Sound</a></li>
+                                                        <li class="nav-item"><a href="#/2_effectors/9_inheritance" class="nav-link">Inheritance</a></li>
+                                                        <li class="nav-item"><a href="#/2_effectors/10_spline" class="nav-link">Spline</a></li>
+                                                        <li class="nav-item"><a href="#/2_effectors/11_volume" class="nav-link">Volume</a></li>
+                                                        <li class="nav-item"><a href="#/2_effectors/12_time" class="nav-link">Time</a></li>
+                                                        <li class="nav-item"><a href="#/2_effectors/13_formula" class="nav-link">Formula</a></li>
+                                                        <li class="nav-item"><a href="#/2_effectors/14_push-apart" class="nav-link">Push Apart</a></li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <!-- Using Fields -->
+                                <li class="nav-item">
+                                    <details class="nav-group">
+                                        <summary class="nav-link">🌐 Using Fields</summary>
+                                        <ul class="sub-menu">
+                                            <li class="nav-item">
+                                                <details class="nav-subgroup">
+                                                    <summary class="nav-link">Field</summary>
+                                                    <ul class="sub-menu">
+                                                        <li class="nav-item"><a href="#/3_fields/1_random" class="nav-link">Random</a></li>
+                                                        <li class="nav-item"><a href="#/3_fields/2_image-tex" class="nav-link">Image Tex</a></li>
+                                                        <li class="nav-item"><a href="#/3_fields/3_sound" class="nav-link">Sound</a></li>
+                                                        <li class="nav-item"><a href="#/3_fields/4_formula" class="nav-link">Formula</a></li>
+                                                        <li class="nav-item"><a href="#/3_fields/5_object-proximity" class="nav-link">Object Proximity</a></li>
+                                                        <li class="nav-item"><a href="#/3_fields/6_spline-object" class="nav-link">Spline Object</a></li>
+                                                        <li class="nav-item"><a href="#/3_fields/7_step" class="nav-link">Step</a></li>
+                                                        <li class="nav-item"><a href="#/3_fields/8_time" class="nav-link">Time</a></li>
+                                                        <li class="nav-item"><a href="#/3_fields/9_set-vertex-weight" class="nav-link">Set Vertex Weight</a></li>
+                                                        <li class="nav-item"><a href="#/3_fields/10_mix-fields" class="nav-link">Mix fields/Selections</a></li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                            <li class="nav-item">
+                                                <details class="nav-subgroup">
+                                                    <summary class="nav-link">Modifier Field</summary>
+                                                    <ul class="sub-menu">
+                                                        <li class="nav-item"><a href="#/3_fields/11_clamp" class="nav-link">Clamp</a></li>
+                                                        <li class="nav-item"><a href="#/3_fields/12_coloramp" class="nav-link">ColorRamp</a></li>
+                                                        <li class="nav-item"><a href="#/3_fields/13_curve" class="nav-link">Curve</a></li>
+                                                        <li class="nav-item"><a href="#/3_fields/14_invert" class="nav-link">Invert</a></li>
+                                                        <li class="nav-item"><a href="#/3_fields/15_map-range" class="nav-link">Map Range</a></li>
+                                                        <li class="nav-item"><a href="#/3_fields/16_quantize" class="nav-link">Quantize</a></li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <!-- Using Object Tools -->
+                                <li class="nav-item">
+                                    <details class="nav-group">
+                                        <summary class="nav-link">🔗 Using Object Tools</summary>
+                                        <ul class="sub-menu">
+                                            <li class="nav-item">
+                                                <details class="nav-subgroup">
+                                                    <summary class="nav-link">Object Tool</summary>
+                                                    <ul class="sub-menu">
+                                                        <li class="nav-item"><a href="#/4_object_tools/1_bfracture" class="nav-link">BFracture</a></li>
+                                                        <li class="nav-item"><a href="#/4_object_tools/2_bmotext" class="nav-link">BMoText</a></li>
+                                                        <li class="nav-item"><a href="#/4_object_tools/3_btracer" class="nav-link">BTracer</a></li>
+                                                        <li class="nav-item"><a href="#/4_object_tools/4_bemitter" class="nav-link">BEmitter</a></li>
+                                                        <li class="nav-item"><a href="#/4_object_tools/5_bmograph-animator" class="nav-link">BMograph Animator</a></li>
+                                                        <li class="nav-item"><a href="#/4_object_tools/6_camera-tools" class="nav-link">Camera Tools</a></li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                            <li class="nav-item">
+                                                <details class="nav-subgroup">
+                                                    <summary class="nav-link">+ Tools</summary>
+                                                    <ul class="sub-menu">
+                                                        <li class="nav-item"><a href="#/4_object_tools/7_btracer-custom-shape" class="nav-link">BTracer Custom Shape</a></li>
+                                                        <li class="nav-item"><a href="#/4_object_tools/8_btracer-to-mesh" class="nav-link">BTracer To Mesh</a></li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <!-- Using Materials -->
+                                <li class="nav-item">
+                                    <details class="nav-group">
+                                        <summary class="nav-link">🔗 Using Materials</summary>
+                                        <ul class="sub-menu">
+                                            <li class="nav-item">
+                                                <details class="nav-subgroup">
+                                                    <summary class="nav-link">Material Tool</summary>
+                                                    <ul class="sub-menu">
+                                                        <li class="nav-item"><a href="#/5_material_tools/1_global-material" class="nav-link">Global Material</a></li>
+                                                        <li class="nav-item"><a href="#/5_material_tools/2_multishader" class="nav-link">Multishader</a></li>
+                                                        <li class="nav-item"><a href="#/5_material_tools/3_mapping-colortoinstances" class="nav-link">Mapping Color To Instances</a></li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                            <li class="nav-item">
+                                                <details class="nav-subgroup">
+                                                    <summary class="nav-link">+ Tools</summary>
+                                                    <ul class="sub-menu">
+                                                        <li class="nav-item"><a href="#/5_material_tools/4_shader-falloff" class="nav-link">Shader Falloff</a></li>
+                                                        <li class="nav-item"><a href="#/5_material_tools/5_images-as-slots-mats" class="nav-link">Images as SlotMats</a></li>
+                                                        <li class="nav-item"><a href="#/5_material_tools/6_override-multishader" class="nav-link">Override Multishader</a></li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <!-- Video Tutorials -->
+                                <li class="nav-item">
+                                    <details class="nav-group">
+                                        <summary class="nav-link">📹 Video Tutorials</summary>
+                                        <ul class="sub-menu">
+                                            <li class="nav-item"><a href="#/6_end/1_video-tutorials-beginr" class="nav-link">Beginner Tutorials</a></li>
+                                            <li class="nav-item"><a href="#/6_end/2_video-tutorials-adv" class="nav-link">Advanced Tutorials</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <!-- Changelog -->
+                                <li class="nav-item">
+                                    <details class="nav-group">
+                                        <summary class="nav-link">📰 Changelog/Updates</summary>
+                                        <ul class="sub-menu">
+                                            <li class="nav-item"><a href="#/6_end/3_changelog" class="nav-link">What's New</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <!-- FAQ -->
+                                <li class="nav-item">
+                                    <details class="nav-group">
+                                        <summary class="nav-link">❓ FAQ</summary>
+                                        <ul class="sub-menu">
+                                            <li class="nav-item"><a href="#/6_end/4_faq" class="nav-link">Frequently Asked Questions</a></li>
+                                        </ul>
+                                    </details>
+                                </li>
+
                             </ul>
                         </details>
                     </li>
+                    
                 </ul>
             </nav>
         </aside>
 
+
+        <!-- MAIN CONTENT - Se cargará dinámicamente -->
         <main class="main-content" id="main-content">
-            <!-- El contenido se cargará aquí -->
+            <!-- El contenido de pages/0_home.html se insertará aquí -->
         </main>
+
     </div>
 
+    <!-- FOOTER -->
     <footer class="page-footer">
-        <p>&copy; <span id="year"></span> Manellopgar</p>
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Manellopgar. All rights reserved.</p>
+        </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
+        // ==========================================
+        // 1. CONFIGURACIÓN INICIAL Y TEMA
+        // ==========================================
         document.getElementById('year').textContent = new Date().getFullYear();
-        // ... (script de tema oscuro) ...
+
+        const toggleBtn = document.getElementById('theme-toggle');
+        const icon = toggleBtn.querySelector('.toggle-icon');
+        const html = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const initialTheme = savedTheme || 'dark';
+
+        html.setAttribute('data-theme', initialTheme);
+        icon.textContent = initialTheme === 'dark' ? '☀️' : '🌙';
+
+        toggleBtn.addEventListener('click', () => {
+            const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            icon.textContent = next === 'dark' ? '☀️' : '🌙';
+        });
     </script>
+
+    <!-- Cargador de páginas (Hash Routing) -->
     <script src="js/loader.js"></script>
+
 </body>
 </html>
