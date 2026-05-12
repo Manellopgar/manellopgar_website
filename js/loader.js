@@ -3,38 +3,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainContainer = document.getElementById('main-content');
     const DEFAULT_HASH = '0_home';
 
-    // 🟢 FUNCIÓN NUEVA: Busca etiquetas <include> y carga su contenido
+    // 🟢 FUNCIÓN CORREGIDA: Procesa etiquetas <include> parseando HTML correctamente
     async function processIncludes(htmlString) {
-        // Creamos un contenedor temporal para manipular el HTML sin mostrarlo aún
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = htmlString;
-        
-        // Buscamos todas las etiquetas <include src="...">
         const includes = tempDiv.querySelectorAll('include');
         
-        if (includes.length > 0) {
-            // Procesamos todas las inclusiones en paralelo
-            await Promise.all(Array.from(includes).map(async (inc) => {
-                const src = inc.getAttribute('src');
-                if (!src) return;
+        await Promise.all(Array.from(includes).map(async (inc) => {
+            const src = inc.getAttribute('src');
+            if (!src) return;
+            try {
+                const res = await fetch(src);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const content = await res.text();
                 
-                try {
-                    // Hacemos fetch del archivo indicado
-                    // Nota: La ruta es relativa a index.html (la raíz)
-                    const res = await fetch(src);
-                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                    
-                    // Reemplazamos la etiqueta <include> por el contenido real
-                    const content = await res.text();
-                    inc.replaceWith(content);
-                } catch (err) {
-                    console.error(`❌ Error cargando include: ${src}`, err);
-                    inc.replaceWith(`<p style="color:red; padding:10px; background:#ffebeb;">⚠️ Error: No se pudo cargar el bloque (${src})</p>`);
-                }
-            }));
-        }
+                // ✅ CORRECCIÓN: Usar <template> para que el navegador parsee el HTML
+                const template = document.createElement('template');
+                template.innerHTML = content.trim();
+                inc.replaceWith(template.content);
+                
+            } catch (err) {
+                console.error(`❌ Error cargando include: ${src}`, err);
+                inc.replaceWith(`<p class="alert warning">⚠️ No se pudo cargar: ${src}</p>`);
+            }
+        }));
         
-        // Devolvemos el HTML ya procesado y completo
         return tempDiv.innerHTML;
     }
 
