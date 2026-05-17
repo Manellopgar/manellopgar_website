@@ -1,0 +1,224 @@
+<h1>Partition Distribution</h1>
+
+<p>This distribution can be loaded directly using the Advanced Distribution button in the BCloners Extension Panel or place it manually if you change the Distribution Menu to Advanced and set the Distribution Object to the parameter <strong>Distribution Object</strong>. This distribution is based on the Partition Modifier and its subdivision of a rectangular area. The resulting individual surfaces are used to place and scale the cloned objects.</p>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/partition_distribution_plane_clones.jpg" alt="Partition Distribution Plane Clones" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Partition distribution showing the subdivided plane and clones</p>
+</div>
+
+<h3>Basic Parameters</h3>
+
+<p><strong>Direction:</strong></p>
+<p>Choose the Axis that is as perpendicular direction of virtual rectangular.</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li>+X, -X, +Y, -Y, +Z or -Z</li>
+</ul>
+
+<p><strong>Size Width:</strong></p>
+<p>Side length of the plane in the X direction.</p>
+
+<p><strong>Size Height:</strong></p>
+<p>Side length of the plane in the Y direction.</p>
+
+<h3>Gap and Orientation</h3>
+
+<p><strong>Gap:</strong></p>
+<p>The virtual rectangular area is divided horizontally and vertically several times, creating rectangular areas of different sizes, which are then evaluated for the distribution of the clones. The <em>Gap</em> value can be used to proportionally reduce the size of these areas within the virtual rectangular area. This creates empty gaps between the clone areas. In relation to the clones, larger <em>Gap</em> values mean that the cloned objects can no longer touch each other.</p>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/partition_gap_comparison.jpg" alt="Partition Gap Comparison" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Clones without Gap and with Gap</p>
+</div>
+
+<h3>Aim Along (Z)</h3>
+
+<p><strong>Aim Along (Z): Match Plane (by default)</strong></p>
+<p>The clones are rotated according to the axis directions of the virtual rectangular surface.</p>
+
+<p><strong>Aim Along (Z): X, Y, Z</strong></p>
+<p>The clones are aligned along the X, Y, Z axis direction of the virtual rectangular surface.</p>
+
+<p><strong>Aim Along (Z): Random</strong></p>
+<p>The clones are randomly aligned along one of the axis directions of the virtual rectangular surface.</p>
+
+<h3>Orientation</h3>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/partition_orientation_clones.jpg" alt="Partition Orientation Clones" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Clones Orientation examples</p>
+</div>
+
+<p><strong>Orientation: Forward (by default)</strong></p>
+<p>The positive Z-axis of the clone objects points in the direction selected under <em>Aim Along</em> the virtual rectangular surface. The sign of the <em>Direction</em> setting also plays a role here.</p>
+
+<p><strong>Orientation: Backward</strong></p>
+<p>The positive Z-axis of the clone objects points in the opposite direction to the one selected under <em>Aim Along</em> the virtual rectangular surface. The sign of the <em>Direction</em> setting also plays a role here.</p>
+
+<p><strong>Orientation: Forward And Backward</strong></p>
+<p>The positive Z-axis of the clones points randomly in the positive or negative axis direction of the virtual plane selected under <em>Aim Along</em>.</p>
+
+<h3>Spin</h3>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/partition_spin_clones.jpg" alt="Partition Spin Clones" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Clones Spin examples</p>
+</div>
+
+<p><strong>Spin: Auto (by default)</strong></p>
+<p>All clones are rotated identically around their orientation axis.</p>
+
+<p><strong>Spin: Opposite</strong></p>
+<p>The clones are rotated by 180° around their alignment axis. In the case of our airplanes, they would now fly lying on their backs.</p>
+
+<p><strong>Spin: Random</strong></p>
+<p>The rotation takes place randomly in 90° steps around the alignment axis.</p>
+
+<h3>Cut Algorithm & Subdivision Types</h3>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/partition_cut_algorithm.jpg" alt="Partition Cut Algorithm" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Clones Cut Algorithm examples</p>
+</div>
+
+<p><strong>Cut Algorithm: Simple (by default)</strong></p>
+<p>The cut is made regardless of the aspect ratio of the virtual rectangular area and any areas already created there by previous cuts.</p>
+
+<p><strong>Cut Algorithm: Largest</strong></p>
+<p>Largest Edge (Stable Geo Dependent).</p>
+
+<h4>Subdivision Types</h4>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/partition_subdiv_single.gif" alt="Cut Single Animation" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Cut Single Subdivision Animation</p>
+</div>
+
+<p><strong>Subdiv Type: Single (by default)</strong></p>
+<p>The subdivisions are added individually and their number can be set via the <em>Cuts</em> value.</p>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/partition_subdiv_double.gif" alt="Cut Double Animation" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Cut Double Subdivision Animation</p>
+</div>
+
+<p><strong>Subdiv Type: Double</strong></p>
+<p>The subdivisions are added to all surfaces at the same time, alternating in the horizontal and vertical directions. The number of these subdivisions is controlled via the <em>Cut Iterations</em> value.</p>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/partition_subdiv_quad.gif" alt="Cut Quad Animation" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Cut Quad Subdivision Animation</p>
+</div>
+
+<p><strong>Subdiv Type: Quad</strong></p>
+<p>The subdivisions are added to all surfaces simultaneously in the horizontal and vertical directions. The number of these subdivisions is controlled via the <em>Cut Iterations</em> value. Please note that, in contrast to Double mode, even lower <em>Cut Iterations</em> can lead to finer subdivisions. Therefore, only increase this value cautiously to avoid creating too many or too small clones.</p>
+
+<h4>Subdivision Controls</h4>
+
+<p><strong>Cuts:</strong></p>
+<p>Here you set the number of sections to be added for the Single Subdivision Type.</p>
+
+<p><strong>Cut Iterations:</strong></p>
+<p>Here you set the sections to be added for the Subdivision Type modes Double and Quad. As these sections are calculated for all surfaces, many correspondingly small surfaces can be created very quickly. Therefore, increase this value carefully, especially in the Quad setting.</p>
+
+<h3>Randomization</h3>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/partition_random_cut_single.gif" alt="Random Cut Single Animation" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Random Cut Single Animation</p>
+</div>
+
+<p><strong>Randomize Density:</strong></p>
+<p>By increasing this value, the areas in which subdivisions are added can be more unevenly distributed. For large percentage values, areas can remain completely without new subdivisions, while other areas are heavily subdivided. Please note that any change to this value leads to a recalculation of all sections.</p>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/partition_random_cut_edges.gif" alt="Random Cut Edges Animation" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Random Cut Edges Animation</p>
+</div>
+
+<p><strong>Randomize Cuts:</strong></p>
+<p>Increasing this value moves the edges within the original rectangular area. An originally regularly divided area can thus be subdivided into more unevenly scaled areas. Please note that any change to this value will result in a recalculation of the sections.</p>
+
+<h3>Cut Orientation</h3>
+
+<p><strong>Cut Orientation: Manual</strong></p>
+<p>The direction of the subdividing cuts can be specified manually via <em>Orientation H/W</em>. Depending on the percentage value defined there, the cuts are then added primarily in the horizontal or vertical direction. With an <em>Orientation H/W</em> value of 50%, an attempt is made to balance the ratio between horizontal and vertical sections.</p>
+
+<p><strong>Cut Orientation: Alternating (by default)</strong></p>
+<p>The direction of the subdivision cuts alternates between horizontal and vertical for each new cut.</p>
+
+<p><strong>Cut Orientation: Longest Edge</strong></p>
+<p>Longest Edge (Stable Geo Dependent).</p>
+
+<p><strong>Orientation H/W:</strong></p>
+<p>If <em>Manual Cut Orientation</em> is selected, you can use this value to influence the main direction for the subdivision cuts. At 50%, a balanced choice of cutting paths is achieved, half of which run horizontally and half vertically.</p>
+
+<h3>Scaling & Matching</h3>
+
+<p><strong>Match Scale To: None</strong></p>
+<p>The size of the cloned objects remains unchanged.</p>
+
+<p><strong>Match Scale To: Width/Height</strong></p>
+<p>The X size of the cloned objects adapts to the corresponding width/height of the subdivision area on the virtual rectangle.</p>
+
+<p><strong>Match Scale To: Constrained</strong></p>
+<p>The scaling is always based on the shortest edge of the respective subdivision area within the virtual rectangle and scales the clones proportionally to this.</p>
+
+<p><strong>Match Scale To: Scale To Fit (by default)</strong></p>
+<p>The X and Y sizes of the clones are scaled identically to the available space in the corresponding area of the virtual rectangle. This inevitably leads to a distortion of the clones.</p>
+
+<h3>Scale Facing</h3>
+
+<p><strong>Scale Facing: None</strong></p>
+<p>The clones can be scaled freely, percentage based on their original size in this direction via the <em>Scale Facing</em> value.</p>
+
+<p><strong>Scale Facing: Set</strong></p>
+<p>The size of the clones in this direction can be specified in absolute terms using the <em>Scale Set</em> value.</p>
+
+<p><strong>Scale Facing: Proportional (by default)</strong></p>
+<p>The size of the clones in this direction is based on the scaling in the other axis directions, but can also be corrected as a percentage using the <em>Scale</em> value.</p>
+
+<p><strong>Scale Facing: Random</strong></p>
+<p>The clones are scaled randomly in the corresponding direction. However, with <em>Random Scale Min</em> and <em>Random Scale Max</em> you can define percentage maximums that refer to the original dimensions of the cloned objects in this direction.</p>
+
+<h4>Scale Parameters</h4>
+
+<p><strong>Scale:</strong></p>
+<p>This value refers to the original dimension of the cloned objects in the Z direction of the distribution plane and can be used in various <em>Scale Facing</em> modes to adjust the object sizes.</p>
+
+<p><strong>Scale Set:</strong></p>
+<p>For <em>Scale Facing Set</em>, an absolute dimension of the clones in the direction of the Z-axis at the distribution plane can be specified here.</p>
+
+<p><strong>Min / Max:</strong></p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Min:</strong> Adjust the Minimum Random Scale.</li>
+  <li><strong>Max:</strong> Adjust the Maximum Random Scale.</li>
+</ul>
+
+<p><strong>Pivot XYZ:</strong></p>
+<p>These values describe the position of the starting point for the scaling within the bounding box of the clones. With the default values 0%, the reference system is exactly in the middle of the bounding boxes. Scaling then takes place uniformly in all axial directions of the clones.</p>
+
+<h3>Advanced Controls</h3>
+
+<p><strong>Cut Cap:</strong></p>
+<p>This value can be used to define an upper limit for the number of sections and subdivisions to be calculated. This can, for example, prevent accidental overloading of the working memory or freezing if the subdivision levels are set too high. If you require a large number of subdivisions, it may also be necessary to increase this value.</p>
+
+<p><strong>Seed:</strong></p>
+<p>Changes the Seed of the Random parameters.</p>
+
+<p><strong>Show Plane:</strong></p>
+<p>Shows the Original Plane that is used to generate the Distribution.</p>
+
+<h3>Animation</h3>
+
+<p><strong>Random Offset:</strong></p>
+<p>Here you can define the maximum displacement of the individual sections and subdivisions during the animation. The actual freedom of movement of the subdivisions depends on the length of the respective edge that is being subdivided.</p>
+
+<p><strong>Noise Frequency:</strong></p>
+<p>Here you control the speed at which the subdivisions are moved. Higher values lead to faster changes.</p>
+
+<p><strong>Animation Speed:</strong></p>
+<p>This controls the overall speed of the animation. The resulting movement speed results from the multiplication of <em>Animation Speed</em> and <em>Noise Frequency</em>. If one of these values is 0, no more animation takes place.</p>
+
+<p><strong>Loop Period:</strong></p>
+<p>Here you can define a number of frames after which the animation should repeat automatically. With the default value 0, there is no repetition and the animation is purely random, regardless of how long it is viewed.</p>

@@ -1,0 +1,39 @@
+<h1>Custom Distribution</h1>
+
+<p>This distribution can be loaded directly using the <strong>Advanced Distribution</strong> button in the BCloners Extension Panel or place it manually if you change the Distribution Menu to Advanced and set the Distribution Object to the parameter Distribution Object.</p>
+
+<h2>Parameters</h2>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Asset Type</strong>: Choose the Input Asset Type</li>
+  <ul style="padding-left: 1.5rem; margin-bottom: 1rem; list-style-type: circle;">
+    <li><strong>Object</strong>: Uses the Object as Clone.</li>
+    <li><strong>Collection</strong>: Uses the Assets of your Collection as Clones.</li>
+  </ul>
+
+  <li><strong>Collection</strong>: Drag Your Custom Collection with the Assets that are used as Clones.</li>
+
+  <li><strong>Object</strong>: Drag Your Custom Asset (Mesh Object).</li>
+
+  <li><strong>Separate Children</strong>: Output each child of the collection as a separate instance, sorted alphabetically.</li>
+
+  <li><strong>Reset Children</strong>: Reset the transforms of every child instance in the output. Only used when Separate Children is enabled.</li>
+
+  <li><strong>Clones</strong>: Choose the Clones Mode</li>
+  <ul style="padding-left: 1.5rem; margin-bottom: 1rem; list-style-type: circle;">
+    <li><strong>Iterate</strong>: The distribution automatically runs through all objects in sequence from top to bottom, as they were grouped under the Cloner object. After placing the last object, this sequence starts again with the topmost object under the loner object.</li>
+    <li><strong>Random</strong>: The object currently to be cloned is selected at random from the objects that have been grouped to the clone object.</li>
+  </ul>
+
+  <li><strong>ID Asset</strong>: Offset the index of each Asset.</li>
+
+  <li><strong>Seed</strong>: This distribution offers random modes based on this value when selecting the objects to be cloned.</li>
+</ul>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <!-- Placeholder for the image as source was not provided -->
+  <div style="border: 2px dashed var(--color-border); padding: 2rem; border-radius: 6px; background-color: var(--color-surface); color: var(--color-text-secondary);">
+    Image placeholder: Custom Advanced Distribution modifier and nodegroup with Frame
+  </div>
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Custom Advanced Distribution Modifier & Nodegroup</p>
+</div>

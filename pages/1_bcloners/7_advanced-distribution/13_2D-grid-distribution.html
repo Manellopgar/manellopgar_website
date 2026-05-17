@@ -1,0 +1,167 @@
+<h1>Projected 2D Grid Distribution</h1>
+
+<p>This distribution can be loaded directly using the Advanced Distribution button in the BCloners Extension Panel or placed manually if you change the Distribution Menu to Advanced and set the Distribution Object to the parameter Distribution Object. All Clones are placed in a regular grid, which is then projected onto the surface of an assigned object. The copies can also be aligned relative to this surface.</p>
+<p>The object to be projected onto must be placed on the <strong>Base Object</strong> parameter.</p>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <!-- Placeholder for Terrain Projection GIF -->
+  <img src="assets/images/3_Initial-Guide-BCloners/Projected_2D_Grid_Terrain_Animation.gif" alt="Projection on Terrain Animation" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Projection animation on a Terrain surface</p>
+</div>
+
+<h3>Base Object & Distribution Parameters</h3>
+
+<div style="margin-bottom: 1.5rem;">
+  <strong>Base Object</strong><br>
+  Drag Your Custom Asset (Base Object). For example: Terrain, Ground... etc.
+</div>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong>Position Strength:</strong> Defines the amount of Strength for the Clones Project Position on the Base Object.
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong>Clones: Iterate:</strong> The distribution automatically runs through all objects in sequence from top to bottom, as they were grouped under the Cloner object. After placing the last object, this sequence starts again with the topmost object under the Cloner object.
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong>Clones: Random:</strong> The object currently to be cloned is selected at random from the objects that have been grouped to the clone object.
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong>ID Asset:</strong> Offset the index of each Asset.
+  </li>
+</ul>
+
+<h3>Grid Settings & Mode</h3>
+
+<div style="margin-bottom: 1.5rem;">
+  <strong>Count X</strong><br>
+  Number of clones in the X direction.
+</div>
+
+<div style="margin-bottom: 1.5rem;">
+  <strong>Count Y</strong><br>
+  Number of clones in the Y direction.
+</div>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong>Mode: Per Step:</strong> When selected, the values will reflect the difference to the previous or next clone.
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong>Mode: End Point:</strong> When selected, the values will reflect the difference between the first and last clone, and the values in-between will be interpolated.
+  </li>
+</ul>
+
+<div style="margin-bottom: 1.5rem;">
+  <strong>Size XY</strong><br>
+  Here you specify the dimensions of the virtual rectangular area on which the clones are placed.
+</div>
+
+<div style="margin-bottom: 1.5rem;">
+  <strong>Plane</strong><br>
+  This setting defines the orientation of the rectangular area in which the copies are originally created.
+</div>
+
+<h3>Projection Methods</h3>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong>Projection: Direction:</strong> Starting from the regular grid positions of the clones, calculation rays are sent out parallel to the vertical on this grid level. Where these collide with the object assigned as the projection target, a new position is calculated.
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong>Projection: Nearest:</strong> Here, too, calculation rays are sent out from the original grid positions in the direction of the child object in the distribution, but these do not necessarily run parallel to the vertical on the grid surface; instead, the rays determine the closest position on the subordinate grouped object for each clone.
+  </li>
+</ul>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <!-- Placeholder for C4D Documentation Image -->
+  <img src="assets/images/3_Initial-Guide-BCloners/C4D_Projection_Schematic.jpg" alt="C4D Projection Schematic" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Projection Schematic (Reference)</p>
+</div>
+
+<h3>Plane Projection Directions</h3>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong>Plane Projection: Forward:</strong> Ensures collision rays that run parallel to the positive Y axis. The object that is projected onto should therefore also lie above the XZ plane of the Cloner object.
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong>Plane Projection: Backward:</strong> The calculation rays would run exactly in the opposite direction, i.e., vertically downwards.
+  </li>
+</ul>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <!-- Placeholder for C4D Documentation GIF -->
+  <img src="assets/images/3_Initial-Guide-BCloners/C4D_Plane_Projection_Directions.gif" alt="C4D Plane Projection Directions" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Plane Projection Direction Examples (Reference)</p>
+</div>
+
+<h3>Alignment & Smoothing</h3>
+
+<div style="margin-bottom: 1.5rem;">
+  <strong>Shift Position</strong><br>
+  This can be used to adjust the determined position of the object copies. The percentage value refers to the dimensions of the bounding box of the cloned objects. Depending on whether Align to Normal is used or not, the clones can be moved in the direction of the projection direction or relative to the surface normal.
+</div>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <!-- Placeholder for C4D Documentation GIF -->
+  <img src="assets/images/3_Initial-Guide-BCloners/C4D_Shift_Position.gif" alt="Shift Position Adjustment" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Shift Position Adjustment (Reference)</p>
+</div>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong>Align To Normal:</strong> The separate Smooth option can be added to a smoothing interpolation of neighboring normal directions.
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong>Smooth (True Normal):</strong> If Align to Normal is active, the directions of neighboring normals can also be interpolated with this option in order to smooth the transitions between the normals.
+  </li>
+</ul>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <!-- Placeholder for C4D Documentation Image -->
+  <img src="assets/images/3_Initial-Guide-BCloners/C4D_Align_Normal_Smooth.jpg" alt="Align to Normal and Smooth Interpolation" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Align to Normal and Smooth Interpolation (Reference)</p>
+</div>
+
+<h3>Scales & Randomization</h3>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong>Scale Axis: Orientation:</strong> The clones can be scaled along their Y-axis. The size of the clones remains unchanged in the perpendicular axis directions.
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong>Scale Axis: Uniform:</strong> The clones are proportionally enlarged or reduced in size.
+  </li>
+</ul>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <!-- Placeholder for C4D Documentation Image -->
+  <img src="assets/images/3_Initial-Guide-BCloners/C4D_Scale_Axes.jpg" alt="Scale Axis Orientation and Uniform" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Scale Axis Options (Reference)</p>
+</div>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong>Random Scale:</strong> This percentage value refers to the size of the bounding box on the cloned objects and indicates their maximum size variation. With a value of 100%, the clones can therefore become a maximum of twice as large.
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong>Seed:</strong> Changes the Seed of the Random parameters.
+  </li>
+</ul>

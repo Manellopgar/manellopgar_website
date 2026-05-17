@@ -1,0 +1,90 @@
+<h1>Initial Guide Advanced Distributions</h1>
+
+<p>In this guide, I explain how to add any Advanced Distribution automatically and manually.</p>
+
+<div class="faq-item" style="margin-bottom: 1rem; border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden;">
+  <div class="faq-header" style="padding: 1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <span class="faq-icon" style="width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; border: 1px solid var(--color-border);">?</span>
+      <strong>How to add any Advanced Distribution to any BCloner?</strong>
+    </div>
+    <span style="font-size: 1.2rem; opacity: 0.7;">&#9660;</span>
+  </div>
+  <div class="faq-body" style="padding: 1rem; border-top: 1px solid var(--color-border);">
+    <p>Select the mesh object, that object must have any BCloner and that BCloner needs to have been active. Go to the BCloners Addon panel and click <strong>Advanced Distribution</strong>. Then select from the list your desired Advanced Distribution. The addon will automatically configure the BCloner to Advanced Distribution mode and generate the object with the selected Advanced Distribution modifier.</p>
+  </div>
+</div>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/3_Initial-Guide-BCloners/advanced_distribution_addition.gif" alt="Advanced Distribution Addition GIF" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">A small GIF showing how to add the Advanced Distribution.</p>
+</div>
+
+<p>The modifier mainly provides information that can be used to create and place geometry copies or clones. A large part of these functions is also provided by the <strong>Advanced Distribution</strong> in the BCloners panel of the B4D Addon.</p>
+
+<p>Some of these distribution functions are also provided in the form of capsules that can be combined directly with a MoGraph Cloner Object to control individual distributions of object copies directly via the Outliner. In addition, you can also combine or create your own individual distribution functions directly with the BCloner using the <strong>Custom Advanced Distribution</strong> option.</p>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/custom_advanced_distribution_nodegroup.jpg" alt="Custom Advanced Distribution Modifier and Node Group" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Custom Advanced Distribution modifier and node group with the Frame where you must work.</p>
+</div>
+
+<p>All Advanced Distributions have these common parameters which define the Input Assets used in the Advanced Distribution. Keep in mind this works if you have <strong>Distribution Enabled</strong>, which is enabled by default.</p>
+
+<h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
+
+<ul style="list-style: none; padding-left: 1.5rem; margin: 0 0 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-primary); font-weight: 600;">•</span>
+    <strong>Asset Type: Object</strong>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text-secondary);">
+    <span style="font-size: 1.2rem;">&#8627;</span>
+    <span>Uses the added <strong>Custom Object to Object</strong> parameter as a clone.</span>
+  </li>
+
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-primary); font-weight: 600;">•</span>
+    <strong>Object</strong>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text-secondary);">
+    <span style="font-size: 1.2rem;">&#8627;</span>
+    <span>Drag your Custom Object that is used as a Clone.</span>
+  </li>
+
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-primary); font-weight: 600;">•</span>
+    <strong>Asset Type: Collection</strong>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text-secondary);">
+    <span style="font-size: 1.2rem;">&#8627;</span>
+    <span>Uses the Objects of the added <strong>Collection to Collection</strong> parameter as clones. When this mode is selected, you will see more parameters to control the generated clones.</span>
+  </li>
+
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-primary); font-weight: 600;">•</span>
+    <strong>Collection</strong>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text-secondary);">
+    <span style="font-size: 1.2rem;">&#8627;</span>
+    <span>Drag your Custom Collection with the Assets that are used as Clones.</span>
+  </li>
+
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-primary); font-weight: 600;">•</span>
+    <strong>Separeate Assets</strong>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text-secondary);">
+    <span style="font-size: 1.2rem;">&#8627;</span>
+    <span>Allows the use of each child of the collection as a separate Clone. Only works if you have more than 1 Asset in the Custom Collection (Drop Your Assets Here).</span>
+  </li>
+
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-primary); font-weight: 600;">•</span>
+    <strong>Reset Coordinates</strong>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text-secondary);">
+    <span style="font-size: 1.2rem;">&#8627;</span>
+    <span>Resets Position, Rotation and Scale to BCloner Origin.</span>
+  </li>
+</ul>

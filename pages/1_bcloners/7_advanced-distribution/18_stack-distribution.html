@@ -1,0 +1,116 @@
+<h1>Stack Distribution</h1>
+
+<p>This distribution can be loaded directly using the Advanced Distribution button in the BCloners Extension Panel or placed manually if you change the Distribution Menu to Advanced and set the Distribution Object to the parameter Distribution Object. Stack Distribution is always suitable when object copies are to be displayed stacked or lined up exactly depending on their dimensions. Think of a pile of magazines or books, for example.</p>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/B4D_Stack_Distribution_Active.jpg" alt="Stack of Clones in action" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Stack of Clones in action</p>
+</div>
+
+<h3>Clones Settings</h3>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Clones: Iterate</strong> – The distribution automatically runs through all objects in sequence from top to bottom, as they were grouped under the Cloner object. After placing the last object, this sequence starts again with the topmost object.</li>
+  <li><strong>Clones: Random</strong> – The object currently to be cloned is selected at random from the objects that have been grouped to the clone object.</li>
+</ul>
+
+<h3>Stack Settings</h3>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Stack: Count</strong> – The absolute number of clones is specified via the following Count value.</li>
+  <li><strong>Stack: Length</strong> – The number of clones is determined indirectly by specifying a distance to be filled by the clones; the actual number of clones depends on the following Length value and the dimensions of the clones.</li>
+</ul>
+
+<h3>Length & Count Parameters</h3>
+
+<p><strong>Length:</strong> For the Length Stack mode, enter the route length to be filled by the object copies here. Please note that deviations from this specification may occur by default if the available objects cannot be placed completely in this route. A gap can then be left at the end of the specified route. If the route is to be completely filled with clones, the separate <strong>Stretch to Fill</strong> option is available. This adjusts the size of the clones so that the specified distance can be completely filled.</p>
+
+<p><strong>Count:</strong> For the Stack mode Count, enter the desired number of object copies here. The number of points to create is determined by this value.</p>
+
+<h3>Offset & Direction</h3>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Offset:</strong> This value is only relevant if several objects have been grouped under the Clone Object or if different shapes are to be cloned. This value determines with which of the objects the sequence of clones along the assigned direction should begin.</li>
+  <li><strong>Direction: +X, -X, +Y, -Y, +Z, or -Z</strong> – Here you specify the direction in which the clones are to be lined up or stacked. The direction specification refers to the axis of the BCloner object.</li>
+</ul>
+
+<p><strong>Gap:</strong> The placement of the clones takes their maximum dimensions into account. Use this value to add additional space between the clones or to manually reduce the space between the clones.</p>
+
+<h3>Aim Along (Z)</h3>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Match Plane (by default):</strong> The clones are rotated according to the axis directions of the virtual rectangular surface.</li>
+  <li><strong>X, Y, Z:</strong> The clones are aligned along the X, Y, Z axis direction of the virtual rectangular surface.</li>
+  <li><strong>Random:</strong> The clones are randomly aligned along one of the axis directions of the virtual rectangular surface.</li>
+</ul>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/B4D_Stack_Aim_Along.jpg" alt="Stack of Clones Aim Along" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Stack of Clones Aim Along</p>
+</div>
+
+<h3>Orientation</h3>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Forward (by default):</strong> The positive Z-axis of the clone objects points in the direction selected under Align along the virtual rectangular surface. The sign of the Direction setting also plays a role here.</li>
+  <li><strong>Backward:</strong> The positive Z-axis of the clone objects points in the opposite direction to the one selected under Align along the virtual rectangular surface. The sign of the Direction setting also plays a role here.</li>
+  <li><strong>Forward And Backward:</strong> The positive Z-axis of the clones points randomly in the positive or negative axis direction of the virtual plane selected under Align Along.</li>
+</ul>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/B4D_Stack_Orientation.jpg" alt="Stack of Clones Orientation" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Stack of Clones Orientation</p>
+</div>
+
+<h3>Spin & Scale Axis</h3>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Spin:</strong>
+    <ul style="padding-left: 1rem; margin-top: 0.5rem; list-style-type: disc;">
+      <li><em>Auto (by default):</em> All clones are rotated identically around their orientation axis.</li>
+      <li><em>Opposite:</em> The clones are rotated by 180° around their alignment axis. In the case of airplanes, they would now fly lying on their backs.</li>
+      <li><em>Random:</em> The rotation takes place randomly in 90° steps around the alignment axis.</li>
+    </ul>
+  </li>
+</ul>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Scale Axis:</strong>
+    <ul style="padding-left: 1rem; margin-top: 0.5rem; list-style-type: disc;">
+      <li><em>Direction:</em> The clones can be scaled along their Y-axis. The size of the clones remains unchanged in the perpendicular axis directions.</li>
+      <li><em>Uniform:</em> The clones are proportionally enlarged or reduced in size.</li>
+    </ul>
+  </li>
+</ul>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/B4D_Stack_Scaling_Axis.jpg" alt="Stack of Clones Scaling Axis" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Stack of Clones Scaling Axis</p>
+</div>
+
+<h3>Random Scale & Stretch to Fill</h3>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Random Scale:</strong> The strength of a random scaling of the cloned objects can be set here. Under Scaling Axis, you can select whether these changes in size should only take place in the direction of the line-up or proportionally. Like all random effects, this calculation is also based on the Seed value. A change in the Seed value therefore also leads to a recalculation of the scaling variations.</li>
+  <li><strong>Stretch to Fill:</strong> Stretches the Scale of Clones to Fill the gaps completely.</li>
+</ul>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/B4D_Stack_Stretch_to_Fill.jpg" alt="Stack of Clones Stretch to Fill" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Stack of Clones Stretch to Fill</p>
+</div>
+
+<h3>Pivot & Seed</h3>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Pivot XYZ:</strong> These three percentage values refer to the bounding box, which encloses all cloned objects. The position of the cloned objects can thus be changed within this bounding box, e.g., to display books standing on a board, although the books have different sizes.</li>
+</ul>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/B4D_Stack_Pivot_XYZ.jpg" alt="Stack of Clones Pivot XYZ" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Stack of Clones Pivot XYZ</p>
+</div>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Seed:</strong> This distribution offers random modes based on this value when selecting the objects to be cloned.</li>
+</ul>

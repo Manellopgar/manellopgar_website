@@ -1,0 +1,54 @@
+<h1>Cannonball Distribution</h1>
+
+<p>This distribution can be loaded directly using the Advanced Distribution button in the BCloners Extension Panel or place it manually if you change the Distribution Menu to Advanced and set the Distribution Object to the parameter Distribution Object. This distribution enables the stacking of object copies in the form of triangular or square pyramids, for example.</p>
+
+<h3>Distribution Modes</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Clones: Iterate:</strong> The distribution automatically runs through all objects in sequence from top to bottom, as they were grouped under the Cloner object. After placing the last object, this sequence starts again with the topmost object.</li>
+  <li><strong>Clones: Random:</strong> The object currently to be cloned is selected at random from the objects that have been grouped to the clone object.</li>
+</ul>
+
+<h3>Shape Selection</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Tri Pyramid:</strong> A pyramid with a triangular base and three triangles, having a total of four faces.</li>
+  <li><strong>Tri Grid:</strong> A grid with a Triangular Shape.</li>
+  <li><strong>Quad Pyramid:</strong> A pyramid with a square base and four triangles, having a total of five faces.</li>
+  <li><strong>Quad Grid:</strong> A grid with a Quad Shape.</li>
+</ul>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/cannonball_shapes_example.jpg" alt="Cannonball Distribution Shapes Examples" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Examples of the four available Cannonball shapes</p>
+</div>
+
+<h3>Geometry & Dimensions</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>ID Asset:</strong> Offset the index of each Asset.</li>
+  <li><strong>Direction:</strong> Indicates the direction for the height of the distribution pattern. For example, +Y results in the rectangular base area lying in the XZ plane and the height developing along the positive Y axis.</li>
+  <li><strong>Count X:</strong> The number of Clones on the X Axis.</li>
+  <li><strong>Count Y:</strong> The number of Clones on the Y Axis.</li>
+  <li><strong>Layers:</strong> The Number/Layers of Clones on the Z Axis.</li>
+</ul>
+
+<h3>Spacing & Scale</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Spacing:</strong> Adjust the spacing between clones.</li>
+  <li><strong>Scale Source:</strong> The distribution evaluates the current size of the cloned objects by calculating their bounding boxes.</li>
+</ul>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/cannonball_scale_source_example.jpg" alt="Cannonball Scale Source Examples" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Scale Source configuration examples</p>
+</div>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Radius:</strong> If the Radius Scale Source is selected, this defines the sphere radius used to calculate the distance between clones.</li>
+  <li><strong>Arrangement:</strong> Determines how the shape defined under Scale Source is evaluated for the distance calculation.</li>
+  <li><strong>Gap:</strong> Reduces or increases the distance between objects evenly in all directions.</li>
+  <li><strong>Seed:</strong> Controls random modes based on this value when selecting objects to be cloned.</li>
+</ul>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/cannonball_arrangement_example.jpg" alt="Cannonball Arrangement Examples" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Arrangement calculation examples</p>
+</div>
