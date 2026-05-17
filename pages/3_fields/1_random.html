@@ -1,27 +1,80 @@
-<!-- Título de la página -->
-<h1>Extension Preferences</h1>
-<hr>
+<h1>Field Random</h1>
 
-<!-- Contenido principal -->
-<p>Aquí va el contenido específico de esta página. Puedes usar:</p>
+<!-- DYNAMIC INJECTION: pages/0_common/2a_fields-namefield-mask.html -->
+<include src="pages/0_common/2a_fields-params.html"></include>
 
-<h2>Sección 1</h2>
-<p>Texto explicativo, listas, imágenes, etc.</p>
-
-<ul>
-    <li>Elemento de lista 1</li>
-    <li>Elemento de lista 2</li>
+<h3>Random Mode</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Random:</strong> (Value: 0)</li>
+  <li><strong>Noise:</strong> (Value: 0)</li>
 </ul>
 
-<h2>Sección 2</h2>
-<p>Más contenido aquí...</p>
+<h3>Random Seed</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Random:</strong> Adjust the Random Seed.</li>
+  <li><strong>Noise:</strong> (Value: 0)</li>
+</ul>
 
-<!-- Ejemplo de código -->
-<pre><code># Tu código aquí
-print("Hello World")</code></pre>
+<h3>Field Controller</h3>
+<p>Drag Your Custom Field Controller.</p>
 
-<!-- Ejemplo de alerta -->
-<strong>Nota:</strong> Información importante para el usuario.
+<h3>Noise Type</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Noise Multifractal:</strong></li>
+  <li><strong>Noise Ridged Multifractal:</strong></li>
+  <li><strong>Noise Hybrid Multifractal:</strong></li>
+  <li><strong>Noise fBM:</strong></li>
+  <li><strong>Noise Hetero Terrain:</strong></li>
+  <li><strong>Voronoi Euclidean:</strong></li>
+  <li><strong>Voronoi Manhatan:</strong></li>
+  <li><strong>Voronoi Chebychev:</strong></li>
+  <li><strong>Voronoi Minkowski:</strong></li>
+</ul>
 
-<!-- Ejemplo de imagen -->
-<img src="../assets/images/ejemplo.jpg" alt="Descripción de la imagen" style="max-width: 100%; border-radius: 8px;">
+<h3>Auto Animation</h3>
+<p>Auto Animation Options</p>
+
+<h3>Noise Seed</h3>
+<p>Changes the Noise Seed.</p>
+
+<h3>Animation Speed</h3>
+<p>Adjust the Animation Speed</p>
+
+<h3>Loop Animation</h3>
+<p>Loop Animation Options</p>
+
+<h3>Frame Loop Out</h3>
+<p>Enter the End Frame for the Loop Out. If is negative doesn't loop.</p>
+
+<h3>Custom Name Field</h3>
+<p>Write your Custom Name Field if you want to use it with a Specific Name.</p>
+
+<h3>Field Mask</h3>
+<p>Enabled by default, if you want a Custom Name Field as Field Mask, You can use Input Attribute Toggle.</p>
+
+<h3>Voronoi Parameters</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Uniform Scale:</strong> Uniform Scale of the Voronoi.</li>
+  <li><strong>Detail:</strong> Number of noise octaves. The fractional part of the input is multiplied by the magnitude of the highest octave. Higher number of octaves corresponds to a higher evaluation time.</li>
+  <li><strong>Roughness:</strong> Blend between a smoother noise pattern, and rougher with sharper peaks.</li>
+  <li><strong>Lacunarity:</strong> The difference between the scale of each two consecutive octaves. Larger values corresponds to larger scale for higher octaves.</li>
+  <li><strong>Randomness:</strong> The randomness of the noise.</li>
+  <li><strong>Exponent:</strong> Exponent of the Minkowski distance metric.</li>
+</ul>
+
+<h3>Noise Parameters</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Uniform Scale:</strong> Uniform Scale of the noise.</li>
+  <li><strong>Detail:</strong> Number of noise octaves. This can have a fractional part, in which case a blend is performed (e.g. a Detail of 2.5 results in a 50% blend between 2 and 3 octaves).</li>
+  <li><strong>Roughness:</strong> Blend between a smoother noise pattern, and rougher with sharper peaks.</li>
+  <li><strong>Lacunarity:</strong> The difference between the scale of each two consecutive octaves. Larger values corresponds to larger scale for higher octaves.</li>
+  <li><strong>Offset:</strong> An added offset to each octave, determines the level where the highest octave will appear.</li>
+  <li><strong>Gain:</strong> An extra multiplier to tune the magnitude of octaves.</li>
+  <li><strong>Distortion:</strong> Amount of Noise distortion.</li>
+</ul>
+
+<!-- DYNAMIC INJECTION: pages/0_common/2a_fields-blending.html -->
+<include src="pages/0_common/2c_fields-blending.html"></include>
+
+<!-- DYNAMIC INJECTION: pages/0_common/2a_fields-remapping.html -->
+<include src="pages/0_common/2d_fields-remapping.html"></include>
