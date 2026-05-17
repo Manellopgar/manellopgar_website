@@ -1,27 +1,203 @@
-<!-- Título de la página -->
-<h1>Extension Preferences</h1>
-<hr>
+<h1>BCloner Spline Mode</h1>
 
-<!-- Contenido principal -->
-<p>Aquí va el contenido específico de esta página. Puedes usar:</p>
+<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
+<include src="pages/0_common/0_bcloner-params.html"></include>
 
-<h2>Sección 1</h2>
-<p>Texto explicativo, listas, imágenes, etc.</p>
+<p><em>Note: QUICK TIP: If you have selected the Spline/Curve apart from the active object, the addon automatically adds that Spline/Curve to the Spline/Curve parameter.</em></p>
 
-<ul>
-    <li>Elemento de lista 1</li>
-    <li>Elemento de lista 2</li>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/4_Spline-Guide/Automatic_Detection_Spline.gif" alt="Automatic Detection Spline" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Automatic Detection Spline</p>
+</div>
+
+<h3>Spline Settings</h3>
+<ul style="list-style: none; padding-left: 1.5rem; margin: 0 0 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Spline/Curve</strong><br>
+      Drag Your Custom Spline/Curve to assign it here.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Delete Spline/Curve</strong><br>
+      Deletes the Original Spline/Curve.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Align</strong><br>
+      If this setting is active, each clone will be arranged with its X axis tangential to the circle. If this setting is not active, each clone will orient itself in accordance with the Cloner's coordinate system.
+    </div>
+  </li>
 </ul>
 
-<h2>Sección 2</h2>
-<p>Más contenido aquí...</p>
+<h3>Distribution Modes</h3>
+<ul style="list-style: none; padding-left: 1.5rem; margin: 0 0 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Distribution: Count</strong><br>
+      Use the neighboring Count setting to define the number of clone segments. Clone spacing will not be uniform, but dependent upon the spline interpolation (i.e., Natural, Even or Adaptive). This result is more often not desired and can be countered by the following modes.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Distribution: Even</strong><br>
+      Use the neighboring Count setting to define a number of clones. The clones will be arranged with equal intervals along the spline.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Distribution: Step</strong><br>
+      Use the neighboring Step setting to define the interval between clones along the spline. The spline will be covered in its entirety by clones.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Distribution: Vertex</strong><br>
+      A Clone will be arranged on each Spline point. No parameters for modification will be available.
+    </div>
+  </li>
+</ul>
 
-<!-- Ejemplo de código -->
-<pre><code># Tu código aquí
-print("Hello World")</code></pre>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/4_Spline-Guide/Spline_Distribution_Modes.gif" alt="4 Modes of Distribution" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">The 4 Modes of Distribution</p>
+</div>
 
-<!-- Ejemplo de alerta -->
-<strong>Nota:</strong> Información importante para el usuario.
+<h3>Spline Control Parameters</h3>
+<ul style="list-style: none; padding-left: 1.5rem; margin: 0 0 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Count</strong><br>
+      Use this setting to define the number of clones to be arranged in the Curve Path.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Step</strong><br>
+      Adjust the Step Interval between clones.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Start</strong><br>
+      Use these settings to limit the Start of the arrangement of clones along the spline.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>End</strong><br>
+      Use these settings to limit the End of the arrangement of clones along the spline.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Offset</strong><br>
+      Use this setting to let the clones move along the circle.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Loop</strong><br>
+      If Offset and Rate are set to values not equal to 0%, clones arranged past the end of the spline will be deleted (Loop not active) or seamlessly (without transition) reinserted at the beginning of the spline (Loop active).
+    </div>
+  </li>
+</ul>
 
-<!-- Ejemplo de imagen -->
-<img src="../assets/images/ejemplo.jpg" alt="Descripción de la imagen" style="max-width: 100%; border-radius: 8px;">
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/4_Spline-Guide/Spline_Additional_Parameters.gif" alt="Additional Spline Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Additional Spline Parameters</p>
+</div>
+
+<h3>Advanced Parameters</h3>
+
+<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-transform.html -->
+<include src="pages/0_common/0_bcloner-transform.html"></include>
+
+<ul style="list-style: none; padding-left: 1.5rem; margin: 0 0 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Offset Variation</strong><br>
+      Use this setting to randomize the arrangement of clones for a more coincidental look.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Spline Rail</strong><br>
+      Drag Your Custom Spline/Curve as a Spline Rail for influence.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Use Rail as Target</strong><br>
+      Uses the Spline/Curve Rail as Target Rotation for the Clones.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Use Rail as Scale</strong><br>
+      Uses the Spline/Curve Rail as Target Scale for the Clones.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Rate</strong><br>
+      Rate basically functions like Offset, with the exception that the clones will move automatically when the animation is played, without having to set keys. This setting defines the distance the clones should travel per second of animation. Activate Smooth Rotation if any irregular movement should occur.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Rate Variation</strong><br>
+      Use this slider to randomly vary the clones' velocity. If the value defined is high enough, individual clones can even be made to move in reverse. Values less than 0% and greater than 100% can also be defined.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Loop with Offset Time</strong><br>
+      Activates the Loop Mode with Offset Time for animated sequences.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Offset Time</strong><br>
+      Adjust the Offset Time for animation timing.
+    </div>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <div>
+      <strong>Random Seed</strong><br>
+      Changes the Random Seed to alter distribution randomness.
+    </div>
+  </li>
+</ul>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/4_Spline-Guide/Spline_Parameter_Effects.gif" alt="Parameter Effects Overview" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Parameter Effects Overview</p>
+</div>
+
+<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-transform.html -->
+<include src="pages/0_common/0_bcloner-transform.html"></include>

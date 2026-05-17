@@ -1,27 +1,102 @@
-<!-- Título de la página -->
-<h1>Extension Preferences</h1>
-<hr>
+<h1>BCloner HoneyComb Mode</h1>
 
-<!-- Contenido principal -->
-<p>Aquí va el contenido específico de esta página. Puedes usar:</p>
+<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
+<include src="pages/0_common/0_bcloner-params.html"></include>
 
-<h2>Sección 1</h2>
-<p>Texto explicativo, listas, imágenes, etc.</p>
+<strong>Orientation</strong>
+<p>Use this setting to define the object coordinate axis to which the honeycomb should be perpendicular. The axis defines the plane on which the honeycomb lies. You can choose between: Z (XY), X (ZY) or Y (ZX).</p>
 
-<ul>
-    <li>Elemento de lista 1</li>
-    <li>Elemento de lista 2</li>
-</ul>
+<strong>Offset Direction: Height</strong>
+<p>Defines the Height offset of every other vertical row.</p>
 
-<h2>Sección 2</h2>
-<p>Más contenido aquí...</p>
+<strong>Offset Direction: Width</strong>
+<p>Defines the Width offset of every other horizontal row.</p>
 
-<!-- Ejemplo de código -->
-<pre><code># Tu código aquí
-print("Hello World")</code></pre>
+<strong>Offset (Even)</strong>
+<p>This setting can be used to adjust the offset of every Even other Row.</p>
 
-<!-- Ejemplo de alerta -->
-<strong>Nota:</strong> Información importante para el usuario.
+<strong>Offset (Odd)</strong>
+<p>This setting can be used to adjust the offset of every Odd other Row.</p>
 
-<!-- Ejemplo de imagen -->
-<img src="../assets/images/ejemplo.jpg" alt="Descripción de la imagen" style="max-width: 100%; border-radius: 8px;">
+<strong>Count Width</strong>
+<p>Defines the amount of Clones Width.</p>
+
+<strong>Count Height</strong>
+<p>Defines the amount of Clones Height.</p>
+
+<strong>Mode: Per Step</strong>
+<p>With this mode, you can determine whether the following parameters Position, Rotation and Scale should apply per clone step. In other words, this mode keeps the distance between clones; it is enabled by default.</p>
+
+<strong>Mode: End Point</strong>
+<p>With this mode, you can determine whether the following parameters Position, Rotation and Scale should apply for the end clone (the values between the start and end clone are then interpolated). In other words, it keeps the distance between the first and end clones, adding clones in the middle.</p>
+
+<strong>Size Width</strong>
+<p>Adjusts the Size Width.</p>
+
+<strong>Size Height</strong>
+<p>Adjusts the Size Height.</p>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/3_Initial-Guide-BCloners/bcloner_honeycomb_mode.gif" alt="HoneyComb Mode Animation" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">HoneyComb Mode demonstration with explained parameters</p>
+</div>
+
+<h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
+
+<h2>Advanced Parameters</h2>
+
+<strong>Offset Variation (Even)</strong>
+<p>Add Offset Variation in the Offset Animation on the Even Clones.</p>
+
+<strong>Offset Variation (Odd)</strong>
+<p>Add Offset Variation in the Offset Animation on the Odd Clones.</p>
+
+<strong>Perpendicular Variation</strong>
+<p>Use this setting to randomly vary the offset of each row in addition to the other honeycomb dimensions (in relation to the Offset Direction value).</p>
+
+<strong>Variation Seed</strong>
+<p>Adjusts the Variation Seed.</p>
+
+<strong>Offset Time (Even)</strong>
+<p>Add Offset Time in the Offset Animation on the Even Clones.</p>
+
+<strong>Offset Time (Odd)</strong>
+<p>Add Offset Time in the Offset Animation on the Odd Clones.</p>
+
+<strong>Offset Time Seed</strong>
+<p>Adjusts the Offset Time Seed.</p>
+
+<strong>Distance Points Threshold</strong>
+<p>By reducing this parameter, you can delete the closest clones to each other.</p>
+
+<strong>Use Object Form</strong>
+<p>Enables the option to use Custom Object Form. This parameter deletes any cloner outside of the volume of that custom object mesh.</p>
+
+<strong>Object Form</strong>
+<p>Drag any Mesh Object to customize the Grid Array Shape.</p>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/3_Initial-Guide-BCloners/bcloner_honeycomb_form.gif" alt="Object Form Effect Demonstration" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Effect of Object Form on HoneyComb</p>
+</div>
+
+<h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
+
+<p>The BCloners Grid Array, Linear, Radial and HoneyComb have the panel called <strong>Interface Gizmos</strong>. If you open this panel, you see two parameters: <strong>Use Size Gizmos</strong> and <strong>Use Count Gizmos</strong>. If you enable these parameters, you MUST have the BCloner Modifier selected to see correctly the Gizmos in the Viewport.</p>
+
+<strong>Use Gizmos</strong>
+<p>Enable to use the Gizmos.</p>
+
+<strong>Use Size Gizmos</strong>
+<p>Enables the Size Gizmos.</p>
+
+<strong>Use Count Gizmos</strong>
+<p>Enables the Count Gizmos.</p>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/3_Initial-Guide-BCloners/bcloner_gizmos.gif" alt="Gizmo Control Demonstration" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Controlling BCloner with Gizmos</p>
+</div>
+
+<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-transform.html -->
+<include src="pages/0_common/0_bcloner-transform.html"></include>

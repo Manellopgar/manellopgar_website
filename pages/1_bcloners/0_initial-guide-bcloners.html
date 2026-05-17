@@ -1,6 +1,5 @@
 <h1>Initial Guide for All BCloners</h1>
-
-<p>This guide explains how to add any BCloner, outlines the recommended Outliner hierarchy, and details how to use asset collections effectively with all BCloners.</p>
+<p>Here I explain how to add any BCloner, which hierarchy outliner is highly recommend to use and also how to use the collection of asset with any BCloner.</p>
 
 <div class="faq-item" style="margin-bottom: 1rem; border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden;">
   <div class="faq-header" style="padding: 1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
@@ -11,46 +10,55 @@
     <span style="font-size: 1.2rem; opacity: 0.7;">&#9660;</span>
   </div>
   <div class="faq-body" style="padding: 1rem; border-top: 1px solid var(--color-border);">
-    <p>Select any mesh object, go to the BCloners Addon panel, and click any BCloner button. The selected BCloner and the corresponding BCloner Transform modifier are added automatically.</p>
+    <p>Select any mesh object, go to the BCloners Addon panel and click any BCloner button. The selected BCloner and the BCloner Transform modifier is added automatically.</p>
   </div>
 </div>
 
 <h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
 
-<h2>The B4D Tools BCloner Modifiers Order</h2>
+<h2>The B4D Tools BCloner Modifiers order:</h2>
+<p>On the Modifier Tab, in almost cases the correct order is from Top to Bottom. Normally the Addon sets the modifiers in the correct order, but in some cases you need to change it. Here you can see a few examples to clarify how it works.</p>
 
-<p>In the Modifier Tab, the correct order is almost always from top to bottom. Normally, the Addon sets the modifiers in the correct sequence automatically. However, there are cases where you may need to manually adjust this order.</p>
-<p><em>Note: Visual examples illustrating the correct modifier stacking order and troubleshooting scenarios are currently being prepared and will be inserted here shortly.</em></p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/01_BCloner_Typical_Order.png" alt="Typical Order example" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Typical Order example.</p>
+</div>
+
+<p>Of course you can change manually any modifier (check the left side of the next image) but, You need to keep in mind that almost all tools ONLY work with instances. So the Realize To Instances tools normally will be as the last modifier if you use it alone or as previous modifier of Split To Instances if you use with that tool as well (check the left side of the next image). If you need more info please check the documentation of each tool in the main menu.</p>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/02_BCloner_Manual_Order.png" alt="Manual Change Order examples" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Manual Change Order examples.</p>
+</div>
 
 <h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
 
-<h2>Hierarchy Order in the Outliner</h2>
-
-<p>B4D Tools follows specific rules regarding hierarchy (sequence and order in the Outliner) to define exactly which objects should be executed. In some scenarios, the Outliner hierarchy is critical for correct operation.</p>
-<p>The following factors are important to consider:</p>
-
+<h2>Hierarchy order in the Outliner</h2>
+<p>B4D has a few rules about the hierarchy (sequence and order in the Outliner) that defines exactly which object should be executed. In some cases, the outliner hierarchy in B4D Tools can also be important.</p>
+<p>The following could be important factors:</p>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
   <li><strong>Default Hierarchy Structure:</strong> Ensure your scene follows the standard structure required by B4D Tools to prevent execution errors.</li>
   <li><strong>Asset Type: Collection Mode:</strong> Pay special attention to object grouping when using this specific mode.</li>
-  <li><strong>Separate Children:</strong> The addon must account for separated children geometry correctly; failure to do so can result in missing data or incorrect distributions.</li>
 </ul>
 
-<p><em>Note: Visual examples comparing "Correct Hierarchy" vs. "Incorrect Hierarchy" are required here to clarify these concepts.</em></p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/03_BCloner_Outliner_Order.png" alt="Visual Examples comparation Correct Hierarchy vs Incorrect Hierarchy" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Visual Examples comparison "Correct Hierarchy" vs. "Incorrect Hierarchy".</p>
+</div>
 
 <h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
 
 <h2>BCloner Collections</h2>
+<p>All BCloners have the parameter Collection and by default the addon generates the <strong>Drop Your Assets Here</strong> Collection and add it to that parameter. The quick and easy way is to add into that collection your custom assets.</p>
 
-<p>All BCloners include a <strong>Collection</strong> parameter. By default, the addon generates a collection named <em>"Drop Your Assets Here"</em> and automatically assigns it to this parameter.</p>
-<p>The quickest and easiest method is to add your custom assets directly into this generated collection.</p>
+<p><em>Note: But if you need you can change it for any other collection. Also that collection can have other Collections inside but remember B4D Tools and Geometry Nodes only reads the first level, the rest is considered a full object. This is important especially if You use the separate Assets option and the Reset Coordinates option.</em></p>
 
-<p><strong>Advanced Configuration:</strong></p>
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li>You can change the parameter to point to any other existing collection if needed.</li>
-  <li>This collection can contain sub-collections inside it.</li>
-  <li><strong>Important Limitation:</strong> B4D Tools and Geometry Nodes only read objects/collections at the first level of nesting. Anything deeper is treated as a single, full object.</li>
-</ul>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/04_BCloner_Collection_Correct.png" alt="Visual Examples of a correct Collection Outliner Hierarchy" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Visual Examples of a correct Collection Outliner Hierarchy.</p>
+</div>
 
-<p>This limitation is particularly important when using options like <strong>Separate Assets</strong> or <strong>Reset Coordinates</strong>.</p>
-
-<p><em>Note: A visual example demonstrating how Geometry Nodes and B4D Tools interpret collection hierarchy (showing the first-level read limit) should be inserted here.</em></p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/3_Initial-Guide-BCloners/05_BCloner_Collection_Wrong.png" alt="Visual Examples of a wrong Collection Outliner Hierarchy" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Visual Examples of a wrong Collection Outliner Hierarchy.</p>
+</div>
