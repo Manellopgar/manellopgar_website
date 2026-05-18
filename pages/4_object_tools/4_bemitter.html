@@ -1,27 +1,93 @@
-<!-- Título de la página -->
-<h1>Extension Preferences</h1>
-<hr>
+<h1>Object BEmitter</h1>
 
-<!-- Contenido principal -->
-<p>Aquí va el contenido específico de esta página. Puedes usar:</p>
+<p><strong>Empty Controller</strong></p>
+<p>Drag Your Custom Empty/Object as Rotation Particle Controller.</p>
 
-<h2>Sección 1</h2>
-<p>Texto explicativo, listas, imágenes, etc.</p>
-
-<ul>
-    <li>Elemento de lista 1</li>
-    <li>Elemento de lista 2</li>
+<p><strong>Asset Type</strong></p>
+<p>Choose the Asset Type:</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Object:</strong> (Value: 0)</li>
+  <li><strong>Collection:</strong> (Value: 0)</li>
 </ul>
 
-<h2>Sección 2</h2>
-<p>Más contenido aquí...</p>
+<p><strong>Object</strong></p>
+<p>Drag Your Custom Object as Particle.</p>
 
-<!-- Ejemplo de código -->
-<pre><code># Tu código aquí
-print("Hello World")</code></pre>
+<p><strong>Collection</strong></p>
+<p>Drag Your Collection Assets for BEmitter.</p>
 
-<!-- Ejemplo de alerta -->
-<strong>Nota:</strong> Información importante para el usuario.
+<p><strong>Pick Instance</strong></p>
+<p>If enabled, instead of adding the entire geometry from the Instance input on every point, choose an instance from the instance list of the geometry based on the Instance Index input in the Collection.</p>
 
-<!-- Ejemplo de imagen -->
-<img src="../assets/images/ejemplo.jpg" alt="Descripción de la imagen" style="max-width: 100%; border-radius: 8px;">
+<p><strong>ID Asset</strong></p>
+<p>Offset the index of each Asset.</p>
+
+<p><strong>Randomize Assets</strong></p>
+<p>Enable Randomize Assets.</p>
+
+<p><strong>Random Seed</strong></p>
+<p>Changes the Seed of the Randomized Assets.</p>
+
+<p><strong>Separate Children</strong></p>
+<p>Active this when you have more than 1 Asset.</p>
+
+<p><strong>Reset Children</strong></p>
+<p>Reset Position, Rotation and Scale to BEmitter Origin.</p>
+
+<h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
+
+<p><strong>Visibility/Density</strong></p>
+<p>Defines how many of the particles should be visible. At first glance, this appears to offer no more than the birthrate settings. However, it is not possible to animate some of the parameters in the particle system, such as the birthrate settings. If you want to vary the intensity of the particle stream over time, animate the Visibility setting.</p>
+
+<p><strong>Start Frame Emission</strong></p>
+<p>Use these values to define when (in frames) the particle emission should start.</p>
+
+<p><strong>End Frame Emission</strong></p>
+<p>Use these values to define when (in frames) the particle emission should end.</p>
+
+<p><strong>Seed</strong></p>
+<p>Seed is used to create the pattern of the particle stream. If you copy an emitter, you will notice that both emitters generate exactly the same pattern. If you want each stream to be unique, set the Seed of each emitter to a different value. For example, a seed value of 1 will create a completely different stream than a seed value of 0.</p>
+
+<p><strong>Lifetime</strong></p>
+<p>Gives the length of time a particle will be visible. For example, if flying sparks are set to be visible for 20 frames, the particles will disappear after this time. This value also controls the length of the animation Track in the Timeline.</p>
+
+<p><strong>Variation Lifetime</strong></p>
+<p>Adds a deviation factor to the Lifetime value; i.e., individual particles can live for a longer or shorter time, according to the size of the Variation value.</p>
+
+<p><strong>Speed</strong></p>
+<p>Indicates the speed of the individual particles, in units per second. The higher you set the value, the longer the particle stream will be displayed in the viewport.</p>
+
+<p><strong>Variation Speed</strong></p>
+<p>Introduces randomness to the speed. A value of 100% can make individual particles twice as fast, or twice as slow.</p>
+
+<p><strong>Rotation</strong></p>
+<p>Specifies the amount by which the particles will revolve around a spatial axis.</p>
+
+<p><strong>Variation Rotation</strong></p>
+<p>Adds a deviation factor to the Rotation value.</p>
+
+<p><strong>Start Scale</strong></p>
+<p>Defines the initial size of the particles relative to their starting size. A value of 0.5, for example, will shrink the particles to half their initial size.</p>
+
+<p><strong>End Scale</strong></p>
+<p>Defines the final size of the particles relative to their starting size. A value of 0.5, for example, will shrink the particles to half their initial size.</p>
+
+<p><strong>Variation Scale</strong></p>
+<p>Defines a variable factor for the scaling so that the particles are sometimes larger or smaller at the end of the animation.</p>
+
+<h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
+
+<p><strong>Show Objects</strong></p>
+<p>If this option is disabled, the particles will be displayed in the viewport as lines. The direction and length of each line indicates the direction of flight and current speed of the respective particle — the longer the line, the faster the particle.</p>
+
+<p><strong>Render Instances</strong></p>
+<p>Realize all Instances to Real Geometry.</p>
+
+<p><strong>Use Gizmos Size</strong></p>
+<p>Show the Viewport Gizmos Size Controls.</p>
+
+<p><strong>Size X</strong></p>
+<p>Give the size X of the emitter. You can also scale the emitter by selecting the Scale tool and dragging in the viewport Gizmos if they are enabled.</p>
+
+<p><strong>Size Y</strong></p>
+<p>Give the size Y of the emitter. You can also scale the emitter by selecting the Scale tool and dragging in the viewport Gizmos if they are enabled.</p>

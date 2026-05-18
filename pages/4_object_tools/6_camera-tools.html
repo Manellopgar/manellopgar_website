@@ -1,27 +1,46 @@
-<!-- Título de la página -->
-<h1>Extension Preferences</h1>
-<hr>
+<h1>Object Camera Tool</h1>
 
-<!-- Contenido principal -->
-<p>Aquí va el contenido específico de esta página. Puedes usar:</p>
+<p>The Object Camera Tool provides powerful optimization features for managing geometry and instances based on camera visibility and distance.</p>
 
-<h2>Sección 1</h2>
-<p>Texto explicativo, listas, imágenes, etc.</p>
+<h3>Camera Tool Mode</h3>
 
-<ul>
-    <li>Elemento de lista 1</li>
-    <li>Elemento de lista 2</li>
+<p>Choose the Camera Tool:</p>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Frustum_Culling:</strong> Deletes the Geometry/Instances Outside the Camera View.</li>
+  <li><strong>LOD:</strong> Level Of Detail System based on the Active Camera. Only works with Instances.</li>
 </ul>
 
-<h2>Sección 2</h2>
-<p>Más contenido aquí...</p>
+<h3>Camera Configuration</h3>
 
-<!-- Ejemplo de código -->
-<pre><code># Tu código aquí
-print("Hello World")</code></pre>
+<p><strong>Custom Camera:</strong> Activates a Custom Camera to use it.</p>
 
-<!-- Ejemplo de alerta -->
-<strong>Nota:</strong> Información importante para el usuario.
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Disable:</strong> Uses the Active Camera of Scene.</li>
+  <li><strong>Enable:</strong> Uses a Custom Camera.</li>
+</ul>
 
-<!-- Ejemplo de imagen -->
-<img src="../assets/images/ejemplo.jpg" alt="Descripción de la imagen" style="max-width: 100%; border-radius: 8px;">
+<p><strong>Camera:</strong> Drag Your Custom Camera Object.</p>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Disable:</strong> Uses the Active Camera of Scene.</li>
+  <li><strong>Enable:</strong> Uses a Custom Camera.</li>
+</ul>
+
+<h3>Target Selection & Margins</h3>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Only Instances:</strong> Affects Only Instances.</li>
+  <li><strong>Only Geometry:</strong> Affects Only Geometry.</li>
+  <li><strong>Adjust Margin:</strong> Adjusts the Margin for culling calculations.</li>
+</ul>
+
+<h3>LOD (Level of Detail) Settings</h3>
+
+<p>Configure your LOD assets when using the LOD tool mode:</p>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>LOD Assets:</strong> Drag Your Custom Collection with LOD Assets prepared.</li>
+  <li><strong>LOD Distance:</strong> Adjust the LOD Distance between LOD Assets.</li>
+  <li><strong>Use Only LOD Assets:</strong> Enables to Use ONLY the Assets from the Collection LOD.</li>
+</ul>

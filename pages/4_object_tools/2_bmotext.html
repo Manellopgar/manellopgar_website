@@ -1,27 +1,112 @@
-<!-- Título de la página -->
-<h1>Extension Preferences</h1>
-<hr>
+<h1>Object BMoText</h1>
 
-<!-- Contenido principal -->
-<p>Aquí va el contenido específico de esta página. Puedes usar:</p>
+<p><strong>Asset Type</strong></p>
+<p>Choose Asset Type</p>
 
-<h2>Sección 1</h2>
-<p>Texto explicativo, listas, imágenes, etc.</p>
-
-<ul>
-    <li>Elemento de lista 1</li>
-    <li>Elemento de lista 2</li>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Object:</strong> Uses the Trace Link Object.</li>
+  <li><strong>Collection:</strong> Uses the Trace Collection.</li>
 </ul>
 
-<h2>Sección 2</h2>
-<p>Más contenido aquí...</p>
+<p><strong>Trace Link</strong></p>
+<p>Drag the Object whose points (polygonal object) are to be taken into account by the Tracer.</p>
 
-<!-- Ejemplo de código -->
-<pre><code># Tu código aquí
-print("Hello World")</code></pre>
+<p><strong>Trace Collection</strong></p>
+<p>Drag the Collection whose Objects are to be taken into account by the Tracer.</p>
 
-<!-- Ejemplo de alerta -->
-<strong>Nota:</strong> Información importante para el usuario.
+<p><strong>Tracing Mode</strong></p>
+<p>Choose the Tracing Mode</p>
 
-<!-- Ejemplo de imagen -->
-<img src="../assets/images/ejemplo.jpg" alt="Descripción de la imagen" style="max-width: 100%; border-radius: 8px;">
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Trace Paths:</strong> The vertex path of objects will be converted to splines.</li>
+  <li><strong>Connect All Objects:</strong> The objects will be connected with a segment of a common spline.</li>
+  <li><strong>Connect Elements:</strong> Objects from different elements drawn by the same tracer will be connected with a common spline but with different segments.</li>
+  <li><strong>Connect All Points:</strong> All Points will be connected by same tracer with a common spline.</li>
+</ul>
+
+<p><strong>Trace Active</strong></p>
+<p>If you want to switch off the Tracer temporarily, you can do so with this option. This creates gaps in the splines and thus spline segments.</p>
+
+<p><strong>Trace</strong></p>
+<p>Use this option to decide whether all objects should be recorded</p>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Origin:</strong> From the Object Center Point.</li>
+  <li><strong>Vertices:</strong> From the Object Vertices.</li>
+</ul>
+
+<p><strong>Use Limit Age From End</strong></p>
+<p>Enables the Limit Age from End.</p>
+
+<p><strong>Limit Age From End</strong></p>
+<p>Splines are generated from the end of the animation for as long as you set frames with this parameter.</p>
+
+<p><strong>Use Limit Age From Start</strong></p>
+<p>Enables the Limit Age from Start.</p>
+
+<p><strong>Limit Age From Start</strong></p>
+<p>Splines are generated from the start of the animation for as long as you set frames with this parameter.</p>
+
+<p><strong>Spline Settings</strong></p>
+<p>Spline Settings Menu</p>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Disable:</strong> (Value: 0)</li>
+  <li><strong>Enable:</strong> (Value: 0)</li>
+</ul>
+
+<p><strong>Spline Type</strong></p>
+<p>Choose the Spline Type</p>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Poly:</strong> This simplest of all spline types connects the support points that define the polygon using direct connecting lines. You can use these splines to create angular objects or to simulate choppy movements during animation.</li>
+  <li><strong>Bezier:</strong> This type of spline creates a smooth curve between the support points, which can be controlled very precisely. The interpolated curve always passes exactly through the interpolation points.</li>
+  <li><strong>NURBS:</strong> This type of spline creates a smooth curve between the points, spline gets auto handles.</li>
+  <li><strong>Catmull Rom:</strong> This type of spline creates a smooth curve between the points, spline gets auto handles.</li>
+</ul>
+
+<p><strong>Close Spline</strong></p>
+<p>Each spline can be closed or open. If a spline is closed, the start and end points are connected.</p>
+
+<p><strong>Reverse Spline</strong></p>
+<p>If you want to reverse the point order of the internal spline, activate this option.</p>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>None:</strong> No Spline Resampling.</li>
+  <li><strong>Count:</strong> Sample the specified number of points along each spline.</li>
+  <li><strong>Evaluated:</strong> Calculate the number of samples by splitting each spline into segments with the specified length. The length will be rounded down so that a whole number of samples will fit in each input spline.</li>
+  <li><strong>Length:</strong> Evaluate the spline's points based on the resolution attribute for NURBS and Bézier splines. Changes nothing for poly splines.</li>
+</ul>
+
+<p><strong>Resample Mode</strong></p>
+<p>Choose the Resample Spline Mode</p>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>None:</strong> No Spline Resampling.</li>
+  <li><strong>Count:</strong> Sample the specified number of points along each spline.</li>
+  <li><strong>Evaluated:</strong> Calculate the number of samples by splitting each spline into segments with the specified length. The length will be rounded down so that a whole number of samples will fit in each input spline.</li>
+  <li><strong>Length:</strong> Evaluate the spline's points based on the resolution attribute for NURBS and Bézier splines. Changes nothing for poly splines.</li>
+</ul>
+
+<p><strong>Resample Count</strong></p>
+<p>The number of control points on the new splines.</p>
+
+<p><strong>Resample Length</strong></p>
+<p>The approximate length between the control points of the new splines.</p>
+
+<p><strong>Advanced Settings</strong></p>
+<p>Enable the Advanced Settings</p>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Disable:</strong> (Value: 0)</li>
+  <li><strong>Enable:</strong> (Value: 0)</li>
+</ul>
+
+<p><strong>Split To Instances</strong></p>
+<p>Enables Split To Intances Option that Splits each Mesh Island as Instance.</p>
+
+<p><strong>Split To Instances Selection</strong></p>
+<p>Use Custom Selection for Split to Instances. You can use Input Attribute Toggle</p>
+
+<p><strong>Distance Points Threshold</strong></p>
+<p>The distance to use for searching for nearby points.</p>

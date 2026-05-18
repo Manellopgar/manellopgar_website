@@ -1,27 +1,50 @@
-<!-- Título de la página -->
-<h1>Extension Preferences</h1>
-<hr>
+<h1>Set Multishader MatSlots</h1>
 
-<!-- Contenido principal -->
-<p>Aquí va el contenido específico de esta página. Puedes usar:</p>
+<p><em>Note: This section requires insertion from <code>0a_Material_Tools_Params.txt</code>.</em></p>
 
-<h2>Sección 1</h2>
-<p>Texto explicativo, listas, imágenes, etc.</p>
+<h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
 
-<ul>
-    <li>Elemento de lista 1</li>
-    <li>Elemento de lista 2</li>
+<p><strong>Only Material Slots</strong></p>
+<p>Configure the Material Slots.</p>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Disable:</strong> The Multishader assigns each Material Slot in the current order to each Instance.</li>
+  <li><strong>Enable:</strong> The Multishader assigns each Material Slot in the current order to each Instance. But you can control how is assigned, changing the Amount, the First Material and the Offset.</li>
 </ul>
 
-<h2>Sección 2</h2>
-<p>Más contenido aquí...</p>
+<p><strong>First Mat Slot</strong></p>
+<p>Set the First Material Slot Index that will be the First Material used.</p>
 
-<!-- Ejemplo de código -->
-<pre><code># Tu código aquí
-print("Hello World")</code></pre>
+<p><strong>Nº of Mat Slots</strong></p>
+<p>Set the Total Amount of Material Slots that you have in the current Object.</p>
 
-<!-- Ejemplo de alerta -->
-<strong>Nota:</strong> Información importante para el usuario.
+<p><strong>Offset Mat Slots</strong></p>
+<p>Adds Offset to the current Material Slot Index.</p>
 
-<!-- Ejemplo de imagen -->
-<img src="../assets/images/ejemplo.jpg" alt="Descripción de la imagen" style="max-width: 100%; border-radius: 8px;">
+<p><strong>Randomize Materials</strong></p>
+<p>Randomize the Material Slot Indexes.</p>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Disable:</strong> The Randomize is disabled.</li>
+  <li><strong>Enable:</strong> The Randomize is enabled.</li>
+</ul>
+
+<p><strong>Sort Randomize</strong></p>
+<p>ReRandomize the half of the Instances. Helpful to avoid repetition.</p>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Disable:</strong> The Randomize is disabled.</li>
+  <li><strong>Enable:</strong> The Randomize is enabled.</li>
+</ul>
+
+<p><strong>Seed</strong></p>
+<p>Set Seed of the Randomize Materials.</p>
+
+<p><strong>Keep Mesh (Not Instances)</strong></p>
+<p>Keep the No Instance Geometry.</p>
+
+<p><strong>Split Selection</strong></p>
+<p>Use Custom Selection for Split to Instances. You can use Input Attribute Toggle.</p>
+
+<p><strong>Use Island Index</strong></p>
+<p>Use Island Index for Split to Instances.</p>
