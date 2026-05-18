@@ -1,27 +1,108 @@
-<!-- Título de la página -->
-<h1>Extension Preferences</h1>
-<hr>
+<h1>FAQ</h1>
 
-<!-- Contenido principal -->
-<p>Aquí va el contenido específico de esta página. Puedes usar:</p>
+<div class="faq-item" style="margin-bottom: 1rem; border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden;">
+  <div class="faq-header" style="padding: 1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <span class="faq-icon" style="width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; border: 1px solid var(--color-border);">?</span>
+      <strong>Which version of Blender is supported?</strong>
+    </div>
+    <span style="font-size: 1.2rem; opacity: 0.7;">&#9660;</span>
+  </div>
+  <div class="faq-body" style="padding: 1rem; border-top: 1px solid var(--color-border);">
+    <p>5.0.1 (Recommended) and above.</p>
+  </div>
+</div>
 
-<h2>Sección 1</h2>
-<p>Texto explicativo, listas, imágenes, etc.</p>
+<div class="faq-item" style="margin-bottom: 1rem; border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden;">
+  <div class="faq-header" style="padding: 1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <span class="faq-icon" style="width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; border: 1px solid var(--color-border);">?</span>
+      <strong>B4D Tools work with Instances?</strong>
+    </div>
+    <span style="font-size: 1.2rem; opacity: 0.7;">&#9660;</span>
+  </div>
+  <div class="faq-body" style="padding: 1rem; border-top: 1px solid var(--color-border);">
+    <p>Yes, it works the same as an object or asset.</p>
+    <p>An example video: <a href="https://youtu.be/EmJ5V5tKWNE" style="color: #e87d0d;">Watch here</a></p>
+  </div>
+</div>
 
-<ul>
-    <li>Elemento de lista 1</li>
-    <li>Elemento de lista 2</li>
-</ul>
+<div class="faq-item" style="margin-bottom: 1rem; border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden;">
+  <div class="faq-header" style="padding: 1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <span class="faq-icon" style="width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; border: 1px solid var(--color-border);">?</span>
+      <strong>Is it possible to bake the mesh made with B4D Tools to a static mesh?</strong>
+    </div>
+    <span style="font-size: 1.2rem; opacity: 0.7;">&#9660;</span>
+  </div>
+  <div class="faq-body" style="padding: 1rem; border-top: 1px solid var(--color-border);">
+    <p>Yes, it is possible. You have to do the following:</p>
+    <ul style="list-style-type: disc; padding-left: 1.5rem; margin: 0.5rem 0;">
+      <li>Activate the <strong>Render Instances</strong> option in BCloner or Last Effector.</li>
+      <li>Select the Object and export the static mesh in any format you like (e.g., .obj).</li>
+      <li>Import the .obj file into Blender or your desired software.</li>
+    </ul>
+  </div>
+</div>
 
-<h2>Sección 2</h2>
-<p>Más contenido aquí...</p>
+<div class="faq-item" style="margin-bottom: 1rem; border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden;">
+  <div class="faq-header" style="padding: 1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <span class="faq-icon" style="width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; border: 1px solid var(--color-border);">?</span>
+      <strong>Is it possible to bake the animation made with B4D Tools?</strong>
+    </div>
+    <span style="font-size: 1.2rem; opacity: 0.7;">&#9660;</span>
+  </div>
+  <div class="faq-body" style="padding: 1rem; border-top: 1px solid var(--color-border);">
+    <p>Yes, it is possible with animations as well. Follow these steps:</p>
+    <ul style="list-style-type: disc; padding-left: 1.5rem; margin: 0.5rem 0;">
+      <li>Activate the <strong>Render Instances</strong> option.</li>
+      <li>Export animation as an Alembic (.abc) file with the <strong>Face Sets</strong> option activated for material support.</li>
+      <li>Import the .abc file into Blender.</li>
+      <li>Bake the animation: Go to <em>Object > Animation > Bake Action</em>, then select <strong>Visual Keying to Object</strong>.</li>
+      <li>Export as an .fbx file.</li>
+    </ul>
+  </div>
+</div>
 
-<!-- Ejemplo de código -->
-<pre><code># Tu código aquí
-print("Hello World")</code></pre>
+<div class="faq-item" style="margin-bottom: 1rem; border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden;">
+  <div class="faq-header" style="padding: 1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <span class="faq-icon" style="width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; border: 1px solid var(--color-border);">?</span>
+      <strong>Is it possible to combine B4D Tools with MTKA Deformers Toolkit?</strong>
+    </div>
+    <span style="font-size: 1.2rem; opacity: 0.7;">&#9660;</span>
+  </div>
+  <div class="faq-body" style="padding: 1rem; border-top: 1px solid var(--color-border);">
+    <p>Yes, it is possible. You should activate the <strong>Render Instances</strong> option before using any MTKA Deformers, or add a Geometry Nodes node where you apply Instances.</p>
+    <p>This step is important to convert all instances into real geometry so that MTKA Deformers can work correctly.</p>
+    <p>A small sample video: <a href="https://youtu.be/H0uCcc0apmk" style="color: #e87d0d;">Watch here</a></p>
+  </div>
+</div>
 
-<!-- Ejemplo de alerta -->
-<strong>Nota:</strong> Información importante para el usuario.
+<div class="faq-item" style="margin-bottom: 1rem; border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden;">
+  <div class="faq-header" style="padding: 1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <span class="faq-icon" style="width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; border: 1px solid var(--color-border);">?</span>
+      <strong>Can you use different BCloners together?</strong>
+    </div>
+    <span style="font-size: 1.2rem; opacity: 0.7;">&#9660;</span>
+  </div>
+  <div class="faq-body" style="padding: 1rem; border-top: 1px solid var(--color-border);">
+    <p>Yes, it is also possible to combine different BCloners.</p>
+    <p>An example video: <a href="https://youtu.be/WisEk9wl6eQ" style="color: #e87d0d;">Watch here</a></p>
+  </div>
+</div>
 
-<!-- Ejemplo de imagen -->
-<img src="../assets/images/ejemplo.jpg" alt="Descripción de la imagen" style="max-width: 100%; border-radius: 8px;">
+<div class="faq-item" style="margin-bottom: 1rem; border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden;">
+  <div class="faq-header" style="padding: 1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <span class="faq-icon" style="width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; border: 1px solid var(--color-border);">?</span>
+      <strong>Is it an addon?</strong>
+    </div>
+    <span style="font-size: 1.2rem; opacity: 0.7;">&#9660;</span>
+  </div>
+  <div class="faq-body" style="padding: 1rem; border-top: 1px solid var(--color-border);">
+    <p>Yes! It is an extension (addon) and Asset Browser File Ready.</p>
+  </div>
+</div>
