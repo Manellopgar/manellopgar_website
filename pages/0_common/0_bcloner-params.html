@@ -1,98 +1,110 @@
 <h2>Distribution Type</h2>
-<p>This parameter allows us to choose the <strong>Distribution Type</strong> with two options: <strong>Basic</strong> and <strong>Advanced</strong>. By default, Basic is enabled.</p>
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Distribution Type: Basic</strong><br>The classic option of BCloners. You will see all the classic options to control and generate clones.</li>
-  <li><strong>Distribution Type: Advanced</strong><br>Enables the Advanced Distribution parameters. The BCloner uses an extra object that contains the Advanced Matrix distribution modifier. In this option, you can control and change it. For more info, please check <a href="#advanced-distributions" style="color: var(--color-primary);">Advanced Distributions</a>.</li>
-  <li><strong>Clones from Distribution: Enable</strong><br>Use the Clones assigned in the Distribution Object.</li>
-</ul>
+<p>This first parameter allows us to choose the Distribution Type with 2 options: <strong>Basic</strong> and <strong>Advanced</strong>. By default, the Basic mode is enabled. For more information about Advanced Distributions, please check the <a href="#advanced-distributions" style="color: var(--color-primary);">Advanced Distributions in Main Menu</a>.</p>
+
+<strong>Distribution Type:</strong> Basic
+<p>This option is the classic option of BCloners; you will see all the classic options to control and generate the clones.</p>
+
+<strong>Distribution Type:</strong> Advanced
+<p>This option enables the Advanced Distribution parameters. Here, the BCloner uses an extra object that contains the Advanced Matrix distribution modifier. In this option, you can control and change it.</p>
+
+<strong>Clones from Distribution:</strong> Enable
+<p>Uses the Clones assigned in the Distribution Object.</p>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/4_Common_Params_BCloners/00_BCloners_Basic-Adv.png" alt="BCloner - Asset Type" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BCloner - Asset Type</p>
+</div>
+
+<h1>Asset Type</h1>
+<p>This menu allows us to choose the input Asset Type. You can choose between <strong>Self</strong>, <strong>Object</strong>, and <strong>Collection</strong>. Except for BCloner Object, which only has <strong>Object</strong> and <strong>Collection</strong>.</p>
+
+<strong>Asset Type:</strong> Self
+<p>Uses the Self Object as an object for the clone.</p>
+
+<strong>Asset Type:</strong> Object
+<p>Uses the added Custom Object to Object parameter as a clone.</p>
+
+<p></p><strong>Object:</strong> Drag Your Custom Object that is used as Clone.</p>
+
+<strong>Asset Type:</strong> Collection
+<p>Uses the Objects of the added Collection to Collection parameter as clones. When this mode is selected, you will have more parameters to control the generated clones.</p>
+
+<p><strong>Collection:</strong> Drag Your Custom Collection with the Assets that are used as Clones.</p>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/4_Common_Params_BCloners/01_BCloners_Asset_Type.png" alt="BCloner - Asset Type" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BCloner - Asset Type</p>
+</div>
 
 <h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
 
-<h2>Asset Type</h2>
-<p>This menu allows us to choose the input <strong>Asset Type</strong>. You can choose between <strong>Self</strong>, <strong>Object</strong>, and <strong>Collection</strong>. Note that the BCloner Object only supports <strong>Object</strong> and <strong>Collection</strong>.</p>
-
-<h3>Asset Type: Self</h3>
-<p><strong>Uses the Self Object as an object for the clone.</strong></p>
-
-<h3>Asset Type: Object</h3>
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Add Custom Object:</strong> Drag your custom object to use it as a clone (Object parameter).</li>
-</ul>
-
-<h3>Asset Type: Collection</h3>
-<p>Uses the objects in the added collection as clones. When this mode is selected, more parameters appear for controlling the generated clones.</p>
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Add Custom Collection:</strong> Drag your custom collection with assets to use as clones (Collection parameter).</li>
-</ul>
-
-<h3>Clones Modes</h3>
+<h2>Clones Mode</h2>
 <p>Select how the assets from the collection are distributed:</p>
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Iterate:</strong> All objects directly subordinate to the cloner object will be cloned one after another, as they are arranged in the object manager (top to bottom, front again). You can also change the ID Asset parameter.</li>
-</ul>
 
-<p><em>Note: The following image demonstrates the 4 Clones Modes styles similar to C4D documentation:</em></p>
+<strong>Clone Mode:</strong> Iterate
+<p>All objects directly subordinate to the cloner object will be cloned one after the other, as they are arranged in the object manager, from top to bottom and then from the front again. You also can change the ID Asset parameter.</p>
+
+<strong>ID Asset</strong>
+<p>Offset the index of each Asset.</p>
+
+<strong>Clone Mode:</strong> Random
+<p>All objects directly subordinate to the cloner object will be used in a random distribution to generate the clones. A Seed value parameter will be displayed in each case, which can be used to vary the random distribution. You also can change the Random Seed parameter.</p>
+
+<strong>Random Seed</strong>
+<p>Randomize the Seed of Clones Mode Random.</p>
+
+<strong>Clone Mode:</strong> Blend
+<p>You can blend between two objects with different shapes. This blend mode ensures proper interpolation between two objects with the same amount of vertices; this only works between the first and the last object of the collection. You must add any Effector with Other Parameters added after to work properly. More details in the <em>Other Parameters</em> of Effectors.</p>
+
+<strong>Clone Mode:</strong> Sort
+<p>The Sort mode will only have an effect when using Effectors (for those that support this, the Modify Clone parameter in the Parameters tab must be greater than 0). The corresponding Effector can then vary the position, size, angle, etc. of the clones. More details in the <em>Other Parameters</em> of Effectors.</p>
+
 <div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/gifs/clone_modes_example.gif" alt="Clones Modes: Iterate, Random, Blend, Sort" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary);">Clones Modes Visualization</p>
+  <img src="assets/gifs/1_Common_Params_BCloners/BCloner_Modes-lite.gif" alt="BCloner - Separate Assets" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BCloner - Clones Mode</p>
 </div>
 
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>ID Asset:</strong> Offset the index of each asset.</li>
-</ul>
+<strong>Separate Assets</strong>
+<p>Allows the use of each child of the collection as a separate Clone. Only works if you have more than 1 Asset in the Custom Collection (Drop Your Assets Here).</p>
 
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Random:</strong> All objects directly subordinate to the cloner object will be used in a random distribution to generate clones. A Seed value parameter will be displayed, which can vary the random distribution.</li>
-</ul>
+<strong>Reset Coordinates</strong>
+<p>Reset Position, Rotation and Scale to BCloner Origin.</p>
 
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Random Seed:</strong> Randomize the seed of Clones Mode Random.</li>
-</ul>
-
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Blend:</strong> You can blend between two objects with different shapes. This mode ensures proper interpolation between two objects with the same amount of vertices. It only works between the first and last object of the Drop Your Assets Collection.</li>
-</ul>
-
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Sort:</strong> The Sort mode has an effect when using Effectors (for those that support this, the Modify Clone parameter in the Parameters tab must be greater than 0). The corresponding Effector can then vary the position, size, angle, etc. of the clones.</li>
-</ul>
-
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Separate Assets:</strong> Allows the use of each child of the collection as a separate clone. Only works if you have more than 1 asset in the Custom Collection.</li>
-</ul>
-
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Reset Coordinates:</strong> Reset Position, Rotation, and Scale to BCloner Origin.</li>
-</ul>
-
-<p><em>Note: The following image shows the correct and incorrect hierarchy for Asset Separation:</em></p>
 <div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/images/asset_hierarchy_example.png" alt="Asset Hierarchy Examples: Correct vs Incorrect" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary);">Asset Hierarchy Examples</p>
+  <img src="assets/gifs/1_Common_Params_BCloners/BCloner_Separate-lite.gif" alt="BCloner - Separate Assets" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BCloner - Separate Assets</p>
 </div>
 
 <h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
 
 <h2>Instance Mode</h2>
 <p>This menu allows us to select the Viewport Instance Mode to improve performance.</p>
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Instance:</strong> The clones are fully-fledged duplicates of the objects to be duplicated. They consume the same amount of memory as if each clone existed as a separate object.</li>
-  <li><strong>Render Instances:</strong> Realize all instances to real geometry (for rendering only).</li>
-  <li><strong>Multi-Instances:</strong> Particularly suitable for vegetation (e.g., thousands of trees or grass). This mode enables the Viewport Mode options below.</li>
-</ul>
 
-<h3>Viewport Modes</h3>
-<p>Select how instances are displayed in the viewport when using Multi-Instance mode:</p>
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Off:</strong> No instances will be displayed.</li>
-  <li><strong>Points:</strong> The instance positions will be displayed with small dots.</li>
-  <li><strong>Matrix:</strong> The instance positions will be displayed with small squares (as usual for the matrix object).</li>
-  <li><strong>Bounding Box:</strong> The instances will be displayed with their bounding box, allowing approximate clone sizes to be estimated.</li>
-  <li><strong>Object:</strong> The instances will be displayed in full.</li>
-</ul>
+<strong>Instance Mode:</strong> Instance
+<p>The clones are fully-fledged duplicates of the objects to be duplicated. They consume the same amount of memory as if each clone existed as a separate object.</p>
 
-<p><em>Note: The following image demonstrates the various Viewport Modes styles similar to C4D documentation:</em></p>
+<strong>Instance Mode:</strong> Render Instances
+<p>Realize all Instances to Real Geometry.</p>
+
+<strong>Instance Mode:</strong> Multi-Instances
+<p>This mode is particularly suitable for all types of vegetation. When it comes to cloning tens of thousands of trees or tufts of grass, for example, this mode is a must. This mode enables the Viewport Mode.</p>
+
+<strong>Viewport Mode:</strong> Off
+<p>No instances will be displayed.</p>
+
+<strong>Viewport Mode:</strong> Points
+<p>The instance positions will be displayed with small dots.</p>
+
+<strong>Viewport Mode:</strong> Matrix
+<p>The instance positions will be displayed with small squares (as usual for the matrix object).</p>
+
+<strong>Viewport Mode:</strong> Bounding Box
+<p>The instances will be displayed with their bounding box. This allows the approximate clone sizes to be estimated.</p>
+
+<strong>Viewport Mode:</strong> Object
+<p>The instances will be displayed in full.</p>
+
 <div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/images/viewport_modes_example.png" alt="Viewport Modes Visualization" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary);">Viewport Modes Visualization</p>
+  <img src="assets/images/4_Common_Params_BCloners/02_BCloners_Modes.png" alt="BCloner - Viewport Modes" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BCloner - Viewport Modes</p>
 </div>
