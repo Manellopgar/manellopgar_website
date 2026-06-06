@@ -3,95 +3,121 @@
 <p>This distribution can be loaded directly using the Advanced Distribution button in the BCloners Extension Panel or place it manually if you change the Distribution Menu to Advanced and set the Distribution Object to the parameter Distribution Object. Copies are placed in a regular grid, similar to the standard Honeycomb arrangement of the BCloner object. However, this Modifier Distribution offers even more options for selecting the desired distance between the clones and additional scaling and coloring options.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/images/3_Initial-Guide-BCloners/Smart_Hex_Distribution.jpg" alt="Honeycomb distribution layout" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Smart Hex Distribution layout example</p>
+  <img src="assets/images/6_Advanced_Distribution/12_Distri_SmartHex_Pres.png" alt="Smart Hex Distribution Preview" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Smart Hex Distribution</p>
 </div>
 
-<h3>Distribution Logic</h3>
-<p><strong>[PARAM] Clones: Iterate</strong></p>
-<p>The distribution automatically runs through all objects in sequence from top to bottom, as they were grouped under the Cloner object. After placing the last object, this sequence starts again with the topmost object under the loner object.</p>
+<h3>Distribution Modes</h3>
 
-<p><strong>[PARAM] Clones: Random</strong></p>
+<p><strong>Clones: Iterate</strong></p>
+<p>The distribution automatically runs through all objects in sequence from top to bottom, as they were grouped under the Cloner object. After placing the last object, this sequence starts again with the topmost object under the cloner object.</p>
+
+<p><strong>Clones: Random</strong></p>
 <p>The object currently to be cloned is selected at random from the objects that have been grouped to the clone object.</p>
 
-<h3>Geometry & Orientation</h3>
-<p><strong>[PARAM] Orientation</strong></p>
+<h3>Geometry & Layout</h3>
+
+<p><strong>Orientation</strong></p>
 <p>The calculation is based on a virtual rectangular area on which the clones are placed. This direction indicates the orientation of the perpendicular on this rectangular surface.</p>
 
-<p><strong>[PARAM] Count Width</strong></p>
+<p><strong>Count Width</strong></p>
 <p>The clones are created within a rectangular area. Here you can specify how many copies should be created horizontally (Count Width).</p>
 
-<p><strong>[PARAM] Count Height</strong></p>
+<p><strong>Count Height</strong></p>
 <p>The clones are created within a rectangular area. Here you can specify how many copies should be created vertically (Count Height).</p>
 
 <h3>Distribution Modes</h3>
-<p><strong>[PARAM] Mode: Per Step</strong></p>
-<p>The horizontal and vertical distances between the clones can be specified using the following settings Size Width and Size Height.</p>
 
-<p><strong>[PARAM] Mode: End Point</strong></p>
-<p>In this mode, the distances between the clones change automatically when the Size Width or Size Height is changed.</p>
+<ul style="list-style: none; padding-left: 1.5rem; margin: 0 0 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong><em>Mode: Per Step</em></strong>
+    <span>The horizontal and vertical distances between the clones can be specified using the following settings Size Width and Size Height.</span>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong><em>Mode: End Point</em></strong>
+    <span>In this mode, the distances between the clones change automatically when the Size Width or Size Height is changed.</span>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong><em>Mode: Circle</em></strong>
+    <span>The clones are treated as circles with a fixed radius. This radius can be freely selected with the following Radius parameter. The distances between the clones are automatically calculated so that there is no overlap between these circle radii. Additional distances between the clones can be configured via the Gap value.</span>
+  </li>
+  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
+    <span style="color: var(--color-text-secondary);">•</span>
+    <strong><em>Mode: Hex</em></strong>
+    <span>This assumes that the clones are hexagonal, e.g., formed by corresponding n-Side splines or hexagonal Cylinder objects. In this case, the Radius value used on these objects can also be used directly here for the subsequent Radius value in order to obtain perfectly fitting clone placements. The separate Gap value for adjusting the clone distances is also available here.</span>
+  </li>
+</ul>
 
-<p><strong>[PARAM] Mode: Circle</strong></p>
-<p>The clones are treated as circles with a fixed radius. This radius can be freely selected with the following Radius parameter. The distances between the clones are automatically calculated so that there is no overlap between these circle radii. Additional distances between the clones can be configured via the Gap value.</p>
-
-<p><strong>[PARAM] Mode: Hex</strong></p>
-<p>This assumes that the clones are hexagonal, e.g., formed by corresponding n-Side splines or hexagonal Cylinder objects. In this case, the Radius value used on these objects can also be used directly here for the subsequent Radius value in order to obtain perfectly fitting clone placements. The separate Gap value for adjusting the clone distances is also available here.</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/8_Advanced_Distribution/06_Advand-Distri_SmartHModes-lite.gif" alt="Smart Hex Distribution Modes Animation" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Smart Hex Distribution - Modes</p>
+</div>
 
 <h3>Sizing Parameters</h3>
-<p><strong>[PARAM] Size Width</strong></p>
+
+<p><strong>Size Width</strong></p>
 <p>Adjust the Size Width Between Clones.</p>
 
-<p><strong>[PARAM] Size Height</strong></p>
+<p><strong>Size Height</strong></p>
 <p>Adjust the Size Height Between Clones.</p>
 
-<p><strong>[PARAM] Radius</strong></p>
-<p>For the Circle and Hex Modes, the size of the clones is described by this Radius. With the Circle setting it is actually a circle radius, in Hex mode the radius of the corner points describing a hexagon is described. If you select the value here identically to the Radius specification on a Cylinder primitive object or n-Side spline, for example. The distances between the clones can also be extended by the Gap value.</p>
+<p><strong>Radius</strong></p>
+<p>For the Circle and Hex Modes, the size of the clones is described by this Radius. With the Circle setting it is actually a circle radius; in Hex mode the radius of the corner points describing a hexagon is described. If you select the value here identically to the Radius specification on a Cylinder primitive object or n-Side spline, for example, the distances between the clones can also be extended by the Gap value.</p>
 
-<p><strong>[PARAM] Gap</strong></p>
+<p><strong>Gap</strong></p>
 <p>This can be used to create an additional gap between the clones, which surrounds them like a joint.</p>
 
 <h3>Scaling Options</h3>
-<p><strong>[PARAM] Match Scale To: None</strong></p>
+
+<p><strong>Match Scale To: None</strong></p>
 <p>The size of the cloned objects remains unchanged.</p>
 
-<p><strong>[PARAM] Match Scale To: Width/Height</strong></p>
+<p><strong>Match Scale To: Width/Height</strong></p>
 <p>The X size of the cloned objects adapts to the corresponding width/height of the subdivision area on the virtual rectangle.</p>
 
-<p><strong>[PARAM] Match Scale To: Constrained (by default)</strong></p>
+<p><strong>Match Scale To: Constrained (by default)</strong></p>
 <p>The scaling is always based on the shortest edge of the respective subdivision area within the virtual rectangle and scales the clones proportionally to this.</p>
 
-<p><strong>[PARAM] Match Scale To: Scale To Fit</strong></p>
+<p><strong>Match Scale To: Scale To Fit</strong></p>
 <p>The X and Y sizes of the clones are scaled identically to the available space in the corresponding area of the virtual rectangle. This inevitably leads to a distortion of the clones.</p>
 
-<h3>Facing & Randomization</h3>
-<p><strong>[PARAM] Scale Facing: None</strong></p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/8_Advanced_Distribution/08_Adv-Distri_SmartHScaleToFit-lite.gif" alt="Smart Hex Distribution Scale To Fit Animation" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Smart Hex Distribution - Scale To Fit</p>
+</div>
+
+<h3>Advanced Scaling Controls</h3>
+
+<p><strong>Scale Facing: None</strong></p>
 <p>The clones can be scaled freely, percentage based on their original size in this direction via the Scale Facing value.</p>
 
-<p><strong>[PARAM] Scale Facing: Set</strong></p>
+<p><strong>Scale Facing: Set</strong></p>
 <p>The size of the clones in this direction can be specified in absolute terms using the Scale Set value.</p>
 
-<p><strong>[PARAM] Scale Facing: Proportional (by default)</strong></p>
+<p><strong>Scale Facing: Proportional (by default)</strong></p>
 <p>The size of the clones in this direction is based on the scaling in the other axis directions, but can also be corrected as a percentage using the Scale value.</p>
 
-<p><strong>[PARAM] Scale Facing: Random</strong></p>
+<p><strong>Scale Facing: Random</strong></p>
 <p>The clones are scaled randomly in the corresponding direction. However, with Random Scale Min and Random Scale Max you can define percentage maximums that refer to the original dimensions of the cloned objects in this direction.</p>
 
-<p><strong>[PARAM] Scale Set</strong></p>
+<h3>Detailed Scaling Parameters</h3>
+
+<p><strong>Scale Set</strong></p>
 <p>For the Scale Facing Proportional mode, an additional multiplier is specified for scaling in a direction perpendicular to the placement plane. The scaling in the direction of width and height remains unaffected by this.</p>
 
-<p><strong>[PARAM] Facing Scale</strong></p>
+<p><strong>Facing Scale</strong></p>
 <p>For the Scale Facing Set mode, use this to specify the absolute dimension of the clones in a direction perpendicular to the distribution plane.</p>
 
-<p><strong>[PARAM] Min</strong></p>
-<p>For the Scale Facing Random mode, this defines the smallest and largest scaling in the direction perpendicular to the distribution plane. The percentage values refer to the original size of the clone bounding box in this direction.</p>
+<p><strong>Min / Max</strong></p>
+<p>For the Scale Facing Random mode, these define the smallest and largest scaling in the direction perpendicular to the distribution plane. The percentage values refer to the original size of the clone bounding box in this direction.</p>
 
-<p><strong>[PARAM] Max</strong></p>
-<p>For the Scale Facing Random mode, this defines the smallest and largest scaling in the direction perpendicular to the distribution plane. The percentage values refer to the original size of the clone bounding box in this direction.</p>
-
-<p><strong>[PARAM] Seed</strong></p>
+<p><strong>Seed</strong></p>
 <p>This distribution offers random modes based on this value when selecting the objects to be cloned.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/gifs/3_Initial-Guide-BCloners/Smart_Hex_Distribution_Action.gif" alt="Honeycomb distribution in action" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Smart Hex Distribution in action (Honeycomb mode)</p>
+  <img src="assets/gifs/8_Advanced_Distribution/09_Advand-Distri_SmartHRandWH-lite.gif" alt="Smart Hex Distribution Random Animation" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Smart Hex Distribution - Random</p>
 </div>

@@ -1,113 +1,75 @@
 <h1>Spline Bed Distribution</h1>
-
 <p>This distribution can be loaded directly using the Advanced Distribution button in the BCloners Extension Panel or place it manually if you change the Distribution Menu to Advanced and set the Distribution Object to the parameter Distribution Object. Copies can be arranged along an assigned spline, for example, like pearls on a string.</p>
 
-<div class="alert alert-info" style="background-color: var(--color-surface); border-left: 4px solid var(--color-primary); padding: 15px; margin-bottom: 1.5rem; border-radius: 6px; display: flex; align-items: flex-start; gap: 12px;">
-  <span style="font-size: 1.2rem; flex-shrink: 0;">💡</span>
-  <div style="flex: 1; color: var(--color-text);">
-    <strong style="display: block; margin-bottom: 4px; color: var(--color-primary);">Quick Tip:</strong>
-    <p style="margin: 0; line-height: 1.6;">If you have selected an extra Spline/Curve apart from the active object selected, the addon adds automatically the Spline/Curve to the Spline/Curve parameter.</p>
-  </div>
-</div>
+<p><em>Note: QUICK TIP: If you have selected an extra Spline/Curve apart the active object selected the addon adds automatically the Spline/Curve to the Spline/Curve parameter.</em></p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/images/3_Initial-Guide-BCloners/Spline_Bed_Distribution_Action.jpg" alt="Spline Bed distribution in action" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Spline Bed Distribution in action</p>
+  <img src="assets/images/6_Advanced_Distribution/13_Distri_SplineBed_Pres.png" alt="Spline Bed Distribution - Presets" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
 </div>
 
-<h3>Distribution Logic</h3>
-<p><strong>[PARAM] Spline/Curve</strong></p>
-<p>Drag Your Custom Spline/Curve.</p>
+<p><strong style="color: var(--color-text);">Spline/Curve:</strong> Drag Your Custom Spline/Curve.</p>
 
-<p><strong>[PARAM] Clones: Iterate</strong></p>
-<p>The distribution automatically runs through all objects in sequence from top to bottom, as they were grouped under the Cloner object. After placing the last object, this sequence starts again with the topmost object under the loner object.</p>
+<h3>Clones</h3>
 
-<p><strong>[PARAM] Clones: Random</strong></p>
-<p>The object currently to be cloned is selected at random from the objects that have been grouped to the clone object.</p>
+<p><strong style="color: var(--color-text);">Clones: Iterate:</strong> The distribution automatically runs through all objects in sequence from top to bottom, as they were grouped under the Cloner object. After placing the last object, this sequence starts again with the topmost object under the Cloner object.</p>
 
-<p><strong>[PARAM] Offset</strong></p>
-<p>This value is only relevant if several objects have been grouped under the Cloner object or if different shapes are to be cloned. This value determines with which of the objects the sequence of clones along the assigned spline should begin. Please note that the <em>Clones from Distribution</em> option on the Cloner object must be active for this.</p>
+<p><strong style="color: var(--color-text);">Clones: Random:</strong> The object currently to be cloned is selected at random from the objects that have been grouped to the clone object.</p>
+
+<p><strong style="color: var(--color-text);">Offset:</strong> This value is only relevant if several objects have been grouped under the Cloner object or if different shapes are to be cloned. This value determines with which of the objects the sequence of clones along the assigned spline should begin. Please note that the Clones from Distribution option on the Cloner object must be active for this.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/gifs/3_Initial-Guide-BCloners/Spline_Bed_Offset_Action.gif" alt="Spline Bed Offset in action" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Spline Bed Offset in action (Better than C4D)</p>
+  <img src="assets/images/6_Advanced_Distribution/14_Distri_SplineBed_Offset.png" alt="Spline Bed Distribution - Offset" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Spline Bed Distribution - Offset</p>
 </div>
 
-<h3>Sizing & Counting</h3>
-<p><strong>[PARAM] Max Count</strong></p>
-<p>The number of clones created depends on various factors, such as the length of the assigned spline, the size of the cloned objects and the selected distance to be maintained between the clones. However, this value can be used to specify a maximum number of clones.</p>
+<p><strong style="color: var(--color-text);">Max Count:</strong> The number of clones created depends on various factors, such as the length of the assigned spline, the size of the cloned objects and the selected distance to be maintained between the clones. However, this value can be used to specify a maximum number of clones.</p>
 
-<h3>Alignment & Rail System</h3>
-<p><strong>[PARAM] Align</strong></p>
-<p>This can be used to influence the rotation of the clones along the spline to align with Tangent Vector.</p>
+<p><strong style="color: var(--color-text);">Align:</strong> This can be used to influence the rotation of the clones along the spline to align with Tangent Vector.</p>
 
-<p><strong>[PARAM] Rail: Enable</strong></p>
-<p>Shows the Rail options.</p>
+<h3>Rail</h3>
+
+<p><strong style="color: var(--color-text);">Rail: Enable:</strong> Shows the Rail options</p>
+
+<p><strong style="color: var(--color-text);">Spline Rail:</strong> Drag Your Custom Spline/Curve that is used as Spline Rail</p>
+
+<p><strong style="color: var(--color-text);">Target:</strong> Activating this option, the Z-axes of the clones are aligned with the Rail spline.</p>
+
+<p><strong style="color: var(--color-text);">Scale To Rail:</strong> This can be used to calculate a scaling of the clones in the direction of the assigned Rail spline. Please note that the Align and Target options must also be active for this.</p>
+
+<p><strong style="color: var(--color-text);">Shift Object:</strong> If a Rail spline is assigned and used to scale the clones (Align, Target and Scale To Rail options activated), this can be used to move the position of the cloned objects between the Spline and Rail spline.</p>
+
+<p><strong style="color: var(--color-text);">Gap:</strong> This distance is maintained as a gap between the neighboring clones on the spline. As the bounding boxes, i.e. the dimensions of the cloned objects, are taken into account, these gaps are retained even with clones of different sizes.</p>
+
+<h3>Fill Gap</h3>
+
+<p><strong style="color: var(--color-text);">Fill Gap: Fill (by default):</strong> The clones are always placed along the spline (not entire) and can only be moved using the following Offset value.</p>
+
+<p><strong style="color: var(--color-text);">Fill Gap: Full:</strong> The clones are always placed along the entire spline and can only be moved using the following Offset value.</p>
+
+<p><strong style="color: var(--color-text);">Offset:</strong> This setting is always available regardless of the selected Fill Gap mode and allows the clones to be moved along the spline.</p>
+
+<p><strong style="color: var(--color-text);">Start:</strong> Adjusts the Start on the Spline the Clones will be generated.</p>
+
+<p><strong style="color: var(--color-text);">End:</strong> Adjusts the End on the Spline the Clones will be generated.</p>
+
+<p><strong style="color: var(--color-text);">Transition Ends:</strong> This automatically reduces the size of the copies that come close to the ends of the specified spline section, as demonstrated in the following video.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/images/3_Initial-Guide-BCloners/Spline_Bed_Rail_Action.jpg" alt="Spline Bed Rail configuration" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Spline Bed Rail configuration</p>
+  <img src="assets/gifs/8_Advanced_Distribution/10_Advand-Distri_SplineBed_EndTrans-lite.gif" alt="Spline Bed Distribution - End Transitions" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Spline Bed Distribution - End Transitions</p>
 </div>
 
-<p><strong>[PARAM] Spline Rail</strong></p>
-<p>Drag Your Custom Spline/Curve that is used as Spline Rail.</p>
+<h3>Scale</h3>
 
-<p><strong>[PARAM] Target</strong></p>
-<p>Activating this option, the Z-axes of the clones are aligned with the Rail spline.</p>
+<p><strong style="color: var(--color-text);">Scaling Axis: Direction (by default):</strong> The clones are only scaled in the direction of the spline. This even applies if a Rail is used.</p>
 
-<p><strong>[PARAM] Scale To Rail</strong></p>
-<p>This can be used to calculate a scaling of the clones in the direction of the assigned Rail spline. Please note that the <em>Align</em> and <em>Target</em> options must also be active for this.</p>
-
-<p><strong>[PARAM] Shift Object</strong></p>
-<p>If a Rail spline is assigned and used to scale the clones (<em>Align, Target</em> and <em>Scale To Rail</em> options activated), this can be used to move the position of the cloned objects between the Spline and Rail spline.</p>
+<p><strong style="color: var(--color-text);">Scaling Axis: Direction:</strong> The clones are scaled evenly in all directions, i.e. proportionally.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/gifs/3_Initial-Guide-BCloners/Spline_Bed_Shift_Object_Action.gif" alt="Spline Bed Shift Object in action" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Spline Bed Shift Object in action</p>
+  <img src="assets/images/6_Advanced_Distribution/15_Distri_SplineBed_ScaleRand.png" alt="Spline Bed Distribution - Scale Random" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Spline Bed Distribution - Scale Random</p>
 </div>
 
-<h3>Gaps & Filling Modes</h3>
-<p><strong>[PARAM] Gap</strong></p>
-<p>This distance is maintained as a gap between the neighboring clones on the spline. As the bounding boxes, i.e., the dimensions of the cloned objects, are taken into account, these gaps are retained even with clones of different sizes.</p>
+<p><strong style="color: var(--color-text);">Random Scale:</strong> This percentage value controls the order of magnitude of the random scaling of the clones. At 0%, the original sizes of the cloned objects are therefore retained.</p>
 
-<p><strong>[PARAM] Fill Gap: Fill (by default)</strong></p>
-<p>The clones are always placed along the spline (not entirely) and can only be moved using the following <em>Offset</em> value.</p>
-
-<p><strong>[PARAM] Fill Gap: Full</strong></p>
-<p>The clones are always placed along the entire spline and can only be moved using the following <em>Offset</em> value.</p>
-
-<p><strong>[PARAM] Offset</strong></p>
-<p>This setting is always available regardless of the selected <em>Fill Gap</em> mode and allows the clones to be moved along the spline.</p>
-
-<h3>Ends & Transitions</h3>
-<p><strong>[PARAM] Start</strong></p>
-<p>Adjusts the Start on the Spline where the Clones will be generated.</p>
-
-<p><strong>[PARAM] End</strong></p>
-<p>Adjusts the End on the Spline where the Clones will be generated.</p>
-
-<p><strong>[PARAM] Transition Ends</strong></p>
-<p>This automatically reduces the size of the copies that come close to the ends of the specified spline section, as demonstrated in the following video.</p>
-
-<div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/gifs/3_Initial-Guide-BCloners/Spline_Bed_Transition_Ends_Action.gif" alt="Spline Bed Transition Ends in action" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Spline Bed Transition Ends in action</p>
-</div>
-
-<h3>Scaling & Randomization</h3>
-<p><strong>[PARAM] Scaling Axis: Direction (by default)</strong></p>
-<p>The clones are only scaled in the direction of the spline. This even applies if a Rail is used.</p>
-
-<p><strong>[PARAM] Scaling Axis: Uniform</strong></p>
-<p>The clones are scaled evenly in all directions, i.e., proportionally.</p>
-
-<div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/images/3_Initial-Guide-BCloners/Spline_Bed_Scaling_Axis_Random.jpg" alt="Spline Bed Scaling Axis Random in action" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Spline Bed Scaling Axis Random in action</p>
-</div>
-
-<p><strong>[PARAM] Random Scale</strong></p>
-<p>This percentage value controls the order of magnitude of the random scaling of the clones. At 0%, the original sizes of the cloned objects are therefore retained.</p>
-
-<p><strong>[PARAM] Seed</strong></p>
-<p>This distribution offers random modes based on this value when selecting the objects to be cloned.</p>
+<p><strong style="color: var(--color-text);">Seed:</strong> This distribution offers random modes based on this value when selecting the objects to be cloned.</p>
