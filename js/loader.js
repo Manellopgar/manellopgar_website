@@ -1,7 +1,7 @@
 // js/loader.js
 document.addEventListener('DOMContentLoaded', () => {
     const mainContainer = document.getElementById('main-content');
-    const DEFAULT_HASH = '0_home';
+    const DEFAULT_HASH = '0_start/0_home';
 
     // 🟢 FUNCIÓN CORREGIDA: Procesa etiquetas <include> parseando HTML correctamente
     async function processIncludes(htmlString) {
