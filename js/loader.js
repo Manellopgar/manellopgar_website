@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 const content = await res.text();
                 
-                // ✅ CORRECCIÓN: Usar <template> para que el navegador parsee el HTML
+                // ✅ CORRECCIÓN: Usar <template> para que el navegador parsee el HTML como nodos reales
                 const template = document.createElement('template');
                 template.innerHTML = content.trim();
                 inc.replaceWith(template.content);
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
-    // Función para actualizar el menú activo (igual que tenías)
+    // Función para actualizar el menú activo
     function updateActiveMenu(currentHash) {
         document.querySelectorAll('.nav-menu .nav-link').forEach(link => {
             link.classList.remove('active');
