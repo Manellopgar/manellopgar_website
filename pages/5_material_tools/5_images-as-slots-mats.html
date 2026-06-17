@@ -1,5 +1,33 @@
 <h1>Images as SlotMats</h1>
+<p>This tool is highly effective for adding multiple images to any BCloner. Upon clicking, an import window appears. It offers functionality similar to Blender’s native Mesh Plane tool, but instead of generating a mesh plane for each image, it creates one material slot per image and adds them to the selected object or B4D Tool.</p>
 
-<p>This tool is highly beneficial when you need to assign multiple images to each instance created by any BCloner.</p>
+<h3>Import Settings</h3>
+<p>When you click the <strong>Images as MatSlots</strong> button, the importer window opens. Navigate to your custom folder containing all the images.</p>
 
-<p>When you activate the tool, an import window will appear allowing you to select and load your image files for automatic slot assignment.</p>
+<h3>Video Settings</h3>
+<p>Here you will find several parameters to configure before importing video textures. These are compatible with video file types supported by Blender.</p>
+
+<p><strong style="color: var(--color-text);">Start Frame:</strong> Defines the starting frame for the video textures.</p>
+<p><strong style="color: var(--color-text);">Cyclic:</strong> Enables the Cyclic option in the Image Texture Node for each video texture.</p>
+<p><strong style="color: var(--color-text);">Auto Refresh:</strong> Enables the Auto Refresh option in the Image Texture Node for each video texture.</p>
+<p><strong style="color: var(--color-text);">Randomize Frame Range:</strong> Randomizes the frame range of each video texture to avoid repetition. This is useful if you have the same animation for all video textures.</p>
+<p><strong style="color: var(--color-text);">Use Time Remapping:</strong> This is not a native feature of the Image Texture Node; it is a workaround that allows each video texture to be animated with default time and duration. It is useful if you want to change the speed or duration for all videos later without re-importing all video textures.</p>
+
+<h3>Image Settings</h3>
+<p>Here you will find parameters to configure before importing images. Please note that these settings are currently unavailable and will be added in a future update.</p>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/40_Material-Tools-MoreTools/02_MatTools_ImgsAsSlots-lite.gif" alt="Mapping Color To Instance Example" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Images as MatSlots - Example</p>
+</div>
+
+<h3>Shader Configuration</h3>
+<p>All created materials follow the same structure:</p>
+<p>1. A node group called <strong>"SHDR_Custom_UVMapping"</strong> for UV Mapping, used in all materials. This allows you to make changes to all materials at once by editing this node group.</p>
+<p>2. The <strong>Image Texture</strong> node with the corresponding image.</p>
+<p>3. A node group called <strong>"SHDR_Custom_Shader"</strong> for the main Shader, used in all materials. This allows you to make changes to all materials at once by editing this node group.</p>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/37_Material-Tools-MoreTools/02_MatTools_ImgAsSl.jpg" alt="Shader configuration" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Shader configuration</p>
+</div>

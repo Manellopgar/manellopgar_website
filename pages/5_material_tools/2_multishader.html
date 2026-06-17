@@ -1,50 +1,75 @@
 <h1>Set Multishader MatSlots</h1>
+<p>This tool allows you to assign each material slot to each instance in index order. By default, it assigns all material slots.</p>
 
-<p><em>Note: This section requires insertion from <code>0a_Material_Tools_Params.txt</code>.</em></p>
+<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 4_material-tools-params.html -->
+<include src="pages/0_common/4_material-tools-params.html"></include>
 
-<h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
-
-<p><strong>Only Material Slots</strong></p>
-<p>Configure the Material Slots.</p>
-
+<h2>Material Slot Configuration</h2>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Disable:</strong> The Multishader assigns each Material Slot in the current order to each Instance.</li>
-  <li><strong>Enable:</strong> The Multishader assigns each Material Slot in the current order to each Instance. But you can control how is assigned, changing the Amount, the First Material and the Offset.</li>
+  <li><strong style="color: var(--color-text);">Only Material Slots:</strong> Configure the Material Slots.</li>
+  <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+    <li><strong style="color: var(--color-text);">Disable:</strong> The Multishader assigns each Material Slot in the current order to each Instance.</li>
+    <li><strong style="color: var(--color-text);">Enable:</strong> The Multishader assigns each Material Slot in the current order to each Instance. However, you can control the assignment by changing the <strong>Amount</strong>, <strong>First Material</strong>, and <strong>Offset</strong>.</li>
+  </ul>
+  <li><strong style="color: var(--color-text);">First Mat Slot:</strong> Set the First Material Slot Index that will be the first material used.</li>
+  <li><strong style="color: var(--color-text);">Nº of Mat Slots:</strong> Set the Total Amount of Material Slots available in the current Object.</li>
+  <li><strong style="color: var(--color-text);">Offset Mat Slots:</strong> Adds an Offset to the current Material Slot Index.</li>
 </ul>
 
-<p><strong>First Mat Slot</strong></p>
-<p>Set the First Material Slot Index that will be the First Material used.</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/39_Material-Tools/02_MatTools_Multi01-lite.gif" alt="Material Slots Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Material Slots - Parameters</p>
+</div>
 
-<p><strong>Nº of Mat Slots</strong></p>
-<p>Set the Total Amount of Material Slots that you have in the current Object.</p>
-
-<p><strong>Offset Mat Slots</strong></p>
-<p>Adds Offset to the current Material Slot Index.</p>
-
-<p><strong>Randomize Materials</strong></p>
-<p>Randomize the Material Slot Indexes.</p>
-
+<h3>Randomization</h3>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Disable:</strong> The Randomize is disabled.</li>
-  <li><strong>Enable:</strong> The Randomize is enabled.</li>
+  <li><strong style="color: var(--color-text);">Randomize Materials:</strong> Randomize the Material Slot Indexes.</li>
+  <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+    <li><strong style="color: var(--color-text);">Disable:</strong> The Randomize is disabled.</li>
+    <li><strong style="color: var(--color-text);">Enable:</strong> The Randomize is enabled.</li>
+  </ul>
+  <li><strong style="color: var(--color-text);">Sort Randomize:</strong> Re-randomize half of the Instances. Helpful to avoid repetition.</li>
+  <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+    <li><strong style="color: var(--color-text);">Disable:</strong> The Randomize is disabled.</li>
+    <li><strong style="color: var(--color-text);">Enable:</strong> The Randomize is enabled.</li>
+  </ul>
+  <li><strong style="color: var(--color-text);">Seed:</strong> Set the Seed of the Randomize Materials.</li>
 </ul>
 
-<p><strong>Sort Randomize</strong></p>
-<p>ReRandomize the half of the Instances. Helpful to avoid repetition.</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/39_Material-Tools/03_MatTools_Multi02.gif" alt="Material Slots Random Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Material Slots - Random Parameters</p>
+</div>
 
+<h3>Mesh & Split Options</h3>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Disable:</strong> The Randomize is disabled.</li>
-  <li><strong>Enable:</strong> The Randomize is enabled.</li>
+  <li><strong style="color: var(--color-text);">Keep Mesh (Not Instances):</strong> Keep the Non-Instance Geometry.</li>
+  <li><strong style="color: var(--color-text);">Split Selection:</strong> Use Custom Selection for Split to Instances. You can use Input Attribute Toggle.</li>
+  <li><strong style="color: var(--color-text);">Use Island Index:</strong> Use Island Index for Split to Instances.</li>
 </ul>
 
-<p><strong>Seed</strong></p>
-<p>Set Seed of the Randomize Materials.</p>
+<h1>Multishader with Multiple Assets from Collection</h1>
+<p>This is an example of how to use the Multishader when you need to use Assets from a Collection.</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li>1st: Add the Multishader Modifier.</li>
+  <li>2nd: You must have selected the first asset of the Collection in the Outliner.</li>
+  <li>3rd: Add as many materials as you need, keeping in mind that each slot has its own material.</li>
+</ul>
 
-<p><strong>Keep Mesh (Not Instances)</strong></p>
-<p>Keep the No Instance Geometry.</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/36_Material-Tools/01_MatTools_MultiAssets.png" alt="Multishader with Multiple Assets" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Multishader with Multiple Assets</p>
+</div>
 
-<p><strong>Split Selection</strong></p>
-<p>Use Custom Selection for Split to Instances. You can use Input Attribute Toggle.</p>
+<h1>Assign More Than 1 Multishader</h1>
+<p>This is an example of how to use more than 1 Multishader for the same BCloner/BCloneCutter.</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li>1st: Add one selection for Front and another for Back in the Custom Selection. Enable <strong>Only Material Slots</strong> if needed.</li>
+  <li>2nd: You must enable the <strong>Split to Instances</strong> Advanced parameter and the <strong>Split Selection</strong>. If it doesn't work, also enable <strong>Use Island Index</strong>. This is mandatory for all Multishader modifiers except the last one.</li>
+  <li>3rd: Verify everything is configured correctly. Don't forget to check if you need to fix the direction of the Back textures.</li>
+</ul>
 
-<p><strong>Use Island Index</strong></p>
-<p>Use Island Index for Split to Instances.</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/36_Material-Tools/02_MatTools_MultiFrBck.png" alt="Multiple Multishaders Example" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">How to use Multiple Multishaders</p>
+</div>
