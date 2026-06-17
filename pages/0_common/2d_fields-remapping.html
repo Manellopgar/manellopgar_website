@@ -1,28 +1,33 @@
 <h3>Remapping</h3>
+<p><strong style="color: var(--color-text);">Invert:</strong> Inverts the Field.</p>
+<p><strong style="color: var(--color-text);">Inner Falloff:</strong> Adjusts the transition between the Minimum and Maximum of the Field.</p>
+<p><strong style="color: var(--color-text);">Min:</strong> Adjust the Minimum value of Field.</p>
+<p><strong style="color: var(--color-text);">Clamp Min:</strong> Clamp to 0 the Minimum value of Field.</p>
+<p><strong style="color: var(--color-text);">Max:</strong> Adjust the Maximum value of Field.</p>
+<p><strong style="color: var(--color-text);">Clamp Max:</strong> Clamp to 1 the Maximum value of Field.</p>
+<p><strong style="color: var(--color-text);">Soft Falloff:</strong> Smoothest the Field.</p>
+<p><strong style="color: var(--color-text);">Multiplier:</strong> Defines the strength of the Remapping exclusively between the Min/Max limits.</p>
 
-<ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
-  <li><strong style="color: var(--color-text);">Invert:</strong> Inverts the Field.</li>
-  <li><strong style="color: var(--color-text);">Inner Falloff:</strong> Adjusts the transition between the Minimum and Maximum of the Field.</li>
-  <li><strong style="color: var(--color-text);">Min:</strong> Adjusts the Minimum value of the Field.</li>
-  <li><strong style="color: var(--color-text);">Clamp Min:</strong> Clamps the Minimum value to 0.</li>
-  <li><strong style="color: var(--color-text);">Max:</strong> Adjusts the Maximum value of the Field.</li>
-  <li><strong style="color: var(--color-text);">Clamp Max:</strong> Clamps the Maximum value to 1.</li>
-  <li><strong style="color: var(--color-text);">Soft Falloff:</strong> Smooths the Field.</li>
-  <li><strong style="color: var(--color-text);">Multiplier:</strong> Defines the strength of the Remapping exclusively between the Min/Max limits.</li>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/25_Field-BasicFields/01_Field-Remap-lite.gif" alt="Field Remapping" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Field Remapping</p>
+</div>
+
+<h3>Contour Mode</h3>
+<p>Here you can select the mode with which the output values should be modulated.</p>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">None:</strong> The value transfer will take place linearly.</li>
+  <li><strong style="color: var(--color-text);">Quadratic:</strong> The value transfer will take place based on a curved defined by the Curve option, which controls the transfer from linear to exponential in both directions.</li>
+  <li><strong style="color: var(--color-text);">Step:</strong> Values will be restricted to certain discrete values. The difference to Quantize is visible when the Min and Max values are modified: the number of steps remains constant but the value interval changes.</li>
+  <li><strong style="color: var(--color-text);">Quantize:</strong> Values will be restricted to certain discrete values. The difference to Step can be seen when the Min and Max values are modified: the value interval remains constant but the number of steps changes.</li>
+  <li><strong style="color: var(--color-text);">Curve:</strong> The value transfer takes place based on a freely definable curve in the Geometry Nodes Editor.</li>
 </ul>
 
-<h3>Countour Mode</h3>
-<p>Select the mode for modulating the output values.</p>
+<p><strong style="color: var(--color-text);">Steps:</strong> With this setting you can define the steps for the modes Step and Quantize. This is an exact number of steps for the Step option and for Quantize only if Max is set to 100%.</p>
+<p><strong style="color: var(--color-text);">Curve:</strong> The value transfer takes place based on a freely definable curve in the Geometry Nodes Editor.</p>
 
-<ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
-  <li><strong style="color: var(--color-text);">None:</strong> The value transfer occurs linearly.</li>
-  <li><strong style="color: var(--color-text);">Quadratic:</strong> The value transfer is based on a curve defined by the Curve option, controlling the transfer from linear to exponential in both directions.</li>
-  <li><strong style="color: var(--color-text);">Step:</strong> Values are restricted to specific discrete steps. Unlike Quantize, modifying Min and Max changes the value interval while the number of steps remains constant.</li>
-  <li><strong style="color: var(--color-text);">Quantize:</strong> Values are restricted to specific discrete steps. Unlike Step, modifying Min and Max changes the value interval while the number of steps remains constant.</li>
-  <li><strong style="color: var(--color-text);">Curve:</strong> The value transfer is based on a freely definable curve in the Geometry Nodes Editor.</li>
-</ul>
-
-<ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
-  <li><strong style="color: var(--color-text);">Steps:</strong> Defines the number of steps for the Step and Quantize modes. For Quantize, this is exact only if Max is set to 100%.</li>
-  <li><strong style="color: var(--color-text);">Curve:</strong> Allows the value transfer to be based on a custom curve defined in the Geometry Nodes Editor.</li>
-</ul>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/25_Field-BasicFields/02_Field_Contour-lite.gif" alt="Field Remapping" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Field Contour</p>
+</div>
