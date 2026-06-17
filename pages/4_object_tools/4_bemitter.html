@@ -1,93 +1,76 @@
 <h1>Object BEmitter</h1>
+<p>This tool generates a simple emitter that is compatible with the other B4D Tools.</p>
 
-<p><strong>Empty Controller</strong></p>
-<p>Drag Your Custom Empty/Object as Rotation Particle Controller.</p>
+<h2>Controller & Asset Settings</h2>
+<p><strong style="color: var(--color-text);">Empty Controller:</strong> Drag your custom empty/object to act as the Rotation Particle Controller.</p>
 
-<p><strong>Asset Type</strong></p>
-<p>Choose the Asset Type:</p>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Object:</strong> (Value: 0)</li>
-  <li><strong>Collection:</strong> (Value: 0)</li>
+  <li><strong style="color: var(--color-text);">Object:</strong> Select a single object as the particle asset.</li>
+  <li><strong style="color: var(--color-text);">Collection:</strong> Select a collection of assets to use as particle instances.</li>
 </ul>
 
-<p><strong>Object</strong></p>
-<p>Drag Your Custom Object as Particle.</p>
+<p><strong style="color: var(--color-text);">Object:</strong> Drag your custom object to use as the particle.</p>
 
-<p><strong>Collection</strong></p>
-<p>Drag Your Collection Assets for BEmitter.</p>
+<p><strong style="color: var(--color-text);">Collection:</strong> Drag your collection assets for BEmitter.</p>
 
-<p><strong>Pick Instance</strong></p>
-<p>If enabled, instead of adding the entire geometry from the Instance input on every point, choose an instance from the instance list of the geometry based on the Instance Index input in the Collection.</p>
+<p><strong style="color: var(--color-text);">Pick Instance:</strong> If enabled, instead of adding the entire geometry from the Instance input on every point, choose an instance from the instance list of the geometry based on the Instance Index input in the Collection.</p>
 
-<p><strong>ID Asset</strong></p>
-<p>Offset the index of each Asset.</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/37_Object-Tools/10_BEmitter_01-lite.gif" alt="BEmitter in default Mode" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BEmitter in default Mode</p>
+</div>
 
-<p><strong>Randomize Assets</strong></p>
-<p>Enable Randomize Assets.</p>
+<h2>Asset Management</h2>
+<p><strong style="color: var(--color-text);">ID Asset:</strong> Offset the index of each Asset.</p>
 
-<p><strong>Random Seed</strong></p>
-<p>Changes the Seed of the Randomized Assets.</p>
+<p><strong style="color: var(--color-text);">Randomize Assets:</strong> Enable randomization of assets.</p>
 
-<p><strong>Separate Children</strong></p>
-<p>Active this when you have more than 1 Asset.</p>
+<p><strong style="color: var(--color-text);">Random Seed:</strong> Changes the seed of the randomized assets.</p>
 
-<p><strong>Reset Children</strong></p>
-<p>Reset Position, Rotation and Scale to BEmitter Origin.</p>
+<p><strong style="color: var(--color-text);">Separate Children:</strong> Activate this when you have more than 1 Asset.</p>
 
-<h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
+<p><strong style="color: var(--color-text);">Reset Children:</strong> Reset Position, Rotation, and Scale to BEmitter Origin.</p>
 
-<p><strong>Visibility/Density</strong></p>
-<p>Defines how many of the particles should be visible. At first glance, this appears to offer no more than the birthrate settings. However, it is not possible to animate some of the parameters in the particle system, such as the birthrate settings. If you want to vary the intensity of the particle stream over time, animate the Visibility setting.</p>
+<h2>Emission & Visibility</h2>
+<p><strong style="color: var(--color-text);">Visibility/Density:</strong> Defines how many of the particles should be visible. At first glance, this appears to offer no more than the birthrate settings. However, it is not possible to animate some of the parameters in the particle system, such as the birthrate settings. If you want to vary the intensity of the particle stream over time, animate the Visibility setting.</p>
 
-<p><strong>Start Frame Emission</strong></p>
-<p>Use these values to define when (in frames) the particle emission should start.</p>
+<p><strong style="color: var(--color-text);">Start Frame Emission:</strong> Use these values to define when (in frames) the particle emission should start.</p>
 
-<p><strong>End Frame Emission</strong></p>
-<p>Use these values to define when (in frames) the particle emission should end.</p>
+<p><strong style="color: var(--color-text);">End Frame Emission:</strong> Use these values to define when (in frames) the particle emission should end.</p>
 
-<p><strong>Seed</strong></p>
-<p>Seed is used to create the pattern of the particle stream. If you copy an emitter, you will notice that both emitters generate exactly the same pattern. If you want each stream to be unique, set the Seed of each emitter to a different value. For example, a seed value of 1 will create a completely different stream than a seed value of 0.</p>
+<p><strong style="color: var(--color-text);">Seed:</strong> Seed is used to create the pattern of the particle stream. If you copy an emitter, you will notice that both emitters generate exactly the same pattern. If you want each stream to be unique, set the Seed of each emitter to a different value. For example, a seed value of 1 will create a completely different stream than a seed value of 0.</p>
 
-<p><strong>Lifetime</strong></p>
-<p>Gives the length of time a particle will be visible. For example, if flying sparks are set to be visible for 20 frames, the particles will disappear after this time. This value also controls the length of the animation Track in the Timeline.</p>
+<h2>Particle Dynamics</h2>
+<p><strong style="color: var(--color-text);">Lifetime:</strong> Gives the length of time a particle will be visible. For example, if flying sparks are set to be visible for 20 frames, the particles will disappear after this time. This value also controls the length of the animation track in the Timeline.</p>
 
-<p><strong>Variation Lifetime</strong></p>
-<p>Adds a deviation factor to the Lifetime value; i.e., individual particles can live for a longer or shorter time, according to the size of the Variation value.</p>
+<p><strong style="color: var(--color-text);">Variation Lifetime:</strong> Adds a deviation factor to the Lifetime value; i.e., individual particles can live for a longer or shorter time, according to the size of the Variation value.</p>
 
-<p><strong>Speed</strong></p>
-<p>Indicates the speed of the individual particles, in units per second. The higher you set the value, the longer the particle stream will be displayed in the viewport.</p>
+<p><strong style="color: var(--color-text);">Speed:</strong> Indicates the speed of the individual particles, in units per second. The higher you set the value, the longer the particle stream will be displayed in the viewport.</p>
 
-<p><strong>Variation Speed</strong></p>
-<p>Introduces randomness to the speed. A value of 100% can make individual particles twice as fast, or twice as slow.</p>
+<p><strong style="color: var(--color-text);">Variation Speed:</strong> Introduces randomness to the speed. A value of 100% can make individual particles twice as fast, or twice as slow.</p>
 
-<p><strong>Rotation</strong></p>
-<p>Specifies the amount by which the particles will revolve around a spatial axis.</p>
+<p><strong style="color: var(--color-text);">Rotation:</strong> Specifies the amount by which the particles will revolve around a spatial axis.</p>
 
-<p><strong>Variation Rotation</strong></p>
-<p>Adds a deviation factor to the Rotation value.</p>
+<p><strong style="color: var(--color-text);">Variation Rotation:</strong> Adds a deviation factor to the Rotation value.</p>
 
-<p><strong>Start Scale</strong></p>
-<p>Defines the initial size of the particles relative to their starting size. A value of 0.5, for example, will shrink the particles to half their initial size.</p>
+<p><strong style="color: var(--color-text);">Start Scale:</strong> Defines the initial size of the particles relative to their starting size. A value of 0.5, for example, will shrink the particles to half their initial size.</p>
 
-<p><strong>End Scale</strong></p>
-<p>Defines the final size of the particles relative to their starting size. A value of 0.5, for example, will shrink the particles to half their initial size.</p>
+<p><strong style="color: var(--color-text);">End Scale:</strong> Defines the final size of the particles relative to their starting size. A value of 0.5, for example, will shrink the particles to half their initial size.</p>
 
-<p><strong>Variation Scale</strong></p>
-<p>Defines a variable factor for the scaling so that the particles are sometimes larger or smaller at the end of the animation.</p>
+<p><strong style="color: var(--color-text);">Variation Scale:</strong> Defines a variable factor for the scaling so that the particles are sometimes larger or smaller at the end of the animation.</p>
 
-<h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
+<p><strong style="color: var(--color-text);">Show Objects:</strong> If this option is disabled, the particles will be displayed in the viewport as lines. The direction and length of each line indicates the direction of flight and current speed of the respective particle — the longer the line, the faster the particle.</p>
 
-<p><strong>Show Objects</strong></p>
-<p>If this option is disabled, the particles will be displayed in the viewport as lines. The direction and length of each line indicates the direction of flight and current speed of the respective particle — the longer the line, the faster the particle.</p>
+<p><strong style="color: var(--color-text);">Render Instances:</strong> Realize all Instances to Real Geometry.</p>
 
-<p><strong>Render Instances</strong></p>
-<p>Realize all Instances to Real Geometry.</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/37_Object-Tools/11_BEmitter_02-lite.gif" alt="BEmitter in default Mode" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BEmitter with Assets</p>
+</div>
 
-<p><strong>Use Gizmos Size</strong></p>
-<p>Show the Viewport Gizmos Size Controls.</p>
+<h2>Viewport Gizmos</h2>
+<p><strong style="color: var(--color-text);">Use Gizmos Size:</strong> Show the Viewport Gizmos Size Controls.</p>
 
-<p><strong>Size X</strong></p>
-<p>Give the size X of the emitter. You can also scale the emitter by selecting the Scale tool and dragging in the viewport Gizmos if they are enabled.</p>
+<p><strong style="color: var(--color-text);">Size X:</strong> Give the size X of the emitter. You can also scale the emitter by selecting the Scale tool and dragging in the viewport Gizmos if they are enabled.</p>
 
-<p><strong>Size Y</strong></p>
-<p>Give the size Y of the emitter. You can also scale the emitter by selecting the Scale tool and dragging in the viewport Gizmos if they are enabled.</p>
+<p><strong style="color: var(--color-text);">Size Y:</strong> Give the size Y of the emitter. You can also scale the emitter by selecting the Scale tool and dragging in the viewport Gizmos if they are enabled.</p>

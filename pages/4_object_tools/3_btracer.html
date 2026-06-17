@@ -1,103 +1,102 @@
-<h1>Object BMoText</h1>
+<h1>Object BTracer</h1>
+<p>This tool generates curves from animated objects, capturing data from vertices, origins, and other key points. It is designed to simplify the creation of tracer trails and motion paths.</p>
 
-<p><strong>Asset Type</strong></p>
-<p>Choose Asset Type:</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/37_Object-Tools/06_BTracer-Pres-lite.gif" alt="BTracer Animation Example" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BTracer - Animation Example</p>
+</div>
+
+<h3>Asset Type</h3>
+<p><strong style="color: var(--color-text);">Asset Type:</strong> Choose the source type for the tracer.</p>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Object:</strong> Uses the Trace Link Object.</li>
-  <li><strong>Collection:</strong> Uses the Trace Collection.</li>
+  <li><strong style="color: var(--color-text);">Object:</strong> Uses the Trace Link Object.</li>
+  <li><strong style="color: var(--color-text);">Collection:</strong> Uses the Trace Collection.</li>
 </ul>
 
-<p><strong>Trace Link</strong></p>
-<p>Drag the Object whose points (polygonal object) are to be taken into account by the Tracer.</p>
+<h3>Trace Source</h3>
+<p><strong style="color: var(--color-text);">Trace Link:</strong> Drag the object whose points (polygonal object) are to be taken into account by the Tracer.</p>
+<p><strong style="color: var(--color-text);">Trace Collection:</strong> Drag the collection whose objects are to be taken into account by the Tracer.</p>
 
-<p><strong>Trace Collection</strong></p>
-<p>Drag the Collection whose Objects are to be taken into account by the Tracer.</p>
-
-<p><strong>Tracing Mode</strong></p>
-<p>Choose the Tracing Mode:</p>
+<h3>Tracing Mode</h3>
+<p><strong style="color: var(--color-text);">Tracing Mode:</strong> Choose how the tracer processes the input data.</p>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Trace Paths:</strong> The vertex path of objects will be converted to splines.</li>
-  <li><strong>Connect All Objects:</strong> The objects will be connected with a segment of a common spline.</li>
-  <li><strong>Connect Elements:</strong> Objects from different elements drawn by the same tracer will be connected with a common spline but with different segments.</li>
-  <li><strong>Connect All Points:</strong> All Points will be connected by same traer with a common spline.</li>
+  <li><strong style="color: var(--color-text);">Trace Paths:</strong> The vertex path of objects will be converted to splines.</li>
+  <li><strong style="color: var(--color-text);">Connect All Objects:</strong> The objects will be connected with a segment of a common spline.</li>
+  <li><strong style="color: var(--color-text);">Connect Elements:</strong> Objects from different elements drawn by the same tracer will be connected with a common spline but with different segments.</li>
+  <li><strong style="color: var(--color-text);">Connect All Points:</strong> All points will be connected by the same tracer with a common spline.</li>
 </ul>
 
-<p><strong>Trace Active</strong></p>
-<p>If you want to switch off the Tracer temporarily, you can do so with this option. This creates gaps in the splines and thus spline segments.</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/37_Object-Tools/08_BTracer-TraceMode-lite.gif" alt="BTracer Trace Mode" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BTracer - Trace Mode</p>
+</div>
 
-<p><strong>Trace</strong></p>
-<p>Use this option to decide whether all objects should be recorded:</p>
+<h3>Trace Options</h3>
+<p><strong style="color: var(--color-text);">Trace Active:</strong> If you want to switch off the Tracer temporarily, you can do so with this option. This creates gaps in the splines and thus spline segments.</p>
+<p><strong style="color: var(--color-text);">Trace:</strong> Use this option to decide whether all objects should be recorded.</p>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Origin:</strong> From the Object Center Point.</li>
-  <li><strong>Vertices:</strong> From the Object Vertices.</li>
+  <li><strong style="color: var(--color-text);">Origin:</strong> From the Object Center Point.</li>
+  <li><strong style="color: var(--color-text);">Vertices:</strong> From the Object Vertices.</li>
 </ul>
 
-<p><strong>Use Limit Age From End</strong></p>
-<p>Enables the Limit Age from End.</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/37_Object-Tools/09_BTracer-Verts-lite.gif" alt="BTracer Trace Options" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BTracer - Trace Options</p>
+</div>
 
-<p><strong>Limit Age From End</strong></p>
-<p>Splines are generated from the end of the animation for as long as you set frames with this parameter.</p>
+<h3>Time Limits</h3>
+<p><strong style="color: var(--color-text);">Use Limit Age From End:</strong> Enables the Limit Age from End.</p>
+<p><strong style="color: var(--color-text);">Limit Age From End:</strong> Splines are generated from the end of the animation for as long as you set frames with this parameter.</p>
+<p><strong style="color: var(--color-text);">Use Limit Age From Start:</strong> Enables the Limit Age from Start.</p>
+<p><strong style="color: var(--color-text);">Limit Age From Start:</strong> Splines are generated from the start of the animation for as long as you set frames with this parameter.</p>
 
-<p><strong>Use Limit Age From Start</strong></p>
-<p>Enables the Limit Age from Start.</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/37_Object-Tools/07_BTracer-Start-End-lite.gif" alt="BTracer From Start/End" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BTracer - From Start/End</p>
+</div>
 
-<p><strong>Limit Age From Start</strong></p>
-<p>Splines are generated from the start of the animation for as long as you set frames with this parameter.</p>
-
-<h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
-
-<p><strong>Spline Settings</strong></p>
+<h3>Spline Settings</h3>
+<p><strong style="color: var(--color-text);">Spline Settings:</strong> Controls the generation of spline data.</p>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Disable:</strong> (Value: 0)</li>
-  <li><strong>Enable:</strong> (Value: 0)</li>
+  <li><strong style="color: var(--color-text);">Disable:</strong> Disable the Spline Settings.</li>
+  <li><strong style="color: var(--color-text);">Enable:</strong> Enable the Spline Settings.</li>
 </ul>
 
-<p><strong>Spline Type</strong></p>
+<p><strong style="color: var(--color-text);">Spline Type:</strong> Choose the type of curve to generate.</p>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Poly:</strong> This simplest of all spline types connects the support points that define the polygon using direct connecting lines. You can use these splines to create angular objects or to simulate choppy movements during animation.</li>
-  <li><strong>Bezier:</strong> This type of spline creates a smooth curve between the support points, which can be controlled very precisely. The interpolated curve always passes exactly through the interpolation points.</li>
-  <li><strong>NURBS:</strong> This type of spline creates a smooth curve between the points, spline gets auto handles.</li>
-  <li><strong>Catmull Rom:</strong> This type of spline creates a smooth curve between the points, spline gets auto handles.</li>
+  <li><strong style="color: var(--color-text);">Poly:</strong> The simplest spline type connects support points using direct lines. Useful for creating angular objects or simulating choppy movements.</li>
+  <li><strong style="color: var(--color-text);">Bezier:</strong> Creates a smooth curve between support points, controllable with high precision. The interpolated curve always passes exactly through the interpolation points.</li>
+  <li><strong style="color: var(--color-text);">NURBS:</strong> Creates a smooth curve between points with auto-generated handles.</li>
+  <li><strong style="color: var(--color-text);">Catmull Rom:</strong> Creates a smooth curve between points with auto-generated handles.</li>
 </ul>
 
-<p><strong>Close Spline</strong></p>
-<p>Each spline can be closed or open. If a spline is closed, the start and end points are connected.</p>
-
-<p><strong>Reverse Spline</strong></p>
+<p><strong style="color: var(--color-text);">Close Spline:</strong> Determines if each spline is closed or open. If closed, the start and end points are connected.</p>
+<p><strong style="color: var(--color-text);">Reverse Spline:</strong> Activates point order reversal for the internal spline.</p>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>None:</strong> No Spline Resampling.</li>
-  <li><strong>Count:</strong> Sample the specified number of points along each spline.</li>
-  <li><strong>Evaluated:</strong> Calculate the number of samples by splitting each spline into segments with the specified length. The length will be rounded down so that a whole number of samples will fit in each input spline.</li>
-  <li><strong>Length:</strong> Evaluate the spline's points based on the resolution attribute for NURBS and Bézier splines. Changes nothing for poly splines.</li>
+  <li><strong style="color: var(--color-text);">None:</strong> No spline resampling.</li>
+  <li><strong style="color: var(--color-text);">Count:</strong> Sample the specified number of points along each spline.</li>
+  <li><strong style="color: var(--color-text);">Evaluated:</strong> Calculate the number of samples by splitting each spline into segments with the specified length. The length will be rounded down so that a whole number of samples will fit in each input spline.</li>
+  <li><strong style="color: var(--color-text);">Length:</strong> Evaluate the spline’s points based on the resolution attribute for NURBS and Bézier splines. Has no effect on Poly splines.</li>
 </ul>
 
-<p><strong>Resample Mode</strong></p>
+<p><strong style="color: var(--color-text);">Resample Mode:</strong> Choose the method for resampling the spline.</p>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>None:</strong> No Spline Resampling.</li>
-  <li><strong>Count:</strong> Sample the specified number of points along each spline.</li>
-  <li><strong>Evaluated:</strong> Calculate the number of samples by splitting each spline into segments with the specified length. The length will be rounded down so that a whole number of samples will fit in each input spline.</li>
-  <li><strong>Length:</strong> Evaluate the spline's points based on the resolution attribute for NURBS and Bézier splines. Changes nothing for poly splines.</li>
+  <li><strong style="color: var(--color-text);">None:</strong> No spline resampling.</li>
+  <li><strong style="color: var(--color-text);">Count:</strong> Sample the specified number of points along each spline.</li>
+  <li><strong style="color: var(--color-text);">Evaluated:</strong> Calculate the number of samples by splitting each spline into segments with the specified length. The length will be rounded down so that a whole number of samples will fit in each input spline.</li>
+  <li><strong style="color: var(--color-text);">Length:</strong> Evaluate the spline’s points based on the resolution attribute for NURBS and Bézier splines. Has no effect on Poly splines.</li>
 </ul>
 
-<p><strong>Resample Count</strong></p>
-<p>The number of control points on the new splines.</p>
+<p><strong style="color: var(--color-text);">Resample Count:</strong> The number of control points on the new splines.</p>
+<p><strong style="color: var(--color-text);">Resample Length:</strong> The approximate length between the control points of the new splines.</p>
 
-<p><strong>Resample Length</strong></p>
-<p>The approximate length between the control points of the new splines.</p>
-
-<h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
-
-<p><strong>Advanced Settings</strong></p>
+<h3>Advanced Settings</h3>
+<p><strong style="color: var(--color-text);">Advanced Settings:</strong> Toggle the visibility of advanced parameters.</p>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Disable:</strong> (Value: 0)</li>
-  <li><strong>Enable:</strong> (Value: 0)</li>
+  <li><strong style="color: var(--color-text);">Disable:</strong> Disable the Advanced Settings.</li>
+  <li><strong style="color: var(--color-text);">Enable:</strong> Enable the Advanced Settings.</li>
 </ul>
 
-<p><strong>Split To Instances</strong></p>
-<p>Enables Split To Intances Option that Splits each Mesh Island as Instance.</p>
-
-<p><strong>Split To Instances Selection</strong></p>
-<p>Use Custom Selection for Split to Instances. You can use Input Attribute Toggle.</p>
-
-<p><strong>Distance Points Threshold</strong></p>
-<p>The distance to use for searching for nearby points.</p>
+<p><strong style="color: var(--color-text);">Split To Instances:</strong> Enables the option to split each mesh island as an instance.</p>
+<p><strong style="color: var(--color-text);">Split To Instances Selection:</strong> Use custom selection for Split to Instances. You can use an Input Attribute Toggle.</p>
+<p><strong style="color: var(--color-text);">Distance Points Threshold:</strong> The distance to use for searching for nearby points.</p>

@@ -1,112 +1,62 @@
 <h1>Object BMoText</h1>
+<p>This tool leverages Blender's Native Text system, automatically converting each character into an instance. This ensures full compatibility with all B4D Tools features. Additionally, it allows you to quickly and easily attach text to any Curve.</p>
 
-<p><strong>Asset Type</strong></p>
-<p>Choose Asset Type</p>
+<p><strong style="color: var(--color-text);">Quick Tip:</strong> If you have a Spline/Curve selected separately from the active object, the addon automatically adds that Spline/Curve to the <strong>Spline/Curve</strong> parameter.</p>
 
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/37_Object-Tools/02_BMoText-Add-lite.gif" alt="BMoText How to Add" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BMoText - How to Add</p>
+</div>
+
+<h2>Splitting & Configuration</h2>
+<p><strong style="color: var(--color-text);">Mode:</strong> Choose the Split Letter to Instance Type.</p>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Object:</strong> Uses the Trace Link Object.</li>
-  <li><strong>Collection:</strong> Uses the Trace Collection.</li>
+  <li><strong style="color: var(--color-text);">Disable:</strong> Keeps the Text in its Original Position.</li>
+  <li><strong style="color: var(--color-text);">Enable:</strong> Sets the Text to the Selected Curve Path.</li>
 </ul>
 
-<p><strong>Trace Link</strong></p>
-<p>Drag the Object whose points (polygonal object) are to be taken into account by the Tracer.</p>
+<p><strong style="color: var(--color-text);">Split to Instances Selection:</strong> Splits a selection of Text Letters into groups, then turns each group into an instance. You can use Input Attribute Toggle to control this.</p>
 
-<p><strong>Trace Collection</strong></p>
-<p>Drag the Collection whose Objects are to be taken into account by the Tracer.</p>
+<p><strong style="color: var(--color-text);">Edge Split Selection:</strong> Splits a selection of Text Letters into Face groups, then turns each group into an instance. You can use Input Attribute Toggle to control this.</p>
 
-<p><strong>Tracing Mode</strong></p>
-<p>Choose the Tracing Mode</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/37_Object-Tools/03_BMoText-Params-lite.gif" alt="BMoText Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BMoText - Parameters</p>
+</div>
 
+<h2>Curve Path & Alignment</h2>
+<p><strong style="color: var(--color-text);">Curve/Spline Path:</strong> Add a Curve Path for the BMoText.</p>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Trace Paths:</strong> The vertex path of objects will be converted to splines.</li>
-  <li><strong>Connect All Objects:</strong> The objects will be connected with a segment of a common spline.</li>
-  <li><strong>Connect Elements:</strong> Objects from different elements drawn by the same tracer will be connected with a common spline but with different segments.</li>
-  <li><strong>Connect All Points:</strong> All Points will be connected by same tracer with a common spline.</li>
+  <li><strong style="color: var(--color-text);">Local:</strong> The Letters are rotated in Local Space. In other words, they are rotated around the axes described by the initial transform of each Letter.</li>
+  <li><strong style="color: var(--color-text);">World:</strong> The Letters are rotated in World Space. In other words, they are rotated around axes specified in the local space of the modifier object.</li>
 </ul>
 
-<p><strong>Trace Active</strong></p>
-<p>If you want to switch off the Tracer temporarily, you can do so with this option. This creates gaps in the splines and thus spline segments.</p>
+<p><strong style="color: var(--color-text);">Offset:</strong> Moves the Text Position along the Curve Path.</p>
 
-<p><strong>Trace</strong></p>
-<p>Use this option to decide whether all objects should be recorded</p>
+<p><strong style="color: var(--color-text);">Local Offset P.Y:</strong> Moves the Text Position in the Curve Path but in the Local Offset P.Y direction.</p>
 
+<h2>Rotation Settings</h2>
+<p><strong style="color: var(--color-text);">Rotation Coordinate:</strong> Choose the Rotation Coordinate system.</p>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Origin:</strong> From the Object Center Point.</li>
-  <li><strong>Vertices:</strong> From the Object Vertices.</li>
+  <li><strong style="color: var(--color-text);">Local:</strong> The Letters are rotated in Local Space. In other words, they are rotated around the axes described by the initial transform of each Letter.</li>
+  <li><strong style="color: var(--color-text);">World:</strong> The Letters are rotated in World Space. In other words, they are rotated around axes specified in the local space of the modifier object.</li>
 </ul>
 
-<p><strong>Use Limit Age From End</strong></p>
-<p>Enables the Limit Age from End.</p>
+<p><strong style="color: var(--color-text);">Rotation:</strong> Set the Rotation of the Text on the XYZ Axis.</p>
 
-<p><strong>Limit Age From End</strong></p>
-<p>Splines are generated from the end of the animation for as long as you set frames with this parameter.</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/37_Object-Tools/05_BMoText-Native-lite.gif" alt="BMoText Native Text Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BMoText - Native Text Parameters</p>
+</div>
 
-<p><strong>Use Limit Age From Start</strong></p>
-<p>Enables the Limit Age from Start.</p>
+<h2>Advanced Options</h2>
+<p><strong style="color: var(--color-text);">Custom Selection:</strong> Add Custom Selection for the Merge By Distance. You can use Input Attribute Toggle to control this.</p>
 
-<p><strong>Limit Age From Start</strong></p>
-<p>Splines are generated from the start of the animation for as long as you set frames with this parameter.</p>
+<p><strong style="color: var(--color-text);">Use Merge by Distance:</strong> Merges each Letter of Native Text vertices within a given distance, merging surrounding geometry where necessary.</p>
 
-<p><strong>Spline Settings</strong></p>
-<p>Spline Settings Menu</p>
+<p><strong style="color: var(--color-text);">Merge Distance:</strong> The distance to use for searching for nearby points.</p>
 
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Disable:</strong> (Value: 0)</li>
-  <li><strong>Enable:</strong> (Value: 0)</li>
-</ul>
-
-<p><strong>Spline Type</strong></p>
-<p>Choose the Spline Type</p>
-
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Poly:</strong> This simplest of all spline types connects the support points that define the polygon using direct connecting lines. You can use these splines to create angular objects or to simulate choppy movements during animation.</li>
-  <li><strong>Bezier:</strong> This type of spline creates a smooth curve between the support points, which can be controlled very precisely. The interpolated curve always passes exactly through the interpolation points.</li>
-  <li><strong>NURBS:</strong> This type of spline creates a smooth curve between the points, spline gets auto handles.</li>
-  <li><strong>Catmull Rom:</strong> This type of spline creates a smooth curve between the points, spline gets auto handles.</li>
-</ul>
-
-<p><strong>Close Spline</strong></p>
-<p>Each spline can be closed or open. If a spline is closed, the start and end points are connected.</p>
-
-<p><strong>Reverse Spline</strong></p>
-<p>If you want to reverse the point order of the internal spline, activate this option.</p>
-
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>None:</strong> No Spline Resampling.</li>
-  <li><strong>Count:</strong> Sample the specified number of points along each spline.</li>
-  <li><strong>Evaluated:</strong> Calculate the number of samples by splitting each spline into segments with the specified length. The length will be rounded down so that a whole number of samples will fit in each input spline.</li>
-  <li><strong>Length:</strong> Evaluate the spline's points based on the resolution attribute for NURBS and Bézier splines. Changes nothing for poly splines.</li>
-</ul>
-
-<p><strong>Resample Mode</strong></p>
-<p>Choose the Resample Spline Mode</p>
-
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>None:</strong> No Spline Resampling.</li>
-  <li><strong>Count:</strong> Sample the specified number of points along each spline.</li>
-  <li><strong>Evaluated:</strong> Calculate the number of samples by splitting each spline into segments with the specified length. The length will be rounded down so that a whole number of samples will fit in each input spline.</li>
-  <li><strong>Length:</strong> Evaluate the spline's points based on the resolution attribute for NURBS and Bézier splines. Changes nothing for poly splines.</li>
-</ul>
-
-<p><strong>Resample Count</strong></p>
-<p>The number of control points on the new splines.</p>
-
-<p><strong>Resample Length</strong></p>
-<p>The approximate length between the control points of the new splines.</p>
-
-<p><strong>Advanced Settings</strong></p>
-<p>Enable the Advanced Settings</p>
-
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Disable:</strong> (Value: 0)</li>
-  <li><strong>Enable:</strong> (Value: 0)</li>
-</ul>
-
-<p><strong>Split To Instances</strong></p>
-<p>Enables Split To Intances Option that Splits each Mesh Island as Instance.</p>
-
-<p><strong>Split To Instances Selection</strong></p>
-<p>Use Custom Selection for Split to Instances. You can use Input Attribute Toggle</p>
-
-<p><strong>Distance Points Threshold</strong></p>
-<p>The distance to use for searching for nearby points.</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/37_Object-Tools/04_BMoText-Effectors-lite.gif" alt="BMoText with Effectors" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BMoText with Effectors</p>
+</div>

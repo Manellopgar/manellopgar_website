@@ -1,107 +1,86 @@
 <h1>Object BMograph Animator Tool</h1>
+<p>This tool allows you to animate any B4D Tools without using keyframes. It is a powerful utility that combines different modes and functions similarly to Cinema 4D's Vibrate Tag, but with significantly more features. It works with single object meshes as well as any BCloner or BFracture tool.</p>
 
-<p>The Object BMograph Animator allows you to create dynamic animations for instances with advanced control over selection, mixing, and interpolation.</p>
+<h2>Core Parameters</h2>
+<p><strong style="color: var(--color-text);">Custom Selection:</strong> Set a Custom Selection for the Instances. You can use an Input Attribute Toggle.</p>
+<p><strong style="color: var(--color-text);">Mix:</strong> Amount of mixing between the Static and Animation states.</p>
 
-<h3>Selection & Mixing Controls</h3>
-
+<h3>Min/Max Settings</h3>
+<p><strong style="color: var(--color-text);">Min/Max Mode:</strong> Use the Minimum/Maximum amount for the Animation.</p>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Custom Selection:</strong> Set a Custom Selection for the Instances. You can use Input Attribute Toggle.</li>
-  <li><strong>Mix:</strong> Amount of mixing between the Static and Animation.</li>
+  <li><strong style="color: var(--color-text);">Disable:</strong> Uses full values for the Animation.</li>
+  <li><strong style="color: var(--color-text);">Enable:</strong> Enables the ability to adjust Min/Max values for the Animation.</li>
 </ul>
-
-<h3>Min/Max Controls</h3>
-
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Disable:</strong> Uses full values for the Animation.</li>
-  <li><strong>Enable:</strong> Enables to adjust Min/Max values for the Animation.</li>
-</ul>
-
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Min:</strong> Adjust the Minimum Value for the Animation.</li>
-  <li><strong>Max:</strong> Adjust the Maximum Value for the Animation.</li>
-</ul>
+<p><strong style="color: var(--color-text);">Min:</strong> Adjust the Minimum Value for the Animation.</p>
+<p><strong style="color: var(--color-text);">Max:</strong> Adjust the Maximum Value for the Animation.</p>
 
 <h3>Animator Type</h3>
-
-<p>Choose the Animator Type:</p>
-
+<p><strong style="color: var(--color-text);">Animator Type:</strong> Choose the Animator Type.</p>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Vibrate:</strong> Can be used to add random behavior to the animation. Or with Regular Pulse a Cyclic Animation.</li>
-  <li><strong>Repeat:</strong> Repeats the Animation configured on the Amplitude parameters.</li>
-  <li><strong>Ping-Pong:</strong> Repeats Foward and Backwards the Animation configured on the Amplitude parameters.</li>
+  <li><strong style="color: var(--color-text);">Vibrate:</strong> Can be used to add random behavior to the animation or create a cyclic animation with Regular Pulse.</li>
+  <li><strong style="color: var(--color-text);">Repeat:</strong> Repeats the Animation configured in the Amplitude parameters.</li>
+  <li><strong style="color: var(--color-text);">Ping-Pong:</strong> Repeats the Animation Forward and Backward based on the Amplitude parameters.</li>
 </ul>
 
 <h3>Interpolation</h3>
-
-<p>Choose the Interpolation Type:</p>
-
+<p><strong style="color: var(--color-text);">Interpolation:</strong> Choose the Interpolation Type.</p>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Linear:</strong> No Ease Interpolation.</li>
-  <li><strong>Sine:</strong> Adds the Sine Easing Interpolation to the Animation.</li>
-  <li><strong>Cubic:</strong> Adds the Cubic Easing Interpolation to the Animation.</li>
-  <li><strong>Exponential:</strong> Adds the Exponential Easing Interpolation to the Animation.</li>
-  <li><strong>Circular:</strong> Adds the Circular Easing Interpolation to the Animation.</li>
-  <li><strong>Back:</strong> Adds the Back Easing Interpolation to the Animation.</li>
-  <li><strong>Bounce:</strong> Adds the Bounce Easing Interpolation to the Animation.</li>
-  <li><strong>Elastic:</strong> Adds the Elastic Easing Interpolation to the Animation.</li>
-  <li><strong>Stepped Linear:</strong> Adds the Stepped Linear Easing Interpolation to the Animation. (Use <strong>Steps</strong> parameter to set number of steps).</li>
-  <li><strong>Ease Quad:</strong> Adds the Ease Quad Easing Interpolation to the Animation.</li>
+  <li><strong style="color: var(--color-text);">Linear:</strong> No Ease Interpolation.</li>
+  <li><strong style="color: var(--color-text);">Sine:</strong> Adds Sine Easing Interpolation to the Animation.</li>
+  <li><strong style="color: var(--color-text);">Cubic:</strong> Adds Cubic Easing Interpolation to the Animation.</li>
+  <li><strong style="color: var(--color-text);">Exponential:</strong> Adds Exponential Easing Interpolation to the Animation.</li>
+  <li><strong style="color: var(--color-text);">Circular:</strong> Adds Circular Easing Interpolation to the Animation.</li>
+  <li><strong style="color: var(--color-text);">Back:</strong> Adds Back Easing Interpolation to the Animation.</li>
+  <li><strong style="color: var(--color-text);">Bounce:</strong> Adds Bounce Easing Interpolation to the Animation.</li>
+  <li><strong style="color: var(--color-text);">Elastic:</strong> Adds Elastic Easing Interpolation to the Animation.</li>
+  <li><strong style="color: var(--color-text);">Stepped Linear:</strong> Adds Stepped Linear Easing Interpolation to the Animation.</li>
+  <li><strong style="color: var(--color-text);">Ease Quad:</strong> Adds Ease Quad Easing Interpolation to the Animation.</li>
 </ul>
 
-<h3>Animation Settings</h3>
+<h2>Animation Controls</h2>
+<p><strong style="color: var(--color-text);">Steps:</strong> Set the Number of Steps for the Stepped Linear Interpolation.</p>
+<p><strong style="color: var(--color-text);">Frequency (Speed):</strong> Control Animation Speed. <em>Note: Loop functionality works perfectly with Integer values.</em></p>
+<p><strong style="color: var(--color-text);">Frame Loop Out:</strong> To enable Loop Animation, set the End Frame to a value greater than 0.</p>
+<p><strong style="color: var(--color-text);">Regular Pulse:</strong> If enabled, the object pulsates using a regular pattern shaped like a sine wave.</p>
+<p><strong style="color: var(--color-text);">Offset:</strong> Offset of the Sine Animation.</p>
+<p><strong style="color: var(--color-text);">Seed:</strong> Adjust the Seed for the Random Animation.</p>
 
+<h2>Axis Parameters</h2>
+<p><strong style="color: var(--color-text);">Use Position:</strong> Enables the Position Parameters.</p>
+<p><strong style="color: var(--color-text);">Amplitude:</strong> The Amplitude input boxes control the maximum positive and negative movement along the X, Y, and Z axes. The Frequency value controls the speed of vibration.</p>
+
+<p><strong style="color: var(--color-text);">Use Rotation:</strong> Enables the Rotation Parameters.</p>
+<p><strong style="color: var(--color-text);">Amplitude:</strong> The Amplitude input boxes control the maximum positive and negative rotation along the X, Y, and Z axes. The Frequency value controls the speed of vibration.</p>
+
+<p><strong style="color: var(--color-text);">Use Scale:</strong> Enables the Scale Parameters.</p>
+<p><strong style="color: var(--color-text);">Amplitude:</strong> The Amplitude input boxes control the maximum positive and negative scale along the X, Y, and Z axes. The Frequency value controls the speed of vibration.</p>
+<p><strong style="color: var(--color-text);">Uniform Scale:</strong> Determines whether all axes are scaled uniformly.</p>
+<p><strong style="color: var(--color-text);">Local Space:</strong> If enabled, instances are scaled in local space (described by the initial transform of each instance). When disabled, the Center and Scale inputs are specified in the local space of the modifier object.</p>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/37_Object-Tools/13_Animator-MeshObj-lite.gif" alt="Animator Tool with Mesh Object" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Animator Tool with any Mesh Object - Examples</p>
+</div>
+
+<h2>Advanced Settings</h2>
+<p><strong style="color: var(--color-text);">Advanced Settings:</strong> Enable Advanced Settings.</p>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Steps:</strong> Set the Number of Steps for the Stepped Linear Interpolation.</li>
-  <li><strong>Frequency (Speed):</strong> Control Speed Animation. INFO: Loop ONLY works perfectly with Integer values.</li>
-  <li><strong>Frame Loop Out:</strong> To enable Loop Animation set the End Frame, that must be greater than 0.</li>
-  <li><strong>Regular Pulse:</strong> If this option is enabled, the object pulsates using a regular pattern shaped like a sine wave.</li>
-  <li><strong>Offset:</strong> Offset of Sine Animation.</li>
-  <li><strong>Seed:</strong> Adjust the Seed from the Random Animation.</li>
+  <li><strong style="color: var(--color-text);">Disable:</strong> Advanced Settings Disabled.</li>
+  <li><strong style="color: var(--color-text);">Enable:</strong> In Vibrate Mode, enables Easing Interpolation Controls. In Other Modes, enables Prune Controls.</li>
 </ul>
 
-<h3>Transform Parameters</h3>
+<p><strong style="color: var(--color-text);">Noise Random Scale:</strong> Overall Noise Texture scale.</p>
+<p><strong style="color: var(--color-text);">Ease Mix:</strong> Adjust the amount of Ease.</p>
+<p><strong style="color: var(--color-text);">Ease In-Out:</strong> Adjust the Percentage Between Ease In-Out.</p>
+<p><strong style="color: var(--color-text);">To Min:</strong> Adjust the Minimum of the Ease for the Animation.</p>
+<p><strong style="color: var(--color-text);">To Max:</strong> Adjust the Maximum of the Ease for the Animation.</p>
 
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Use Position:</strong> Enables the Position Parameters.</li>
-  <li><strong>Amplitude (Position):</strong> The Amplitude input boxes control the maximum positive and negative movement along the X, Y and Z axes. The Frequency value controls the speed of vibration.</li>
-</ul>
+<p><strong style="color: var(--color-text);">Prune Pos Amount:</strong> Controls the amount of Instances Prune for the Position Animation.</p>
+<p><strong style="color: var(--color-text);">Prune Rot Amount:</strong> Controls the amount of Instances Prune for the Rotation Animation.</p>
+<p><strong style="color: var(--color-text);">Prune Scale Amount:</strong> Controls the amount of Instances Prune for the Scale Animation.</p>
+<p><strong style="color: var(--color-text);">Seed:</strong> Adjust the Seed for the Random Prune.</p>
 
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Use Rotation:</strong> Enables the Rotation Parameters.</li>
-  <li><strong>Amplitude (Rotation):</strong> The Amplitude input boxes control the maximum positive and negative rotation along the X, Y and Z axes. The Frequency value controls the speed of vibration.</li>
-</ul>
-
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Use Scale:</strong> Enables the Scale Parameters.</li>
-  <li><strong>Amplitude (Scale):</strong> The Amplitude input boxes control the maximum positive and negative scale along the X, Y and Z axes. The Frequency value controls the speed of vibration.</li>
-  <li><strong>Uniform Scale:</strong> The Uniform Scale option determines whether all axes are scaled uniformly.</li>
-  <li><strong>Local Space:</strong> If enabled, the instances are scaled in local space. In other words, they are scaled in the directions described by the initial transform of each instance. When disabled, the Center and Scale inputs are specified in the local space of the modifier object.</li>
-</ul>
-
-<h3>Advanced Settings</h3>
-
-<p>Enable Advanced Settings:</p>
-
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Disable:</strong> Advanced Settings Disabled.</li>
-  <li><strong>Enable:</strong> In Vibrate Mode enables the Easing Interpolation Controls. In the Other Modes, enables Prune Controls.</li>
-</ul>
-
-<p>Once enabled (Vibrate Mode), you can control Easing:</p>
-
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Noise Random Scale:</strong> Overall Noise Texture scale.</li>
-  <li><strong>Ease Mix:</strong> Adjust the amount of Ease.</li>
-  <li><strong>Ease In-Out:</strong> Adjust the Percentage Between Ease In-Out.</li>
-  <li><strong>To Min:</strong> Adjust the Minimum of the Ease for the Animation.</li>
-  <li><strong>To Max:</strong> Adjust the Maximum of the Ease for the Animation.</li>
-</ul>
-
-<p>Once enabled (Other Modes), you can control Pruning:</p>
-
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Prune Pos Amount:</strong> Controls the amount of Instances Prune for the Position Animation.</li>
-  <li><strong>Prune Rot Amount:</strong> Controls the amount of Instances Prune for the Rotation Animation.</li>
-  <li><strong>Prune Scale Amount:</strong> Controls the amount of Instances Prune for the Scale Animation.</li>
-  <li><strong>Seed:</strong> Adjust the Seed from the Random Prune.</li>
-</ul>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/37_Object-Tools/12_Animator-BCloner-lite.gif" alt="Animator Tool with BCloner" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Animator Tool with any Mesh Object - Examples</p>
+</div>
