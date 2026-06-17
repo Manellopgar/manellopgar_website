@@ -1,80 +1,84 @@
 <h1>Field Random</h1>
+<p>This tool allows use a Random Values or Random Noise as a Field.</p>
 
-<!-- DYNAMIC INJECTION: pages/0_common/2a_fields-namefield-mask.html -->
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/26_Field-Random/01_Field-Rand-Press-lite.gif" alt="Field Random Examples" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Field Random Examples</p>
+</div>
+
+<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
 <include src="pages/0_common/2a_fields-params.html"></include>
 
-<h3>Random Mode</h3>
+<h2>Random Mode</h2>
+<p><strong style="color: var(--color-text);">Random Mode:</strong> Choose Random Mode.</p>
+
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Random:</strong> (Value: 0)</li>
-  <li><strong>Noise:</strong> (Value: 0)</li>
+  <li><strong style="color: var(--color-text);">Random:</strong> Random Values.</li>
+  <li><strong style="color: var(--color-text);">Noise:</strong> Animation Random Values.</li>
 </ul>
 
-<h3>Random Seed</h3>
+<p><strong style="color: var(--color-text);">Random Seed:</strong> Adjust the Random Seed.</p>
+
+<p><strong style="color: var(--color-text);">Field Controller:</strong> Drag Your Custom Field Controller.</p>
+
+<h2>Noise Type</h2>
+<p><strong style="color: var(--color-text);">Noise Type:</strong> Choose the Noise Type.</p>
+
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Random:</strong> Adjust the Random Seed.</li>
-  <li><strong>Noise:</strong> (Value: 0)</li>
+  <li><strong style="color: var(--color-text);">Noise Multifractal:</strong> Noise Multifractal Texture.</li>
+  <li><strong style="color: var(--color-text);">Noise Ridged Multifractal:</strong> Noise Ridged Multifractal Texture.</li>
+  <li><strong style="color: var(--color-text);">Noise Hybrid Multifractal:</strong> Noise Hybrid Multifractal Texture.</li>
+  <li><strong style="color: var(--color-text);">Noise fBM:</strong> Noise fBM Texture.</li>
+  <li><strong style="color: var(--color-text);">Noise Hetero Terrain:</strong> Noise Hetero Terrain Texture.</li>
+  <li><strong style="color: var(--color-text);">Voronoi Euclidean:</strong> Voronoi Euclidean Texture.</li>
+  <li><strong style="color: var(--color-text);">Voronoi Manhatan:</strong> Voronoi Manhatan Texture.</li>
+  <li><strong style="color: var(--color-text);">Voronoi Chebychev:</strong> Voronoi Chebychev Texture.</li>
+  <li><strong style="color: var(--color-text);">Voronoi Minkowski:</strong> Voronoi Minkowski Texture.</li>
 </ul>
 
-<h3>Field Controller</h3>
-<p>Drag Your Custom Field Controller.</p>
+<h2>Auto Animation</h2>
+<p><strong style="color: var(--color-text);">Auto Animation:</strong> Auto Animation Options.</p>
 
-<h3>Noise Type</h3>
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Noise Multifractal:</strong></li>
-  <li><strong>Noise Ridged Multifractal:</strong></li>
-  <li><strong>Noise Hybrid Multifractal:</strong></li>
-  <li><strong>Noise fBM:</strong></li>
-  <li><strong>Noise Hetero Terrain:</strong></li>
-  <li><strong>Voronoi Euclidean:</strong></li>
-  <li><strong>Voronoi Manhatan:</strong></li>
-  <li><strong>Voronoi Chebychev:</strong></li>
-  <li><strong>Voronoi Minkowski:</strong></li>
-</ul>
+<p><strong style="color: var(--color-text);">Noise Seed:</strong> Changes the Noise Seed.</p>
 
-<h3>Auto Animation</h3>
-<p>Auto Animation Options</p>
+<p><strong style="color: var(--color-text);">Animation Speed:</strong> Adjust the Animation Speed.</p>
 
-<h3>Noise Seed</h3>
-<p>Changes the Noise Seed.</p>
+<h2>Loop Animation</h2>
+<p><strong style="color: var(--color-text);">Loop Animation:</strong> Loop Animation Options.</p>
 
-<h3>Animation Speed</h3>
-<p>Adjust the Animation Speed</p>
+<p><strong style="color: var(--color-text);">Frame Loop Out:</strong> Enter the End Frame for the Loop Out. If is negative doesn't loop.</p>
 
-<h3>Loop Animation</h3>
-<p>Loop Animation Options</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/26_Field-Random/02_Field-Rand-Loop-lite.gif" alt="Field Random Loop Mode" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Field Random Loop Mode</p>
+</div>
 
-<h3>Frame Loop Out</h3>
-<p>Enter the End Frame for the Loop Out. If is negative doesn't loop.</p>
+<p><strong style="color: var(--color-text);">Custom Name Field:</strong> Write your Custom Name Field if you want to use it with a Specific Name.</p>
 
-<h3>Custom Name Field</h3>
-<p>Write your Custom Name Field if you want to use it with a Specific Name.</p>
+<p><strong style="color: var(--color-text);">Field Mask:</strong> Enabled by default, if you want a Custom Name Field as Field Mask, You can use Input Attribute Toggle.</p>
 
-<h3>Field Mask</h3>
-<p>Enabled by default, if you want a Custom Name Field as Field Mask, You can use Input Attribute Toggle.</p>
+<h2>Voronoi Settings</h2>
+<p><strong style="color: var(--color-text);">Uniform Scale:</strong> Uniform Scale of the Voronoi.</p>
+<p><strong style="color: var(--color-text);">Detail:</strong> Number of noise octaves. The fractional part of the input is multiplied by the magnitude of the highest octave. Higher number of octaves corresponds to a higher evaluation time.</p>
+<p><strong style="color: var(--color-text);">Roughness:</strong> Blend between a smoother noise pattern, and rougher with sharper peaks.</p>
+<p><strong style="color: var(--color-text);">Lacunarity:</strong> The difference between the scale of each two consecutive octaves. Larger values corresponds to larger scale for higher octaves.</p>
+<p><strong style="color: var(--color-text);">Randomness:</strong> The randomness of the noise.</p>
+<p><strong style="color: var(--color-text);">Exponent:</strong> Exponent of the Minkowski distance metric.</p>
 
-<h3>Voronoi Parameters</h3>
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Uniform Scale:</strong> Uniform Scale of the Voronoi.</li>
-  <li><strong>Detail:</strong> Number of noise octaves. The fractional part of the input is multiplied by the magnitude of the highest octave. Higher number of octaves corresponds to a higher evaluation time.</li>
-  <li><strong>Roughness:</strong> Blend between a smoother noise pattern, and rougher with sharper peaks.</li>
-  <li><strong>Lacunarity:</strong> The difference between the scale of each two consecutive octaves. Larger values corresponds to larger scale for higher octaves.</li>
-  <li><strong>Randomness:</strong> The randomness of the noise.</li>
-  <li><strong>Exponent:</strong> Exponent of the Minkowski distance metric.</li>
-</ul>
+<h2>Noise Settings</h2>
+<p><strong style="color: var(--color-text);">Uniform Scale:</strong> Uniform Scale of the noise.</p>
+<p><strong style="color: var(--color-text);">Detail:</strong> Number of noise octaves. This can have a fractional part, in which case a blend is performed (e.g. a Detail of 2.5 results in a 50% blend between 2 and 3 octaves).</p>
+<p><strong style="color: var(--color-text);">Roughness:</strong> Blend between a smoother noise pattern, and rougher with sharper peaks.</p>
+<p><strong style="color: var(--color-text);">Lacunarity:</strong> The difference between the scale of each two consecutive octaves. Larger values corresponds to larger scale for higher octaves.</p>
+<p><strong style="color: var(--color-text);">Offset:</strong> An added offset to each octave, determines the level where the highest octave will appear.</p>
+<p><strong style="color: var(--color-text);">Gain:</strong> An extra multiplier to tune the magnitude of octaves.</p>
+<p><strong style="color: var(--color-text);">Distortion:</strong> Amount of Noise distortion.</p>
 
-<h3>Noise Parameters</h3>
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong>Uniform Scale:</strong> Uniform Scale of the noise.</li>
-  <li><strong>Detail:</strong> Number of noise octaves. This can have a fractional part, in which case a blend is performed (e.g. a Detail of 2.5 results in a 50% blend between 2 and 3 octaves).</li>
-  <li><strong>Roughness:</strong> Blend between a smoother noise pattern, and rougher with sharper peaks.</li>
-  <li><strong>Lacunarity:</strong> The difference between the scale of each two consecutive octaves. Larger values corresponds to larger scale for higher octaves.</li>
-  <li><strong>Offset:</strong> An added offset to each octave, determines the level where the highest octave will appear.</li>
-  <li><strong>Gain:</strong> An extra multiplier to tune the magnitude of octaves.</li>
-  <li><strong>Distortion:</strong> Amount of Noise distortion.</li>
-</ul>
+<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
+<include src="pages/0_common/2b_fields-namefield-mask.html"></include>
 
-<!-- DYNAMIC INJECTION: pages/0_common/2a_fields-blending.html -->
+<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
 <include src="pages/0_common/2c_fields-blending.html"></include>
 
-<!-- DYNAMIC INJECTION: pages/0_common/2a_fields-remapping.html -->
+<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
 <include src="pages/0_common/2d_fields-remapping.html"></include>
