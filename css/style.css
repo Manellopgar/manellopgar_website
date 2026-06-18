@@ -935,6 +935,16 @@ body, .container, .sidebar, .main-content, .nav-link, summary,
     box-shadow: 0 0 0 3px rgba(255, 122, 92, 0.5);
 }
 
+/* Rotar la flecha cuando el details está abierto */
+.faq-item[open] .faq-arrow {
+    transform: rotate(180deg);
+}
+
+/* Opcional: Quitar el triángulo nativo del navegador si aparece */
+.faq-header::-webkit-details-marker {
+    display: none;
+}
+
 /* ========================================== */
 /* FIN DE ESTILOS BASE. CSS COMPLETO.       */
 /* ========================================== */
