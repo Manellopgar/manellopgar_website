@@ -1,18 +1,36 @@
 <h1>Effector Sound</h1>
+<p>As the name suggests, this Effector modifies the Clones based on the Sound Amplitude of any loaded Sound file. <em>Note: In the next update, this will be refactored with Blender 5.2 new features!</em></p>
 
-<p>As the name suggests, this Effector changes with the Sound Amplitude of any Sound file all Clones in different ways.</p>
+<p><strong>Sound Baked Object:</strong> Drag Your Custom Object as Bake Object Sound.</p>
 
-<p><strong>Sound Baked Object</strong></p>
-<p>Drag Your Custom Object as Bake Object Sound.</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/18_Effector-Sound/02_Effector_Sound-Empty-lite.gif" alt="Effector Sound - Empty Controller" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Effector Sound - Empty Controller</p>
+</div>
 
-<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
 <include src="pages/0_common/1a_effectors-strength-select.html"></include>
 
-<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
 <include src="pages/0_common/1b_effectors-min-max.html"></include>
 
-<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
 <include src="pages/0_common/1c_effectors-use-PSR-params.html"></include>
 
-<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/18_Effector-Sound/03_Effector_Sound-Example-lite.gif" alt="Effector Sound - Example" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Effector Sound - Example</p>
+</div>
+
 <include src="pages/0_common/1d_effectors-other-params.html"></include>
+
+<h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
+
+<h2>Special Case: Effector Sound</h2>
+<p>This effector utilizes a two-state button mechanism:</p>
+<ol style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li>Clicking the button opens a file browser window where you must select the audio file.</li>
+  <li>Click the button again to close the browser and return the interface to its original state.</li>
+</ol>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/18_Effector-Sound/01_Effector_Sound-2states-lite.gif" alt="Two States of Sound Effector" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Two States of Sound Effector</p>
+</div>

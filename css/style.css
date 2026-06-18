@@ -655,50 +655,34 @@ body, .container, .sidebar, .main-content, .nav-link, summary,
     color: #e2e8f0;
 }
 
-/* Botón Toggle en modo oscuro */
+/* Botón Toggle */
 .theme-toggle {
     position: relative;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
-    padding: 6px 14px;
+    padding: 8px 14px;
     border-radius: 20px;
     cursor: pointer;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
-    gap: 6px;
-    transition: background 0.2s, transform 0.2s;
-    z-index: 10;
+    justify-content: center;
+    transition: background 0.2s;
+    height: 38px;
+    min-width: 42px;  /* ✅ Añadido: evita que se encoja */
+    line-height: 1;
 }
 
 .theme-toggle:hover {
-    background: rgba(255,255,255,0.25);
-    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.3);
 }
 
+/* Modo oscuro - botón toggle */
 [data-theme="dark"] .theme-toggle {
-    background: rgba(0,0,0,0.3);
-    border-color: rgba(255,255,255,0.2);
-    color: #f8fafc;
-}
-
-/* Ajustes Header en modo oscuro */
-[data-theme="dark"] .header-tools #search-input {
-    background-color: rgba(0, 0, 0, 0.3);
-    border-color: rgba(255, 255, 255, 0.1);
-    color: #e2e8f0;
-}
-
-[data-theme="dark"] .header-tools #search-input:focus {
-    background-color: #151e32;
-    border-color: var(--color-primary);
-    color: #e2e8f0;
-}
-
-[data-theme="dark"] .header-tools .theme-toggle {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
     border-color: rgba(255, 255, 255, 0.2);
+    color: #f8fafc;
 }
 
 /* ========================================== */
@@ -830,6 +814,125 @@ body, .container, .sidebar, .main-content, .nav-link, summary,
     background-color: var(--color-primary);
     color: white;
     box-shadow: 0 0 0 3px rgba(255, 122, 92, 0.4);
+}
+
+/* ========================================== */
+/* HEADER CON LOGO + TÍTULO (Mantiene estilo naranja) */
+/* ========================================== */
+.page-header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Contenedor del logo + título */
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+/* Logo */
+.header-logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Grupo del título */
+.header-title-group {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+/* Título principal */
+.site-title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.5px;
+}
+
+/* Subtítulo */
+.site-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Herramientas (buscador + toggle) a la derecha */
+.header-tools {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+/* Responsive: en móvil apilar elementos */
+@media screen and (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .header-brand {
+        width: 100%;
+    }
+    
+    .header-tools {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .header-logo {
+        height: 50px;
+    }
+    
+    .site-title {
+        font-size: 1.5rem;
+    }
+    
+    .site-subtitle {
+        font-size: 0.85rem;
+    }
+}
+
+/* ========================================== */
+/* RESALTADO DE BÚSQUEDA ACTIVA              */
+/* ========================================== */
+.search-highlight-active {
+    background-color: var(--color-warning);
+    color: #333;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.5);
+    animation: highlightPulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes highlightPulse {
+    from { box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.5); }
+    to   { box-shadow: 0 0 0 8px rgba(255, 193, 7, 0.1); }
+}
+
+[data-theme="dark"] .search-highlight-active {
+    background-color: var(--color-primary);
+    color: white;
+    box-shadow: 0 0 0 3px rgba(255, 122, 92, 0.5);
 }
 
 /* ========================================== */

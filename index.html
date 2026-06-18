@@ -1,58 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manellopgar 3D Stuff</title>
+    <title>Manellopgar 3D Stuff - B4D Tools Documentation</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!-- HEADER -->
+    <!-- HEADER CON LOGO + TÍTULO + BUSCADOR + TOGGLE -->
     <header class="page-header">
-        <h1 class="header-title">Manellopgar 3D Stuff</h1>
+        <div class="header-brand">
+            <img src="assets/images/00_About-B4D/00_Manellopgar_Logo.png" alt="Manellopgar 3D Stuff" class="header-logo">
+            <div class="header-title-group">
+                <h1 class="site-title">Manellopgar</h1>
+                <span class="site-subtitle">3D STUFF</span>
+            </div>
+        </div>
         
         <div class="header-tools">
-            <div class="search-wrapper">
-                <input type="text" id="search-input" placeholder="🔍 Search..." autocomplete="off">
-                <div id="search-results" class="search-results"></div>
-            </div>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar modo claro/oscuro">
-                <span class="toggle-icon">☀️</span>
-            </button>
+            <input type="text" id="search-input" placeholder="🔍 Search...">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
         </div>
     </header>
 
-    <!-- Main container -->
+    <!-- CONTENEDOR PRINCIPAL -->
     <div class="container">
-
-        <!-- SIDEBAR -->
+        <!-- Sidebar con el menú -->
         <aside class="sidebar">
             <nav role="navigation" aria-label="Main navigation">
                 <ul class="nav-menu">
-                    
-                    <!-- 🆕 NUEVO: Panel principal "B4D Tools" -->
+                    <!-- Panel raíz "B4D Tools" -->
                     <li class="nav-item">
                         <details class="nav-group nav-root" open>
                             <summary class="nav-link nav-root-title">
                                 <strong>B4D Tools</strong>
                             </summary>
                             <ul class="sub-menu sub-menu-root">
-                                
-                                <!-- Getting Started (ahora sub-nivel) -->
+                                <!-- Getting Started -->
                                 <li class="nav-item">
                                     <details class="nav-group">
-                                        <summary class="nav-link">🚀 Getting Started</summary>
+                                        <summary class="nav-link"> Getting Started</summary>
                                         <ul class="sub-menu">
-                                            <!-- Enlaces con HASH (#nombre) -->
-                                            <li class="nav-item"><a href="#/0_start/0_home" class="nav-link">About B4D Tools</a></li>
-                                            <li class="nav-item"><a href="#/0_start/1_installation" class="nav-link">Installation & Updating</a></li>
-                                            <li class="nav-item"><a href="#/0_start/2_beginners-video" class="nav-link">Beginner's Guide Video</a></li>
-                                            <li class="nav-item"><a href="#/0_start/3_preferences" class="nav-link">Addon Preferences</a></li>
+                                            <li class="nav-item"><a href="#0_start/0_home" class="nav-link active" aria-current="page">About B4D Tools</a></li>
+                                            <li class="nav-item"><a href="#0_start/1_installation" class="nav-link">Installation & Updating</a></li>
+                                            <li class="nav-item"><a href="#0_start/2_beginners-video" class="nav-link">Beginner's Guide Video</a></li>
+                                            <li class="nav-item"><a href="#0_start/3_preferences" class="nav-link">Addon Preferences</a></li>
                                         </ul>
                                     </details>
                                 </li>
-
                                 <!-- Using BCloners -->
                                 <li class="nav-item">
                                     <details class="nav-group">
@@ -62,30 +57,28 @@
                                                 <details class="nav-subgroup">
                                                     <summary class="nav-link">BCloner</summary>
                                                     <ul class="sub-menu">
-                                                        <li class="nav-item"><a  href="#/1_bcloners/0c_initial-guide-bcloners" class="nav-link">Initial Guide BCloners</a></li>
-                                                        <li class="nav-item"><a  href="#/1_bcloners/1_grid-array" class="nav-link">Grid Array</a></li>
-                                                        <li class="nav-item"><a  href="#/1_bcloners/2_linear" class="nav-link">Linear</a></li>
-                                                        <li class="nav-item"><a  href="#/1_bcloners/3_radial" class="nav-link">Radial</a></li>
-                                                        <li class="nav-item"><a  href="#/1_bcloners/4_honeycomb-array" class="nav-link">HoneyComb Array</a></li>
-                                                        <li class="nav-item"><a  href="#/1_bcloners/5_object" class="nav-link">Object</a></li>
-                                                        <li class="nav-item"><a  href="#/1_bcloners/6_spline" class="nav-link">Spline</a></li>
-                                                            <ul class="sub-menu">
-                                                                <li class="nav-item">
-                                                                    <details class="nav-subgroup">
-                                                                        <summary class="nav-link">Advanced Distributions</summary>
-                                                                        <ul class="sub-menu">
-                                                                            <li class="nav-item"><a href="#/1_bcloners/7_advanced-distribution/12_initial-guide-distribution" class="nav-link">Initial Guide Advanced Distributions</a></li>
-                                                                            <li class="nav-item"><a href="#/1_bcloners/7_advanced-distribution/13_2D-grid-distribution" class="nav-link">2D Grid Distribution</a></li>
-                                                                            <li class="nav-item"><a href="#/1_bcloners/7_advanced-distribution/14_cannonball-distribution" class="nav-link">Cannonball Distribution</a></li>
-                                                                            <li class="nav-item"><a href="#/1_bcloners/7_advanced-distribution/15_partition-distribution" class="nav-link">Partition Distribution</a></li>
-                                                                            <li class="nav-item"><a href="#/1_bcloners/7_advanced-distribution/16_smart-hex-distribution" class="nav-link">Smart Hex Distribution</a></li>
-                                                                            <li class="nav-item"><a href="#/1_bcloners/7_advanced-distribution/17_spline-bed-distribution" class="nav-link">Spline Bed Distribution</a></li>
-                                                                            <li class="nav-item"><a href="#/1_bcloners/7_advanced-distribution/18_stack-distribution" class="nav-link">Stack Distribution</a></li>
-                                                                            <li class="nav-item"><a href="#/1_bcloners/7_advanced-distribution/19_custom-distribution" class="nav-link">Custom Distribution</a></li>
-                                                                        </ul>
-                                                                    </details>
-                                                                </li>
-                                                            </ul>                    
+                                                        <li class="nav-item"><a href="#1_bcloners/0c_initial-guide-bcloners" class="nav-link">Initial Guide BCloners</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/1_grid-array" class="nav-link">Grid Array</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/2_linear" class="nav-link">Linear</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/3_radial" class="nav-link">Radial</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/4_honeycomb-array" class="nav-link">HoneyComb Array</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/5_object" class="nav-link">Object</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/6_spline" class="nav-link">Spline</a></li>
+                                                    </ul>
+                                                </details>
+                                            </li>
+                                            <li class="nav-item">
+                                                <details class="nav-subgroup">
+                                                    <summary class="nav-link">Advanced Distributions</summary>
+                                                    <ul class="sub-menu">
+                                                        <li class="nav-item"><a href="#1_bcloners/7_advanced-distribution/12_initial-guide-distribution" class="nav-link">Initial Guide Advanced Distributions</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/7_advanced-distribution/13_2D-grid-distribution" class="nav-link">2D Grid Distribution</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/7_advanced-distribution/14_cannonball-distribution" class="nav-link">Cannonball Distribution</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/7_advanced-distribution/15_partition-distribution" class="nav-link">Partition Distribution</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/7_advanced-distribution/16_smart-hex-distribution" class="nav-link">Smart Hex Distribution</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/7_advanced-distribution/17_spline-bed-distribution" class="nav-link">Spline Bed Distribution</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/7_advanced-distribution/18_stack-distribution" class="nav-link">Stack Distribution</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/7_advanced-distribution/19_custom-distribution" class="nav-link">Custom Distribution</a></li>
                                                     </ul>
                                                 </details>
                                             </li>
@@ -93,18 +86,17 @@
                                                 <details class="nav-subgroup">
                                                     <summary class="nav-link">+ Tools</summary>
                                                     <ul class="sub-menu">
-                                                        <li class="nav-item"><a href="#/1_bcloners/8_bmograph-selection" class="nav-link">BMograph Selection</a></li>
-                                                        <li class="nav-item"><a href="#/1_bcloners/9_bclonertomatrix" class="nav-link">BCloner To Matrix</a></li>
-                                                        <li class="nav-item"><a href="#/1_bcloners/10_bcloner-mirror" class="nav-link">BCloner Mirror</a></li>
-                                                        <li class="nav-item"><a href="#/1_bcloners/11_realize-instances" class="nav-link">Realize Instances</a></li>
-                                                        <li class="nav-item"><a href="#/1_bcloners/12_split-to-instances" class="nav-link">Split To Instances</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/8_bmograph-selection" class="nav-link">BMograph Selection</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/9_bclonertomatrix" class="nav-link">BCloner To Matrix</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/10_bcloner-mirror" class="nav-link">BCloner Mirror</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/11_realize-instances" class="nav-link">Realize Instances</a></li>
+                                                        <li class="nav-item"><a href="#1_bcloners/12_split-to-instances" class="nav-link">Split To Instances</a></li>
                                                     </ul>
                                                 </details>
                                             </li>
                                         </ul>
                                     </details>
                                 </li>
-
                                 <!-- Using Effectors -->
                                 <li class="nav-item">
                                     <details class="nav-group">
@@ -114,28 +106,27 @@
                                                 <details class="nav-subgroup">
                                                     <summary class="nav-link">Effector</summary>
                                                     <ul class="sub-menu">
-                                                        <li class="nav-item"><a href="#/2_effectors/0_initial-guide-effectors" class="nav-link">Initial Guide Effectors</a></li>
-                                                        <li class="nav-item"><a href="#/2_effectors/1_plain" class="nav-link">Plain</a></li>
-                                                        <li class="nav-item"><a href="#/2_effectors/2_random" class="nav-link">Random</a></li>
-                                                        <li class="nav-item"><a href="#/2_effectors/3_step" class="nav-link">Step</a></li>
-                                                        <li class="nav-item"><a href="#/2_effectors/4_target" class="nav-link">Target</a></li>
-                                                        <li class="nav-item"><a href="#/2_effectors/5_delay" class="nav-link">Delay</a></li>
-                                                        <li class="nav-item"><a href="#/2_effectors/6_image-tex" class="nav-link">Image Tex</a></li>
-                                                        <li class="nav-item"><a href="#/2_effectors/7_noise-tex" class="nav-link">Noise Tex</a></li>
-                                                        <li class="nav-item"><a href="#/2_effectors/8_sound" class="nav-link">Sound</a></li>
-                                                        <li class="nav-item"><a href="#/2_effectors/9_inheritance" class="nav-link">Inheritance</a></li>
-                                                        <li class="nav-item"><a href="#/2_effectors/10_spline" class="nav-link">Spline</a></li>
-                                                        <li class="nav-item"><a href="#/2_effectors/11_volume" class="nav-link">Volume</a></li>
-                                                        <li class="nav-item"><a href="#/2_effectors/12_time" class="nav-link">Time</a></li>
-                                                        <li class="nav-item"><a href="#/2_effectors/13_formula" class="nav-link">Formula</a></li>
-                                                        <li class="nav-item"><a href="#/2_effectors/14_push-apart" class="nav-link">Push Apart</a></li>
+                                                        <li class="nav-item"><a href="#2_effectors/0_initial-guide-effectors" class="nav-link">Initial Guide Effectors</a></li>
+                                                        <li class="nav-item"><a href="#2_effectors/1_plain" class="nav-link">Plain</a></li>
+                                                        <li class="nav-item"><a href="#2_effectors/2_random" class="nav-link">Random</a></li>
+                                                        <li class="nav-item"><a href="#2_effectors/3_step" class="nav-link">Step</a></li>
+                                                        <li class="nav-item"><a href="#2_effectors/4_target" class="nav-link">Target</a></li>
+                                                        <li class="nav-item"><a href="#2_effectors/5_delay" class="nav-link">Delay</a></li>
+                                                        <li class="nav-item"><a href="#2_effectors/6_image-tex" class="nav-link">Image Tex</a></li>
+                                                        <li class="nav-item"><a href="#2_effectors/7_noise-tex" class="nav-link">Noise Tex</a></li>
+                                                        <li class="nav-item"><a href="#2_effectors/8_sound" class="nav-link">Sound</a></li>
+                                                        <li class="nav-item"><a href="#2_effectors/9_inheritance" class="nav-link">Inheritance</a></li>
+                                                        <li class="nav-item"><a href="#2_effectors/10_spline" class="nav-link">Spline</a></li>
+                                                        <li class="nav-item"><a href="#2_effectors/11_volume" class="nav-link">Volume</a></li>
+                                                        <li class="nav-item"><a href="#2_effectors/12_time" class="nav-link">Time</a></li>
+                                                        <li class="nav-item"><a href="#2_effectors/13_formula" class="nav-link">Formula</a></li>
+                                                        <li class="nav-item"><a href="#2_effectors/14_push-apart" class="nav-link">Push Apart</a></li>
                                                     </ul>
                                                 </details>
                                             </li>
                                         </ul>
                                     </details>
                                 </li>
-
                                 <!-- Using Fields -->
                                 <li class="nav-item">
                                     <details class="nav-group">
@@ -145,18 +136,18 @@
                                                 <details class="nav-subgroup">
                                                     <summary class="nav-link">Field</summary>
                                                     <ul class="sub-menu">
-                                                        <li class="nav-item"><a href="#/3_fields/0_initial-guide-fields" class="nav-link">Initial Guide All Fields</a></li>
-                                                        <li class="nav-item"><a href="#/3_fields/0b_basic-fields" class="nav-link">Basic Fields</a></li>
-                                                        <li class="nav-item"><a href="#/3_fields/1_random" class="nav-link">Random</a></li>
-                                                        <li class="nav-item"><a href="#/3_fields/2_image-tex" class="nav-link">Image Tex</a></li>
-                                                        <li class="nav-item"><a href="#/3_fields/3_sound" class="nav-link">Sound</a></li>
-                                                        <li class="nav-item"><a href="#/3_fields/4_formula" class="nav-link">Formula</a></li>
-                                                        <li class="nav-item"><a href="#/3_fields/5_object-proximity" class="nav-link">Object Proximity</a></li>
-                                                        <li class="nav-item"><a href="#/3_fields/6_spline-object" class="nav-link">Spline Object</a></li>
-                                                        <li class="nav-item"><a href="#/3_fields/7_step" class="nav-link">Step</a></li>
-                                                        <li class="nav-item"><a href="#/3_fields/8_time" class="nav-link">Time</a></li>
-                                                        <li class="nav-item"><a href="#/3_fields/9_set-vertex-weight" class="nav-link">Set Vertex Weight</a></li>
-                                                        <li class="nav-item"><a href="#/3_fields/10_mix-fields" class="nav-link">Mix fields/Selections</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/0_initial-guide-fields" class="nav-link">Initial Guide All Fields</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/0b_basic-fields" class="nav-link">Basic Fields</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/1_random" class="nav-link">Random</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/2_image-tex" class="nav-link">Image Tex</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/3_sound" class="nav-link">Sound</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/4_formula" class="nav-link">Formula</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/5_object-proximity" class="nav-link">Object Proximity</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/6_spline-object" class="nav-link">Spline Object</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/7_step" class="nav-link">Step</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/8_time" class="nav-link">Time</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/9_set-vertex-weight" class="nav-link">Set Vertex Weight</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/10_mix-fields" class="nav-link">Mix fields/Selections</a></li>
                                                     </ul>
                                                 </details>
                                             </li>
@@ -164,34 +155,33 @@
                                                 <details class="nav-subgroup">
                                                     <summary class="nav-link">Modifier Field</summary>
                                                     <ul class="sub-menu">
-                                                        <li class="nav-item"><a href="#/3_fields/11_clamp" class="nav-link">Clamp</a></li>
-                                                        <li class="nav-item"><a href="#/3_fields/12_coloramp" class="nav-link">ColorRamp</a></li>
-                                                        <li class="nav-item"><a href="#/3_fields/13_curve" class="nav-link">Curve</a></li>
-                                                        <li class="nav-item"><a href="#/3_fields/14_invert" class="nav-link">Invert</a></li>
-                                                        <li class="nav-item"><a href="#/3_fields/15_map-range" class="nav-link">Map Range</a></li>
-                                                        <li class="nav-item"><a href="#/3_fields/16_quantize" class="nav-link">Quantize</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/11_clamp" class="nav-link">Clamp</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/12_coloramp" class="nav-link">ColorRamp</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/13_curve" class="nav-link">Curve</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/14_invert" class="nav-link">Invert</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/15_map-range" class="nav-link">Map Range</a></li>
+                                                        <li class="nav-item"><a href="#3_fields/16_quantize" class="nav-link">Quantize</a></li>
                                                     </ul>
                                                 </details>
                                             </li>
                                         </ul>
                                     </details>
                                 </li>
-
                                 <!-- Using Object Tools -->
                                 <li class="nav-item">
                                     <details class="nav-group">
-                                        <summary class="nav-link">🔗 Using Object Tools</summary>
+                                        <summary class="nav-link">🧰 Using Object Tools</summary>
                                         <ul class="sub-menu">
                                             <li class="nav-item">
                                                 <details class="nav-subgroup">
                                                     <summary class="nav-link">Object Tool</summary>
                                                     <ul class="sub-menu">
-                                                        <li class="nav-item"><a href="#/4_object_tools/1_bfracture" class="nav-link">BFracture</a></li>
-                                                        <li class="nav-item"><a href="#/4_object_tools/2_bmotext" class="nav-link">BMoText</a></li>
-                                                        <li class="nav-item"><a href="#/4_object_tools/3_btracer" class="nav-link">BTracer</a></li>
-                                                        <li class="nav-item"><a href="#/4_object_tools/4_bemitter" class="nav-link">BEmitter</a></li>
-                                                        <li class="nav-item"><a href="#/4_object_tools/5_bmograph-animator" class="nav-link">BMograph Animator</a></li>
-                                                        <li class="nav-item"><a href="#/4_object_tools/6_camera-tools" class="nav-link">Camera Tools</a></li>
+                                                        <li class="nav-item"><a href="#4_object_tools/1_bfracture" class="nav-link">BFracture</a></li>
+                                                        <li class="nav-item"><a href="#4_object_tools/2_bmotext" class="nav-link">BMoText</a></li>
+                                                        <li class="nav-item"><a href="#4_object_tools/3_btracer" class="nav-link">BTracer</a></li>
+                                                        <li class="nav-item"><a href="#4_object_tools/4_bemitter" class="nav-link">BEmitter</a></li>
+                                                        <li class="nav-item"><a href="#4_object_tools/5_bmograph-animator" class="nav-link">BMograph Animator</a></li>
+                                                        <li class="nav-item"><a href="#4_object_tools/6_camera-tools" class="nav-link">Camera Tools</a></li>
                                                     </ul>
                                                 </details>
                                             </li>
@@ -199,27 +189,26 @@
                                                 <details class="nav-subgroup">
                                                     <summary class="nav-link">+ Tools</summary>
                                                     <ul class="sub-menu">
-                                                        <li class="nav-item"><a href="#/4_object_tools/7_btracer-custom-shape" class="nav-link">BTracer Custom Shape</a></li>
-                                                        <li class="nav-item"><a href="#/4_object_tools/8_btracer-to-mesh" class="nav-link">BTracer To Mesh</a></li>
+                                                        <li class="nav-item"><a href="#4_object_tools/7_btracer-custom-shape" class="nav-link">BTracer Custom Shape</a></li>
+                                                        <li class="nav-item"><a href="#4_object_tools/8_btracer-to-mesh" class="nav-link">BTracer To Mesh</a></li>
                                                     </ul>
                                                 </details>
                                             </li>
                                         </ul>
                                     </details>
                                 </li>
-
                                 <!-- Using Materials -->
                                 <li class="nav-item">
                                     <details class="nav-group">
-                                        <summary class="nav-link">🔗 Using Materials</summary>
+                                        <summary class="nav-link">🎨 Using Materials</summary>
                                         <ul class="sub-menu">
                                             <li class="nav-item">
                                                 <details class="nav-subgroup">
                                                     <summary class="nav-link">Material Tool</summary>
                                                     <ul class="sub-menu">
-                                                        <li class="nav-item"><a href="#/5_material_tools/1_global-material" class="nav-link">Global Material</a></li>
-                                                        <li class="nav-item"><a href="#/5_material_tools/2_multishader" class="nav-link">Multishader</a></li>
-                                                        <li class="nav-item"><a href="#/5_material_tools/3_mapping-colortoinstances" class="nav-link">Mapping Color To Instances</a></li>
+                                                        <li class="nav-item"><a href="#5_material_tools/1_global-material" class="nav-link">Global Material</a></li>
+                                                        <li class="nav-item"><a href="#5_material_tools/2_multishader" class="nav-link">Multishader</a></li>
+                                                        <li class="nav-item"><a href="#5_material_tools/3_mapping-colortoinstances" class="nav-link">Mapping Color To Instances</a></li>
                                                     </ul>
                                                 </details>
                                             </li>
@@ -227,97 +216,232 @@
                                                 <details class="nav-subgroup">
                                                     <summary class="nav-link">+ Tools</summary>
                                                     <ul class="sub-menu">
-                                                        <li class="nav-item"><a href="#/5_material_tools/4_shader-falloff" class="nav-link">Shader Falloff</a></li>
-                                                        <li class="nav-item"><a href="#/5_material_tools/5_images-as-slots-mats" class="nav-link">Images as SlotMats</a></li>
-                                                        <li class="nav-item"><a href="#/5_material_tools/6_override-multishader" class="nav-link">Override Multishader</a></li>
+                                                        <li class="nav-item"><a href="#5_material_tools/4_shader-falloff" class="nav-link">Shader Falloff</a></li>
+                                                        <li class="nav-item"><a href="#5_material_tools/5_images-as-slots-mats" class="nav-link">Images as SlotMats</a></li>
+                                                        <li class="nav-item"><a href="#5_material_tools/6_override-multishader" class="nav-link">Override Multishader</a></li>
                                                     </ul>
                                                 </details>
                                             </li>
                                         </ul>
                                     </details>
                                 </li>
-
                                 <!-- Video Tutorials -->
                                 <li class="nav-item">
                                     <details class="nav-group">
                                         <summary class="nav-link">📹 Video Tutorials</summary>
                                         <ul class="sub-menu">
-                                            <li class="nav-item"><a href="#/6_end/1_video-tutorials-beginr" class="nav-link">Beginner Tutorials</a></li>
-                                            <li class="nav-item"><a href="#/6_end/2_video-tutorials-adv" class="nav-link">Advanced Tutorials</a></li>
+                                            <li class="nav-item"><a href="#6_end/1_video-tutorials-beginr" class="nav-link">Beginner Tutorials</a></li>
+                                            <li class="nav-item"><a href="#6_end/2_video-tutorials-adv" class="nav-link">Advanced Tutorials</a></li>
                                         </ul>
                                     </details>
                                 </li>
-
                                 <!-- Changelog -->
                                 <li class="nav-item">
                                     <details class="nav-group">
-                                        <summary class="nav-link">📰 Changelog/Updates</summary>
+                                        <summary class="nav-link"> Changelog/Updates</summary>
                                         <ul class="sub-menu">
-                                            <li class="nav-item"><a href="#/6_end/3_changelog" class="nav-link">What's New</a></li>
+                                            <li class="nav-item"><a href="#6_end/3_changelog" class="nav-link">What's New</a></li>
                                         </ul>
                                     </details>
                                 </li>
-
                                 <!-- FAQ -->
                                 <li class="nav-item">
                                     <details class="nav-group">
                                         <summary class="nav-link">❓ FAQ</summary>
                                         <ul class="sub-menu">
-                                            <li class="nav-item"><a href="#/6_end/4_faq" class="nav-link">Frequently Asked Questions</a></li>
+                                            <li class="nav-item"><a href="#6_end/4_faq" class="nav-link">Frequently Asked Questions</a></li>
                                         </ul>
                                     </details>
                                 </li>
-
                             </ul>
                         </details>
                     </li>
-                    
                 </ul>
             </nav>
         </aside>
 
-        <!-- MAIN CONTENT - Se cargará dinámicamente -->
-        <main class="main-content" id="main-content">
-            <!-- El contenido de pages/0_home.html se insertará aquí -->
+        <!-- MAIN CONTENT (Donde loader.js inyecta las páginas) -->
+        <main id="main-content" class="main-content">
+            <!-- El contenido se carga dinámicamente aquí -->
         </main>
-
     </div>
 
     <!-- FOOTER -->
-    <footer class="page-footer">
-        <div class="footer-content">
-            <p>&copy; <span id="year"></span> Manellopgar. All rights reserved.</p>
-        </div>
+    <footer class="site-footer">
+        <p>&copy; Manellopgar. All rights reserved.</p>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-        // ==========================================
-        // 1. CONFIGURACIÓN INICIAL Y TEMA
-        // ==========================================
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        const toggleBtn = document.getElementById('theme-toggle');
-        const icon = toggleBtn.querySelector('.toggle-icon');
-        const html = document.documentElement;
-
-        const savedTheme = localStorage.getItem('theme');
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const initialTheme = savedTheme || 'dark';
-
-        html.setAttribute('data-theme', initialTheme);
-        icon.textContent = initialTheme === 'dark' ? '☀️' : '🌙';
-
-        toggleBtn.addEventListener('click', () => {
-            const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            html.setAttribute('data-theme', next);
-            localStorage.setItem('theme', next);
-            icon.textContent = next === 'dark' ? '☀️' : '🌙';
-        });
-    </script>
-
-    <!-- Cargador de páginas (Hash Routing) -->
     <script src="js/loader.js"></script>
 
+<script>
+    // ==========================================
+    // BUSCADOR GLOBAL CON SCROLL Y HIGHLIGHT
+    // ==========================================
+    
+    let allPages = [];
+    let searchTimeout = null;
+    window.pendingSearchTerm = null;
+
+    // Extraer páginas del menú
+    function extractPagesFromMenu() {
+        const links = document.querySelectorAll('.nav-menu a.nav-link[href^="#"]');
+        allPages = Array.from(links).map(link => ({
+            hash: link.getAttribute('href').replace('#', ''),
+            title: link.textContent.trim(),
+            url: `pages/${link.getAttribute('href').replace('#', '')}.html`
+        }));
+        console.log(`✅ Páginas indexadas: ${allPages.length}`);
+    }
+
+    // Buscar contenido en una página
+    async function searchInPage(page) {
+        try {
+            const response = await fetch(page.url);
+            if (!response.ok) return null;
+            
+            const html = await response.text();
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+            
+            const contentElements = tempDiv.querySelectorAll('h1, h2, h3, p, li');
+            const content = Array.from(contentElements)
+                .map(el => el.textContent)
+                .join(' ')
+                .toLowerCase();
+            
+            return { ...page, content };
+        } catch (error) {
+            console.error(`Error buscando en ${page.url}:`, error);
+            return null;
+        }
+    }
+
+    // Búsqueda principal
+    async function performSearch(query) {
+        if (query.length < 2) {
+            hideSearchResults();
+            return;
+        }
+        
+        const searchResults = document.getElementById('search-results');
+        searchResults.innerHTML = '<div class="search-result-item">Buscando...</div>';
+        searchResults.classList.add('show');
+        
+        const queryLower = query.toLowerCase();
+        const pagesWithContent = await Promise.all(allPages.map(p => searchInPage(p)));
+        const results = pagesWithContent.filter(p => p && p.content.includes(queryLower)).slice(0, 10);
+        
+        if (results.length > 0) {
+            searchResults.innerHTML = results.map(page => {
+                const highlightedTitle = page.title.replace(
+                    new RegExp(`(${query})`, 'gi'), '<mark>$1</mark>'
+                );
+                const escapedTerm = query.replace(/'/g, "\\'");
+                return `
+                    <div class="search-result-item" onclick="navigateToPage('${page.hash}', '${escapedTerm}')">
+                        <strong>${highlightedTitle}</strong>
+                        <small>${page.title}</small>
+                    </div>
+                `;
+            }).join('');
+        } else {
+            searchResults.innerHTML = '<div class="search-result-item no-results">No se encontraron resultados</div>';
+        }
+    }
+
+    // Navegar a página con scroll y highlight
+    window.navigateToPage = function(hash, term) {
+        window.pendingSearchTerm = term;
+        window.location.hash = hash;
+        hideSearchResults();
+        document.getElementById('search-input').value = '';
+    };
+
+    function hideSearchResults() {
+        const sr = document.getElementById('search-results');
+        if (sr) { sr.classList.remove('show'); sr.innerHTML = ''; }
+    }
+
+    // Highlight y scroll cuando la página termina de cargar
+    window.addEventListener('pageLoaded', () => {
+        const term = window.pendingSearchTerm;
+        if (!term) return;
+        
+        setTimeout(() => {
+            highlightAndScroll(term);
+        }, 100);
+        window.pendingSearchTerm = null;
+    });
+
+    function highlightAndScroll(term) {
+        const mainContent = document.getElementById('main-content');
+        if (!mainContent) return;
+        
+        const termLower = term.toLowerCase();
+        const walker = document.createTreeWalker(mainContent, NodeFilter.SHOW_TEXT, null, false);
+        let firstMatch = null;
+        const textNodes = [];
+        
+        while (walker.nextNode()) textNodes.push(walker.currentNode);
+        
+        textNodes.forEach(node => {
+            if (node.textContent.toLowerCase().includes(termLower)) {
+                const regex = new RegExp(`(${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+                const parts = node.textContent.split(regex);
+                const parent = node.parentNode;
+                
+                parts.forEach(part => {
+                    if (part.toLowerCase() === termLower) {
+                        const mark = document.createElement('mark');
+                        mark.className = 'search-highlight-active';
+                        mark.textContent = part;
+                        parent.insertBefore(mark, node);
+                        if (!firstMatch) firstMatch = mark;
+                    } else if (part) {
+                        parent.insertBefore(document.createTextNode(part), node);
+                    }
+                });
+                parent.removeChild(node);
+            }
+        });
+        
+        if (firstMatch) {
+            firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(() => {
+                document.querySelectorAll('.search-highlight-active').forEach(el => {
+                    el.outerHTML = el.textContent;
+                });
+            }, 3000);
+        }
+    }
+
+    // Inicialización
+    document.addEventListener('DOMContentLoaded', () => {
+        extractPagesFromMenu();
+        
+        const searchInput = document.getElementById('search-input');
+        if (!searchInput) return;
+
+        let searchResults = document.getElementById('search-results');
+        if (!searchResults) {
+            searchResults = document.createElement('div');
+            searchResults.id = 'search-results';
+            searchResults.className = 'search-results';
+            searchInput.parentElement.style.position = 'relative';
+            searchInput.after(searchResults);
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => performSearch(e.target.value.trim()), 300);
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                hideSearchResults();
+            }
+        });
+    });
+</script>
 </body>
 </html>

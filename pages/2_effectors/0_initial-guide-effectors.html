@@ -1,7 +1,6 @@
 <h1>Initial Guide for All Effectors</h1>
 
-<p>Here I explain how to add any Effector and the common parameters that work the same for all Effectors. If you want to know about the specific parameters, please check the other menus for each specific Effector.</p>
-<p>By default, all modifiers are in the quick and simple version. If you need the advanced options in all cases, you need to enable the <strong>Advanced Settings/Parameters</strong>.</p>
+<p>This guide explains how to add any Effector. By default, all modifiers are in the quick and simple version. If you need the advanced options for all cases, you must enable the <strong>Advanced Settings/Parameters</strong> option.</p>
 
 <div class="faq-item" style="margin-bottom: 1rem; border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden;">
   <div class="faq-header" style="padding: 1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
@@ -12,34 +11,43 @@
     <span style="font-size: 1.2rem; opacity: 0.7;">&#9660;</span>
   </div>
   <div class="faq-body" style="padding: 1rem; border-top: 1px solid var(--color-border);">
-    <p>Select any mesh object, go to the BCloners Addon panel and click any BCloner button. The selected BCloner and the BCloner Transform modifier are added automatically.</p>
+    <p>Select any mesh object, go to the Effectors Addon panel, and click any Effector button. The selected Effector and the Basic Fields modifier are added automatically.</p>
   </div>
+</div>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/11a_Initial-Guide-Effectors/00_AddAnyEffector-lite.gif" alt="How to Add Any Field" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">How to Add Any Effector</p>
 </div>
 
 <h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
 
 <h2>The Effectors Modifiers Order</h2>
+<p>In the Modifier Tab, in almost all cases, the correct order is from top to bottom. Normally, the Addon sets the modifiers in the correct order, but in some cases, you may need to change it for proper functionality.</p>
 
-<p>In the Modifier Tab, in almost all cases, the correct order is from top to bottom. Normally, the Addon sets the modifiers in the correct order automatically, but in some cases, you may need to change it manually.</p>
-<p>Here are a few examples to clarify how it works:</p>
+<p>The most important rule is: You must have <strong>1 Basic Fields Modifier</strong> before all Effectors and after any BCloner Transform or BFracture.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
-  <!-- Placeholder for the image as source was not provided -->
-  <div style="border: 2px dashed var(--color-border); padding: 2rem; border-radius: 6px; background-color: var(--color-surface); color: var(--color-text-secondary);">
-    Image placeholder: Effector Modifiers Order Examples
-  </div>
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Effector Modifiers Order Examples</p>
+  <img src="assets/images/07_Initial-Guide-Effectors/01_Effectors_Typical_Orde.png" alt="Effectors Modifiers Order" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Effectors Modifiers Order</p>
 </div>
 
 <h2>Use the Outliner Effector Collections</h2>
-<p>(Content to be added)</p>
+<p>Effectors: Plain, Random, Step, Image Tex, Noise Tex, Sound, Volume, Formula, and Time have <strong>Other Parameters</strong> where the <code>Collection</code> Custom_Asset_Modify is automatically assigned to the correct socket. Here you can add any Asset that you want to use as a substitute for the original clones.</p>
+
+<p>Keep in mind that it has the same limitation: Geometry Nodes only reads the first child of that collection. For more information, please check the Initial BCloners Guide.</p>
 
 <h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
 
-<h2>Special Case: Effector Sound</h2>
-
+<h2>Special Case Effector Sound</h2>
 <p>This effector has a two-state button. When you click the button:</p>
+
 <ol style="padding-left: 1.5rem; margin-bottom: 1rem;">
   <li>It shows a file browser window where you have to select the audio file.</li>
-  <li>Now, click again to return the interface changes to original.</li>
+  <li>Now click again to return the interface changes to the original state.</li>
 </ol>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/18_Effector-Sound/01_Effector_Sound-2states-lite.gif" alt="Two States of Sound Effector" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Two States of Sound Effector</p>
+</div>

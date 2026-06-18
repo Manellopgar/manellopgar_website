@@ -1,47 +1,36 @@
 <h1>Effector Spline</h1>
+<p>As the name suggests, this Effector arranges the clones along a Curve/Spline Path.</p>
 
-<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/20_Effector-Spline/01_Effector_Spline-Pres.gif" alt="Effector Spline - Example" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Effector Spline - Example</p>
+</div>
+
 <include src="pages/0_common/1a_effectors-strength-select.html"></include>
 
-<p><strong>Spline/Curve</strong></p>
-<p>Drag Your Custom Spline/Curve.</p>
+<p><strong>Spline/Curve:</strong> Drag Your Custom Spline/Curve.</p>
+<p><strong>Delete Curve/Spline:</strong> Deletes the Original Curve/Spline.</p>
+<p><strong>Offset:</strong> If Strength is set to 100%, modifying Offset will make the clones wander along the spline. Lesser Strength values will produce interesting effects.</p>
+<p><strong>Start:</strong> Use the Start parameter to define the Start point of the spline on which the clones should be arranged.</p>
+<p><strong>End:</strong> Use the End parameter to define the End point of the spline on which the clones should be arranged.</p>
+<p><strong>Clamp:</strong> If an Offset value not equal to 0% has been selected, this setting determines whether clones that land on a spline's start or end points should stay there, or appear on the opposite end of the spline.</p>
+<p><strong>Align:</strong> Align all Clones to the Tangent of the Spline/Curve.</p>
 
-<p><strong>Delete Curve/Spline</strong></p>
-<p>Deletes the Original Curve/Spline.</p>
+<h3>Transform Mode</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Absolute:</strong> The clones are organized directly onto the spline, which is exactly what most users want.</li>
+  <li><strong>Relative to Node:</strong> Imagine a copy of the spline at each clone (with the spline oriented in the direction of the Z axis), which follows each clone varying the Offset.</li>
+  <li><strong>Relative to Spline:</strong> By varying the Offset value, the clones move in unison relative to the spline, without being organized onto it.</li>
+</ul>
 
-<p><strong>Offset</strong></p>
-<p>f Strength is set to 100%, modifying Offset will make sure the clones wander along the spline. Lesser Strength values will produce interesting effects.</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/20_Effector-Spline/02_Effector_Spline-Modes.gif" alt="Effector Spline - Transform Modes" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Effector Spline - Transform Modes</p>
+</div>
 
-<p><strong>Start</strong></p>
-<p>Use the Start to define Start point of the spline on which the clones should be arranged.</p>
-
-<p><strong>End</strong></p>
-<p>Use the Start to define End point of the spline on which the clones should be arranged.</p>
-
-<p><strong>Clamp</strong></p>
-<p>If an Offset value not equal to 0% has been selected, this setting determines whether clones that land on a spline's start or end points should stay there, or appear on the opposite end of the spline.</p>
-
-<p><strong>Align</strong></p>
-<p>Align all Clones to the Tangent Spline/Curve.</p>
-
-<p><strong>Transform Mode</strong></p>
-<p>Choose the Transform Mode</p>
-<ul style="padding-left:1.5rem;"><li><strong>Absolute:</strong> (Value: 0)</li><li><strong>Relative to Node:</strong> (Value: 0)</li><li><strong>Relative to Spline:</strong> (Value: 0)</li></ul>
-
-<p><strong>Use Position</strong></p>
-<p>Use this setting to define whether or not the Effector’s position should be varied</p>
-
-<p><strong>Use Rotation</strong></p>
-<p>Use this setting to define whether or not the Effector’s rotation should be varied.</p>
-
-<p><strong>Rotation</strong></p>
-<p>Activating Rotation will make the XYZ settings available, with which each clone can be rotated according to its coordinate system.</p>
-
-<p><strong>Spline Rail</strong></p>
-<p>Drag Your Custom Spline/Curve to use as Rail.</p>
-
-<p><strong>Use Rail as Target</strong></p>
-<p>Use the Rail Spline as the Target for all Clones.</p>
-
-<p><strong>Use Rail as Scale</strong></p>
-<p>Use the Rail Spline as the Uniform Scale for all Clones.</p>
+<p><strong>Use Position:</strong> Use this setting to define whether or not the Effector’s position should be varied.</p>
+<p><strong>Use Rotation:</strong> Use this setting to define whether or not the Effector’s rotation should be varied.</p>
+<p><strong>Rotation:</strong> Activating Rotation makes the XYZ settings available, allowing each clone to be rotated according to its coordinate system.</p>
+<p><strong>Spline Rail:</strong> Drag Your Custom Spline/Curve to use as a Rail.</p>
+<p><strong>Use Rail as Target:</strong> Use the Rail Spline as the Target for all Clones.</p>
+<p><strong>Use Rail as Scale:</strong> Use the Rail Spline as the Uniform Scale for all Clones.</p>

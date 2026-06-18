@@ -1,33 +1,40 @@
 <h1>Effector Push Apart</h1>
+<p>As the name suggests, this Effector calculates if the clones intersect and moves them to avoid the intersection.</p>
 
 <!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
 <include src="pages/0_common/1a_effectors-strength-select.html"></include>
 
-<p><strong>Mode</strong></p>
-<p>Choose the Push Apart Mode</p>
-<ul style="padding-left:1.5rem;">
-  <li><strong>Hide Mode:</strong> Clones will not be moved. They will be hidden. It may happen that more clones are hidden than is actually necessary.</li>
-  <li><strong>Push Apart Mode:</strong> When in this mode, an attempt will be made - depending on the Radius value defined - to create the defined minimum distance by pushing the clones apart. If the clones lie too closely together, the entire clone group will be inflated spatially (instead of the clones "looking for" free spaces).</li>
-  <li><strong>Scale Apart Mode:</strong> As soon as the virtual spheres (see Radius) intersect, the respective clones will be scaled down. The greater the intersection, the more the clones will be scaled down. Clones that lie close together will be made smaller the larger the Radius value becomes.</li>
-  <li><strong>Along X Axis Mode:</strong> In principle, this works similarly to Push Apart only that the clones are pushed apart only along their X axis.</li>
-  <li><strong>Along Y Axis Mode:</strong> In principle, this works similarly to Push Apart only that the clones are pushed apart only along their Y axis.</li>
-  <li><strong>Along Z Axis Mode:</strong> In principle, this works similarly to Push Apart only that the clones are pushed apart only along their Z axis.</li>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/21_Effector-Push-Apart/01_Effector-PushAp-Hide.png" alt="Effector Push Apart Modes: None - Push Apart - Hide" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Effector Push Apart Modes</p>
+</div>
+
+<h3>Mode</h3>
+<p>Choose the Push Apart Mode.</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Hide Mode:</strong> Clones will not be moved. They will be hidden. It may happen that more clones are hidden than is actually necessary.</li>
+  <li><strong style="color: var(--color-text);">Push Apart Mode:</strong> When in this mode, an attempt will be made - depending on the Radius value defined - to create the defined minimum distance by pushing the clones apart. If the clones lie too closely together, the entire clone group will be inflated spatially (instead of the clones "looking for" free spaces).</li>
+  <li><strong style="color: var(--color-text);">Scale Apart Mode:</strong> As soon as the virtual spheres (see Radius) intersect, the respective clones will be scaled down. The greater the intersection, the more the clones will be scaled down. Clones that lie close together will be made smaller the larger the Radius value becomes.</li>
+  <li><strong style="color: var(--color-text);">Along X Axis Mode:</strong> In principle, this works similarly to Push Apart only that the clones are pushed apart only along their X axis.</li>
+  <li><strong style="color: var(--color-text);">Along Y Axis Mode:</strong> In principle, this works similarly to Push Apart only that the clones are pushed apart only along their Y axis.</li>
+  <li><strong style="color: var(--color-text);">Along Z Axis Mode:</strong> In principle, this works similarly to Push Apart only that the clones are pushed apart only along their Z axis.</li>
 </ul>
 
-<p><strong>Radius</strong></p>
-<p>Imagine a sphere with this radius around each clone. If these radii intersect, the Push Apart Effector will react accordingly, depending on which Mode is selected.</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/images/21_Effector-Push-Apart/02_Effector-PushAp-Detail.png" alt="Effector Push Apart Modes: None - Hide - Push Apart" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Effector Push Apart Modes</p>
+</div>
 
-<p><strong>Iterations</strong></p>
-<p>This setting can be seen as a type of quality controller.</p>
+<p><strong style="color: var(--color-text);">Radius:</strong> Imagine a sphere with this radius around each clone. If these radii intersect, the Push Apart Effector will react accordingly, depending on which Mode is selected.</p>
 
-<p><strong>Advanced Settings</strong></p>
-<p>Enable the Advanced Settings.</p>
+<p><strong style="color: var(--color-text);">Iterations:</strong> This setting can be seen as a type of quality controller.</p>
 
-<p><strong>Delete Points</strong></p>
-<p>Delete the Point Cloud Points used to simulation.</p>
+<h3>Advanced Settings</h3>
 
-<p><strong>Frame Start Simulation</strong></p>
-<p>Defines the Start Frame for the Simulation.</p>
+<p><strong style="color: var(--color-text);">Advanced Settings:</strong> Enable the Advanced Settings.</p>
 
-<p><strong>Frame Stop Simulation</strong></p>
-<p>Defines the End Frame for the Simulation.</p>
+<p><strong style="color: var(--color-text);">Delete Points:</strong> Delete the Point Cloud Points used to simulation.</p>
+
+<p><strong style="color: var(--color-text);">Frame Start Simulation:</strong> Defines the Start Frame for the Simulation.</p>
+
+<p><strong style="color: var(--color-text);">Frame Stop Simulation:</strong> Defines the End Frame for the Simulation.</p>

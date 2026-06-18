@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainContainer = document.getElementById('main-content');
     const DEFAULT_HASH = '0_start/0_home';
 
-    // 🟢 FUNCIÓN CORREGIDA: Procesa etiquetas <include> parseando HTML correctamente
+    // 🟢 FUNCIÓN: Procesa etiquetas <include> parseando HTML correctamente
     async function processIncludes(htmlString) {
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = htmlString;
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 const content = await res.text();
                 
-                // ✅ CORRECCIÓN: Usar <template> para que el navegador parsee el HTML como nodos reales
+                // ✅ Usar <template> para parsear HTML real
                 const template = document.createElement('template');
                 template.innerHTML = content.trim();
                 inc.replaceWith(template.content);
@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para cargar la página
     function loadPage(hash) {
-        // Construir ruta: hash "1_bcloners/1_grid-array" -> "pages/1_bcloners/1_grid-array.html"
         const filePath = `pages/${hash}.html`;
         
         fetch(filePath)
@@ -42,15 +41,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 return res.text();
             })
             .then(async (html) => {
-                // 1. Procesar los includes antes de mostrar nada
+                // 1. Procesar includes
                 const finalHtml = await processIncludes(html);
                 
-                // 2. Inyectar en el DOM
+                // 2. Inyectar en DOM
                 mainContainer.innerHTML = finalHtml;
                 
                 // 3. Actualizar menú y URL
                 updateActiveMenu(hash);
                 window.location.hash = hash;
+                
+                // 4. Re-indexar buscador
+                if (typeof window.buildSearchIndex === 'function') {
+                    window.buildSearchIndex();
+                }
+                
+                // 5. Disparar evento para highlight/scroll si viene de búsqueda
+                window.dispatchEvent(new CustomEvent('pageLoaded'));
             })
             .catch(err => {
                 console.error('❌ Error:', err);
@@ -74,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
             activeLink.classList.add('active');
             activeLink.setAttribute('aria-current', 'page');
             
-            // Abrir padres
             let parent = activeLink.parentElement;
             while (parent && parent !== document.body) {
                 if (parent.tagName === 'DETAILS') parent.setAttribute('open', '');
@@ -105,4 +111,37 @@ document.addEventListener('DOMContentLoaded', () => {
     // Carga inicial
     const initialHash = window.location.hash.replace('#', '') || DEFAULT_HASH;
     loadPage(initialHash);
+
+    // ==========================================
+    // MODO OSCURO/CLARO - THEME TOGGLE
+    // ==========================================
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    function updateThemeIcon(theme) {
+        if (themeToggle) {
+            themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+            themeToggle.setAttribute('aria-label', 
+                theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'
+            );
+        }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+    
+    body.setAttribute('data-theme', initialTheme);
+    updateThemeIcon(initialTheme);
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+    }
 });
