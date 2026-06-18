@@ -1,8 +1,5 @@
 <h1>Initial Guide for All Fields</h1>
-
-<p>In this guide, I explain how to add any Effector and the common parameters that work consistently across all Effectors. For details on specific parameters, please refer to the dedicated menus for each specific Effector.</p>
-
-<p><strong>Note:</strong> By default, all modifiers operate in a quick and simple version. To access advanced options for any modifier, you must enable the <strong>Advanced Settings/Parameters</strong> option in the addon preferences or panel.</p>
+<p>Here I explain how to add any Field. By default, all Field Modifiers have the first parameter configured in the <strong>Enable</strong> option. However, if you need to deactivate it, you can switch to <strong>Disable</strong>; this option deactivates the Field itself.</p>
 
 <div class="faq-item" style="margin-bottom: 1rem; border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden;">
   <div class="faq-header" style="padding: 1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
@@ -13,21 +10,31 @@
     <span style="font-size: 1.2rem; opacity: 0.7;">&#9660;</span>
   </div>
   <div class="faq-body" style="padding: 1rem; border-top: 1px solid var(--color-border);">
-    <p>Select any mesh object, go to the BCloners Addon panel, and click any BCloner button. The selected BCloner and its associated Transform modifier are added automatically.</p>
+    <p>Select any mesh object, go to the BCloners Addon panel and click any BCloner button. The selected BCloner and the BCloner Transform modifier are added automatically.</p>
   </div>
 </div>
 
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/25a_Initial-Guide-Fields/01_AddAnyField-lite.gif" alt="How to Add Any Field" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">How to Add Any Field</p>
+</div>
+
 <h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
-
-<h2>The Fields Modifiers Order</h2>
-
-<p>In the <strong>Modifier Tab</strong>, the correct order is almost always from top to bottom. The Addon typically sets modifiers in the optimal sequence automatically. However, there are cases where you may need to rearrange them manually.</p>
+<h2>The Fields Modifiers order:</h2>
+<p>In the Modifier Tab, in almost all cases, the correct order is from top to bottom. Normally, the Addon sets the modifiers in the correct order, but in some cases, you need to change it. Here you can see a example to clarify how it works.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
   <img src="assets/images/22_Initial-Guide-Fields/01_Fields_Typical_Orde.png" alt="Field Modifiers Typical Order" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
   <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Field Modifiers Typical Order</p>
 </div>
 
-<h2>How to use the Outliner Collections created by the addon?</h2>
+<h2>How to use the Outliner Collection/Empty automatically created when you add some Fields?</h2>
+<p>This is a special case for Field Random and Field Sound.</p>
+<p>When you add the <strong>Field Random</strong>, an Empty called <strong>"Ctrl_OBJECT_Field"</strong> is added automatically. This Empty allows us to control the origin of the Noise Texture when you enable the <strong>Random Mode Noise</strong>.</p>
 
-<p>The BCloners Addon automatically generates organized collections in the Outliner to help you manage your clones and effector objects efficiently. These collections are structured to streamline your workflow, allowing for quick selection, hiding, or isolating specific groups of objects without cluttering your viewport.</p>
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/25a_Initial-Guide-Fields/02_FieldRand-Ctrl-lite.gif" alt="Random Field in Noise Mode - Empty Controller" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Random Field in Noise Mode - Empty Controller</p>
+</div>
+
+<p>When you add the <strong>Field Sound</strong>, the Selected Sound is automatically baked into keyframes of the Empty called <strong>"Field_Sound_Baked"</strong> and this Empty is automatically added to the <strong>Sound Baked Object</strong>. So by default, everything is working as expected. If you have another Empty or object with the Sound Baked Animation, you can switch it in the parameter <strong>Sound Baked Object</strong> of the Field Sound.</p>
