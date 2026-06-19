@@ -1,27 +1,18 @@
 <h1>BCloner Grid Array Mode</h1>
 
-<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
 <include src="pages/0_common/0_bcloner-params.html"></include>
 
-<strong>Count X,Y,Z</strong>
-<p>Number of clones that should be created on the X-axis, Y-axis and Z-axis.</p>
+<p><strong style="color: var(--color-text);">Count X, Y, Z:</strong> Number of clones to be created along the X, Y, and Z axes.</p>
 
 <h3>Mode</h3>
-<p>Choose between clones distance or the dimension of the entire clone conglomerate.</p>
+<p>Choose between defining the distance between clones or the total dimension of the clone conglomerate.</p>
 
-<ul style="list-style: none; padding-left: 1.5rem; margin: 0 0 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div><strong>Per Step:</strong> With this mode, you can determine whether the following parameters Position, Rotation and Scale should apply per clone step. In other words, this mode keeps the distance between clones, is enabled by default.</div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div><strong>End Point:</strong> With this mode, you can determine whether the following parameters Position, Rotation and Scale should apply for the end clone (The values between the start and end clone are then interpolated), in other words, keeps the distance between the first and end clones, adding clones in the middle.</div>
-  </li>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Per Step:</strong> Determines whether Position, Rotation, and Scale parameters apply per clone step. This mode maintains a fixed distance between clones and is enabled by default.</li>
+  <li><strong style="color: var(--color-text);">End Point:</strong> Determines whether Position, Rotation, and Scale parameters apply to the final clone. The values between the start and end clones are interpolated, effectively maintaining the distance between the first and last clones while filling the middle.</li>
 </ul>
 
-<strong>Size XYZ</strong>
-<p>Use Size to define the extent of the complete grid clone conglomerate in the X, Y and Z directions.</p>
+<p><strong style="color: var(--color-text);">Size X, Y, Z:</strong> Defines the total extent of the grid clone conglomerate in the X, Y, and Z directions.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
   <img src="assets/gifs/02_BCloner-Grid-Array/01_Grid_Array_Params-lite.gif" alt="Grid Array Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
@@ -32,20 +23,15 @@
 
 <h3>Advanced Parameters</h3>
 
-<strong>Fill</strong>
-<p>By reducing this parameter, You can empty the inside of the shape so that gradually only the clones of the shell remain. The fill option allows deleting the instances randomly.</p>
+<p><strong style="color: var(--color-text);">Fill:</strong> Reducing this parameter empties the interior of the shape, leaving only the clones of the outer shell. This option allows for random deletion of internal instances.</p>
 
-<strong>Fill Seed</strong>
-<p>Changes the Seed of the Fill parameter.</p>
+<p><strong style="color: var(--color-text);">Fill Seed:</strong> Changes the random seed for the Fill parameter.</p>
 
-<strong>Distance Points Threshold</strong>
-<p>By reducing this parameter, You can delete the closest each other clones.</p>
+<p><strong style="color: var(--color-text);">Distance Points Threshold:</strong> Reducing this parameter allows you to delete clones that are too close to each other.</p>
 
-<strong>Use Object Form</strong>
-<p>Enables the option to use Custom Object Form. This parameter deletes any cloner outside of the volume of that custom object mesh.</p>
+<p><strong style="color: var(--color-text);">Use Object Form:</strong> Enables the use of a Custom Object Form. This parameter deletes any cloner instances that fall outside the volume of the specified custom mesh.</p>
 
-<strong>Object Form</strong>
-<p>Drag any Mesh Object to customize the Grid Array Shape.</p>
+<p><strong style="color: var(--color-text);">Object Form:</strong> Drag any mesh object here to customize the Grid Array shape.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
   <img src="assets/gifs/02_BCloner-Grid-Array/02_Grid_Array_ObjectForm-lite.gif" alt="Object Form Example" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
@@ -53,20 +39,17 @@
 </div>
 
 <h3>Gizmos</h3>
-<p>The BCloners Grid Array, Linear, Radial and HoneyComb have the panel called Interface Gizmos. If you open this panel, you see two parameters: Use Size Gizmos and Use Count Gizmos. If you enable these parameters and you MUST have the BCloner Modifier selected to see correctly the Gizmos in the Viewport.</p>
+<p>The BCloner Grid Array, Linear, Radial, and HoneyComb tools include a panel called <strong>Interface Gizmos</strong>. Inside this panel, you will find two parameters: <strong>Use Size Gizmos</strong> and <strong>Use Count Gizmos</strong>. To view the gizmos correctly in the viewport, you must have the BCloner Modifier selected.</p>
 
-<strong>Use Gizmos</strong>
+<p><strong style="color: var(--color-text);">Use Gizmos:</strong> Master toggle for gizmo visibility.</p>
 
-<strong>Use Size Gizmos</strong>
-<p>Enables the Size Gizmos</p>
+<p><strong style="color: var(--color-text);">Use Size Gizmos:</strong> Enables the gizmos for adjusting size dimensions.</p>
 
-<strong>Use Count Gizmos</strong>
-<p>Enables the Count Gizmos</p>
+<p><strong style="color: var(--color-text);">Use Count Gizmos:</strong> Enables the gizmos for adjusting clone counts.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
   <img src="assets/gifs/02_BCloner-Grid-Array/03_Grid_Array_Gizmos-lite.gif" alt="Gizmos Example" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
   <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Gizmos Example</p>
 </div>
 
-<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-transform.html -->
 <include src="pages/0_common/0_bcloner-transform.html"></include>
