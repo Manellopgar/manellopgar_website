@@ -1,3 +1,245 @@
-<h1>Changelog</h1>
+<h1>List of Changelogs</h1>
 
-<p>Coming soon!</p>
+<h3>Changelog 1.5.0 - 26-06-24</h3>
+<p><em>Note: B4D Tools 1.5.0 is NOT COMPATIBLE with previous versions. The new BCloners distributions and the fixed Min/Max parameters on Effectors involve significant changes that do not work properly with old setups.</em></li>
+
+<h3>NEW TOOLS!</h3>
+<p>In the BCloner Panel, you will find the new <strong>Add Advanced Distribution</strong> option:</li>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Advanced Distributions:</strong> This option allows you to choose between 6 advanced distribution arrays for any BCloner, plus one empty slot for creating your own custom advanced distribution. All options include bounding box calculations to simplify the setup of any kind of instance: 2D Grid Distribution, Cannonball Distribution, Smart Hex Distribution, Spline Bed Distribution, and Stack Distribution.</li>
+</ul>
+
+<h3>New Fields</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>B4D Field Set VERTEX Weight:</strong> This field allows you to use any Vertex Weight from a Custom Object as a control field for any B4D Tool.</li>
+</ul>
+<p>For example, this makes Dynamic Paint compatible with B4D Tools, providing greater flexibility. The bug preventing height map functionality has been fixed, and it now works as expected.</li>
+
+<h3>New Object Tools</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Object BMograph ANIMATOR:</strong> This tool is highly useful and features a vibrate tool similar to C4D's. Additional options include ping-pong and repeat animation modes. All tools are compatible with single objects as well as any BCloner or instance objects. The Selection option has been fixed to work as expected.</li>
+</ul>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Object Camera Tools:</strong> This category now includes two tools. <strong>Frustum Culling</strong> is available, allowing you to render only instances or geometry visible in the active camera. You can adjust the margin via the Margin parameter or use a Custom Camera for added flexibility. The <strong>Level Of Detail</strong> option allows you to use lighter assets for instances located at a distance from the Active Camera.</li>
+</ul>
+
+<h3>New Material Tools</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Images as MatSlots Button:</strong> Opens a file browser to select a folder containing images or videos. You can assign each file to a clone of the selected BCloner. This tool adds one material per file, preconfigured with two node groups: one for UV map setup (allowing quick changes across all materials) and another for Shader Node configuration. The filename is automatically used as the material name.</li>
+  <li><strong>Images as Slots:</strong> If the MultiShader modifier is not present, it is now added automatically.</li>
+  <li><strong>Video Import Options:</strong> When importing video files, you now have specific options to configure useful settings for all videos, saving significant time.</li>
+  <li><strong>Override MultiShader Tool:</strong> Allows you to override MultiShader MatSlots from any type of BCloner. This is handy for keeping one animated BCloner while creating multiple variants with different textures but the same animation.</li>
+  <li><strong>Transformation Menu:</strong> Added to allow selection between Original and Relative Origin modes.</li>
+  <li><strong>Advanced Options:</strong> The parameter <strong>As Instances</strong> is now enabled by default, as it is required for most cases.</li>
+</ul>
+
+<h3>INTERFACE UPDATES</h3>
+
+<p>I have refactored the full UI of B4D Tools to streamline future updates, keep the code clean, and maximize code reusability. You will notice a slightly different interface where panel order can be customized. All features from the previous version are available, along with several improvements.</li>
+
+<h3>New Website Documentation</h3>
+<p>The full documentation is now fully text-based and accessible via the addon's preferences panel. The main menu follows the same order as the addon panels. This is the first version, so it will be improved in the coming weeks. Your feedback is welcome.</li>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Navigaion:</strong> Use the main menu to browse sections. Toggle between Dark and Light mode using the button in the top-right corner.</li>
+  <li><strong>Search:</strong> Use the search field in the top-right corner. Results are highlighted after a short processing delay.</li>
+  <li><strong>Initial Guide:</strong> Check the "Initial Guide" pages for critical explanations on how the addon works with modifier stacks and the Outliner, along with recommendations for the best experience.</li>
+</ul>
+
+<h3>Viewport Feedback & Usability</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Collection Wireframes:</strong> If the Collection option is active and the selected collection is empty, B4D Tools now displays wireframe cubes in the viewport to provide visual feedback on how assets will be placed.</li>
+  <li><strong>Effector Sound & Field Sound:</strong> The button now has two states: one for automatic sound baking to the control empty, and another to restore the standard Blender UI layout. This prevents unwanted changes to your workspace.</li>
+  <li><strong>Incompatible Object Detection:</strong> If incompatible objects are selected when adding a tool, an error message now appears listing the compatible objects, preventing previous errors.</li>
+  <li><strong>BTracer Icon:</strong> The icon has been updated to distinguish it from the Animator Tools.</li>
+</ul>
+
+<h3>Naming Conventions</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Advanced Panels:</strong> All Advanced Parameter/Setting panels are now named "Advanced Parameters" for cohesive naming.</li>
+  <li><strong>Children/Assets:</strong> "Separated Children" and "Reset Children" are now named "Separated Assets" and "Reset Coordinates" to align with the rest of the addon's terminology.</li>
+</ul>
+
+<h3>AUTOMATIC DETECTION Function</h3>
+<p>This new function simplifies setup by automatically detecting extra selected objects and assigning them to the appropriate parameters:</li>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>BCloner Object Mode:</strong> Extra selected object → Custom Mesh parameter.</li>
+  <li><strong>BCloner Spline Mode:</strong> Extra selected curve → Spline/Curve parameter.</li>
+  <li><strong>Effector Spline:</strong> Extra selected curve → Spline/Curve parameter.</li>
+  <li><strong>Effector Target:</strong> Extra selected object → Target parameter.</li>
+  <li><strong>Effector Inheritance:</strong> Extra selected object → Target parameter.</li>
+  <li><strong>Effector Volume:</strong> Extra selected object → Volume Object parameter.</li>
+  <li><strong>Field Object Proximity:</strong> Extra selected object → Object Proximity parameter.</li>
+  <li><strong>Field Spline Object:</strong> Extra selected object → Spline Object parameter.</li>
+  <li><strong>BMoText Object:</strong> Extra selected curve → Curve/Spline Path parameter (and automatically enables Text On Curve).</li>
+  <li><strong>BTracer:</strong> Extra selected object → Link Tracer parameter.</li>
+  <li><strong>BTracer To Mesh Object:</strong> Extra selected curve → Profile Curve parameter.</li>
+  <li><strong>Override Imgs as Slots:</strong> If two objects are selected, the second object is automatically added to the "Original BCloner" socket, while the active object receives the BCloner and Multishader setup.</li>
+</ul>
+
+<h3>All BCloners</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Asset Type Parameter:</strong> Replaces "Use Collection" with three options: <strong>Self</strong> (uses original mesh as instance), <strong>Object</strong> (choose a custom object), and <strong>Collection</strong> (same as previous Use Collection). This clarifies setup when using a single custom object.</li>
+  <li><strong>Clones from Distribution:</strong> Now a button switch. This dynamic interface hides unnecessary parameters, showing only what is relevant to the active menu.</li>
+  <li><strong>ID Asset & Random Seed:</strong> Fixed correct display for BCloner Grid Array, Linear, Radial, and Honeycomb modes.</li>
+</ul>
+
+<h3>BCloner Linear Mode</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Min/Max Origin Pos:</strong> Added to change the origin of the Linear clones' start position. Default is 1 to maintain compatibility with previous version results.</li>
+</ul>
+
+<h3>BCloner Object Mode</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Align Parameter:</strong> Fixed to use surface normals by default in both Surface and Volume modes.</li>
+  <li><strong>Asset Type:</strong> Changed from Use Collection to Asset Type. Use <strong>Object</strong> for single assets or <strong>Collection</strong> for multiple assets. "Use Self" is unavailable due to Geometry Nodes limitations.</li>
+</ul>
+
+<h3>BCloner Radial Mode</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Scale X and Y:</strong> Added to deform the original radial shape into an oval or similar form, providing more creative options.</li>
+</ul>
+
+<h3>BCloner Transform</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Use Material & Material Selection:</strong> Both fixed to work as expected.</li>
+</ul>
+
+<h3>BCloner Advanced Distributions</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Hidden Container:</strong> The object container for selected Advanced Distributions is now hidden in both Viewport and Render. You can still edit its parameters by selecting it in the Outliner.</li>
+  <li><strong>PSR Follow:</strong> Fixed Rotation and Scale. The Advanced Distribution clones now correctly follow the BCloner's PSR (Position, Scale, Rotation) changes.</li>
+</ul>
+
+<h3>Advanced Projected 2D Distribution</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Align To Normal:</strong> Fixed to work as expected.</li>
+  <li><strong>Self Transformation:</strong> Fixed so that moving the BCloner correctly moves the Advanced Distribution accordingly.</li>
+</ul>
+
+<h3>Advanced Spline Bed Distribution</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Scale Rail:</strong> Fixed to work as expected.</li>
+</ul>
+
+<h3>Advanced Stack Distribution</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Random XYZ on Direction:</strong> Added to provide more control over randomizing the size of all clones.</li>
+</ul>
+
+<h3>Effectors Refactoring (Plain, Random, Step, Image Text, Noise Tex, Sound, Volume, Time, Formula)</h3>
+<p>The Min/Max parameters have been refactored, breaking compatibility with previous versions. Default scale values are now 0 (previously 1) to ensure correct functionality. Visibility parameter is also fixed.</li>
+
+<h3>Effector Step</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Spline Nodegroup:</strong> Added a Float Curve to control step interpolation calculation, offering flexibility similar to C4D. <em>Note: Edit the curve in the Geometry Nodes editor for now; interface control will be added in the future.</em></li>
+  <li><strong>Scale X Axis:</strong> Fixed to work as expected.</li>
+</ul>
+
+<h3>Effector Volume</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Volume Selection:</strong> Fixed to work as expected.</li>
+</ul>
+
+<h3>Effector Delay</h3>
+<p>Complete refactor to ensure Position, Rotation, and Scale work correctly and can be combined without issues.</li>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>String Mode:</strong> Added <strong>Stiffness</strong> and <strong>Damping</strong> parameters to control the physics of the String mode. These are located in Advanced Options.</li>
+  <li><strong>Mode Options:</strong> Supports both Even and String modes.</li>
+</ul>
+
+<h3>Effector Noise Tex</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Noise Seed:</strong> Added to allow manual seed changes when Auto Animation is disabled.</li>
+  <li><strong>Noise Type Menu:</strong> Added to select the desired noise type.</li>
+  <li><strong>Auto Animation Menu:</strong> Now contains <strong>Animation Speed</strong> (set to 100% default) and <strong>Loop Animation</strong>.</li>
+  <li><strong>Loop Animation:</strong> New parameter to enable noise looping. When enabled, the <strong>Frame Loop Out</strong> parameter appears, allowing you to define the end frame for the loop.</li>
+</ul>
+
+<h3>Effector Random</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Animation Speed:</strong> Changed to a percentage-based parameter with a default value of 100.</li>
+  <li><strong>Loop Animation:</strong> A new toggle to enable noise loop animations. When enabled, the <strong>Frame Loop Out</strong> parameter becomes visible, allowing you to define the specific frame where the loop concludes. This simplifies the creation of seamless noise loops for clones.</li>
+  <li><strong>Auto Animation:</strong> When enabled, this reveals the following controls:</li>
+  <li><strong>Animation Speed:</strong> Controls the playback speed.</li>
+  <li><strong>Loop Animation:</strong> Toggles the looping behavior.</li>
+  <li><strong>Use Random Time:</strong> Refactored into a dedicated menu for easier access.</li>
+  <li><strong>Rand Time Seed:</strong> Visible when <strong>Random Time</strong> is enabled, allowing you to adjust the seed value for varied noise patterns.</li>
+  <li><strong>Min/Max Refinement:</strong> The Min and Max parameters have been refactored to work properly, providing precise control over transformations applied by the Effector Random.</li>
+  <li><strong>Scale Parameter Fix:</strong> Corrected a bug where the Scale parameter did not interact correctly with Field tools. It now functions as expected across all contexts.</li>
+</ul>
+
+<h3>Effector Formula</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Sine Axis:</strong> Added Sine Axis menu, allowing you to choose which axis to use for the Sine Animation.</li>
+  <li><strong>Animation Speed:</strong> Changed to a percentage parameter with a default value of 100.</li>
+  <li><strong>Loop Animation:</strong> New parameter that can be enabled to create a noise loop animation. When enabled, the <strong>Frame Loop Out</strong> parameter appears, allowing you to define the frame at which the loop ends, making noise loop animations for clones straightforward.</li>
+  <li><strong>Wave/Voronoi Type:</strong> Renamed the Wave/Voronoid Texture Configuration menu to Wave/Voronoi Type for a more compact label.</li>
+  <li><strong>Auto Animation:</strong> When enabled, displays the Animation Speed and Loop Animation parameters.</li>
+</ul>
+
+<h3>Effector Noise Texture</h3>
+  <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>UV Map Fix:</strong> Fixed the UV Map for the Noise, ensuring it now works as expected.</li>
+</ul>
+
+<h3>Effector Spline</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Tooltips:</strong> Added tooltips to the Transform Mode menu for better guidance.</li>
+</ul>
+
+<h3>Field Random</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Noise Seed:</strong> Added a Noise Seed parameter when Auto Animation is disabled, allowing users to change the noise seed.</li>
+  <li><strong>Animation Speed:</strong> Changed to a percentage parameter with a default value of 100.</li>
+  <li><strong>Loop Animation:</strong> New parameter that can be enabled to create a noise loop animation. When enabled, the <strong>Frame Loop Out</strong> parameter appears, allowing you to define the frame at which the loop ends, making noise loop animations for clones straightforward.</li>
+  <li><strong>Auto Animation:</strong> When enabled, displays the Animation Speed and Loop Animation parameters.</li>
+  <li><strong>Round Falloff:</strong> Added Round Falloff option, useful when using the random result as a Custom Field Selection.</li>
+</ul>
+
+<h3>Field Formula</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Sine Axis:</strong> Added Sine Axis menu, allowing you to choose which axis to use for the Sine Animation.</li>
+  <li><strong>Animation Speed:</strong> Changed to a percentage parameter with a default value of 100.</li>
+  <li><strong>Loop Animation:</strong> New parameter that can be enabled to create a noise loop animation. When enabled, the <strong>Frame Loop Out</strong> parameter appears, allowing you to define the frame at which the loop ends, making noise loop animations for clones straightforward.</li>
+  <li><strong>Wave/Voronoi Type:</strong> Renamed the Wave/Voronoid Texture Configuration menu to Wave/Voronoi Type for a more compact label.</li>
+  <li><strong>Auto Animation:</strong> When enabled, displays the Animation Speed and Loop Animation parameters.</li>
+</ul>
+
+<h3>Multishader</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Performance Improvement:</strong> Improved performance by preventing unnecessary duplicated geometry generation.</li>
+  <li><strong>Keep Mesh (Not Instances):</strong> Added a parameter to keep geometry that is not an Instance.</li>
+  <li><strong>Island Index Splitting:</strong> Added the option to use the Island Index to split to instances, useful when working with multiple Multishaders.</li>
+</ul>
+
+<h3>Mapping Color to Instances</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Mode Menu:</strong> Replaced the old Boolean switch for ColorToVertex/ColorToInstances with a new <strong>Mode</strong> menu for clearer selection.</li>
+  <li><strong>Fix Texture:</strong> Added a third option called <strong>Fix Texture</strong>, functioning similarly to the Fix Texture parameter in C4D Clones. This allows you to apply any texture and fix it onto the clones, projecting the texture on top.</li>
+</ul>
+
+<h3>BTracer</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Asset Type:</strong> Changed "Use Collection" to <strong>Asset Type</strong> to align with the new naming conventions of BCloners.</li>
+  <li><strong>Split To Instances:</strong> Added a parameter to split geometry, useful when merged geometry is added to the Trace Link Object.</li>
+  <li><strong>Split To Instances Selection:</strong> Added the ability to set a custom selection for splitting to instances.</li>
+</ul>
+
+<h3>BEmitter</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Asset Type:</strong> Changed "Use Collection" to <strong>Asset Type</strong> to align with the new naming conventions of BCloners.</li>
+  <li><strong>Empty Controller:</strong> Added the Empty Controller as a separate object, providing rotation control when the emitter is emitting particles/instances.</li>
+</ul>
+
+<h3>Matrix ToInstances</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Asset Type Options:</strong> Changed the "Use Collection" parameter to <strong>Asset Type</strong> with three options: <strong>Self</strong> (uses the original mesh as instances, default), <strong>Object</strong> (allows choosing a custom object as an instance), and <strong>Collection</strong> (same as the previous Use Collection). This clarifies the process when only a custom object is needed.</li>
+</ul>
+
+<h3>Bmograph Selection</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong>Even Indices Selection:</strong> Added the ability to select even indices of clones, selecting only the even-numbered indices.</li>
+  <li><strong>Display Index Fix:</strong> Fixed the Display Index to prevent duplicating original instances.</li>
+</ul>
