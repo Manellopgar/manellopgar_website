@@ -34,58 +34,20 @@
 
 <h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
 
-<ul style="list-style: none; padding-left: 1.5rem; margin: 0 0 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-primary); font-weight: 600;">•</span>
-    <strong>Asset Type: Object</strong>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text-secondary);">
-    <span style="font-size: 1.2rem;">&#8627;</span>
-    <span>Uses the added <strong>Custom Object to Object</strong> parameter as a clone.</span>
-  </li>
+<h1>Asset Type</h1>
+<p>This menu allows us to choose the input Asset Type. You can choose between <strong>Object</strong>, and <strong>Collection</strong>. Note that BCloner Object only supports <strong>Object</strong> and <strong>Collection</strong>.</p>
 
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-primary); font-weight: 600;">•</span>
-    <strong>Object</strong>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Object:</strong> Uses the added Custom Object from the Object parameter as the clone.
+    <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+      <li><strong style="color: var(--color-text);">Object:</strong> Drag your Custom Object that is used as the Clone.</li>
+    </ul>
   </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text-secondary);">
-    <span style="font-size: 1.2rem;">&#8627;</span>
-    <span>Drag your Custom Object that is used as a Clone.</span>
-  </li>
-
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-primary); font-weight: 600;">•</span>
-    <strong>Asset Type: Collection</strong>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text-secondary);">
-    <span style="font-size: 1.2rem;">&#8627;</span>
-    <span>Uses the Objects of the added <strong>Collection to Collection</strong> parameter as clones. When this mode is selected, you will see more parameters to control the generated clones.</span>
-  </li>
-
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-primary); font-weight: 600;">•</span>
-    <strong>Collection</strong>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text-secondary);">
-    <span style="font-size: 1.2rem;">&#8627;</span>
-    <span>Drag your Custom Collection with the Assets that are used as Clones.</span>
-  </li>
-
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-primary); font-weight: 600;">•</span>
-    <strong>Separate Assets</strong>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text-secondary);">
-    <span style="font-size: 1.2rem;">&#8627;</span>
-    <span>Allows the use of each child of the collection as a separate Clone. Only works if you have more than 1 Asset in the Custom Collection (Drop Your Assets Here).</span>
-  </li>
-
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-primary); font-weight: 600;">•</span>
-    <strong>Reset Coordinates</strong>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text-secondary);">
-    <span style="font-size: 1.2rem;">&#8627;</span>
-    <span>Resets Position, Rotation and Scale to BCloner Origin.</span>
+  <li><strong style="color: var(--color-text);">Collection:</strong> Uses the Objects from the added Collection (Collection parameter) as clones. When this mode is selected, more parameters become available to control the generated clones.
+    <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+      <li><strong style="color: var(--color-text);">Collection:</strong> Drag your Custom Collection with the Assets that are used as Clones.</li>
+      <li><strong style="color: var(--color-text);">Separate Assets:</strong> Allows the use of each child of the collection as a separate Clone. Only works if you have more than 1 Asset in the Custom Collection.</li>
+      <li><strong style="color: var(--color-text);">Reset Coordinates:</strong> Reset Position, Rotation, and Scale to BCloner Origin.</li>
+    </ul>
   </li>
 </ul>
