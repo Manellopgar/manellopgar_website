@@ -6,189 +6,58 @@
 <p><em>Note: QUICK TIP: If you have selected an extra object apart the active object selected, the addon automatically adds that object to the Object parameter.</em></p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/gifs/6_Object/03_Object_AutoDetect.gif" alt="BCloner Object Advanced Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <img src="assets/gifs/06_BCloner-Object/03_Object_AutoDetect.gif" alt="BCloner Object Advanced Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
   <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BCloner Object Automatic Detection</p>
 </div>
 
 <h3>Distribution Settings</h3>
-<ul style="list-style: none; padding-left: 1.5rem; margin: 0 0 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Delete Original</strong><br>
-      Deletes the Original Object as Base Mesh.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Distribution: Vertex</strong><br>
-      A clone on each vertex point.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Distribution: Edge</strong><br>
-      A clone on each edge (additional settings will be made available).
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Distribution: Polygon Center</strong><br>
-      A clone on each polygon center.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Distribution: Surface</strong><br>
-      Clones randomly arranged over an object's entire surface.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Distribution: Volume</strong><br>
-      Randomly dispersed Clones within an object's volume.
-    </div>
-  </li>
+
+<p><strong style="color: var(--color-text);">Delete Original:</strong> Deletes the Original Object as Base Mesh.</p>
+
+<p><strong style="color: var(--color-text);">Distribution Mode:</strong> Choose the Distribution Type.</p>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Vertex:</strong> A clone on each vertex point.</li>
+  <li><strong style="color: var(--color-text);">Edge:</strong> A clone on each edge (additional settings will be made available).</li>
+  <li><strong style="color: var(--color-text);">Polygon Center:</strong> A clone on each polygon center.</li>
+  <li><strong style="color: var(--color-text);">Surface:</strong> Clones randomly arranged over an object's entire surface.</li>
+  <li><strong style="color: var(--color-text);">Volume:</strong> Randomly dispersed Clones within an object's volume.</li>
+</ul>
+
+<h3>Alignment & Distribution Parameters</h3>
+<p>The following parameters control how clones are aligned and distributed across the base object.</p>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Up Vector:</strong> Activating the Align Clone option clearly aligns a clone's Z axis but not the rotation around it. You can choose between None, +X, -X, +Y, -Y, +Z or -Z.</li>
+  <li><strong style="color: var(--color-text);">Count:</strong> (Only on Distribution: Surface or Volume) Set the Number of Clones that will be generated.</li>
+  <li><strong style="color: var(--color-text);">Offset:</strong> (Only on Distribution: Edge) Moves the clones along the edge. Values less than 0% or greater than 100% can also be defined, whereby the movement of the clones will not be limited to the edges.</li>
+  <li><strong style="color: var(--color-text);">Seed:</strong> (Only on Distribution: Surface or Volume) Changes the Seed that affects the position of each Clone in the Distribution.</li>
+  <li><strong style="color: var(--color-text);">Align Clone:</strong> If this setting is active, each clone will be arranged with its X axis tangential to the Normal Face of the Object. If this setting is not active, each clone will orient itself in accordance with the Cloner's coordinate system.</li>
+  <li><strong style="color: var(--color-text);">Selection:</strong> Set a Custom Selection. You can use Input Attribute Toggle.</li>
 </ul>
 
 <div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/images/06_BCloner-Object/01_BCloner_Obj_Distri.png" alt="BCloner Object Distribution Modes" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BCloner Object Distribution Modes</p>
-</div>
-
-<h3>Alignment & Count</h3>
-<ul style="list-style: none; padding-left: 1.5rem; margin: 0 0 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Up Vector</strong><br>
-      None, +X, -X, +Y, -Y, +Z or -Z. Activating the Align Clone option clearly aligns a clone's Z axis but not the rotation around it. You can choose between these vectors to control orientation.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Count (Only on Distribution: Surface or Volume)</strong><br>
-      Set the Number of Clones that will be generated.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Offset (Only on Distribution: Edge)</strong><br>
-      Moves the clones along the edge (values less than 0% or greater than 100% can also be defined, whereby the movement of the clones will not be limited to the edges).
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Seed (Only on Distribution: Surface or Volume)</strong><br>
-      Changes the Seed that changes the position of each Clone of the Distribution.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Align Clone</strong><br>
-      If this setting is active, each clone will be arranged with its X axis tangential to the Normal Face of the Object. If this setting is not active, each clone will orient itself in accordance with the Cloner's coordinate system.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Selection</strong><br>
-      Set a Custom Selection. You can use Input Attribute Toggle.
-    </div>
-  </li>
-</ul>
-
-<div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/gifs/6_Object/01_Object_Params-lite.gif" alt="BCloner Object Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <img src="assets/gifs/06_BCloner-Object/01_Object_Params-lite.gif" alt="BCloner Object Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
   <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BCloner Object Parameters</p>
 </div>
 
 <h3>Advanced Parameters</h3>
 
-<ul style="list-style: none; padding-left: 1.5rem; margin: 0 0 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Use Custom Object</strong><br>
-      Enables to Use the Custom Object as Base Mesh.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Custom Object</strong><br>
-      Drag Your Custom Object to assign it here.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Distance Points Threshold</strong><br>
-      By reducing this parameter, You can delete the closest each other clones.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Use Scale on Edge (Only on Distribution: Edge)</strong><br>
-      Enables the Scale on Edge Parameter.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Edge Scale (Only on Distribution: Edge)</strong><br>
-      The clones will be scaled in the direction of the edge.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Enable Scaling (Only on Distribution: Polygon Center or Surface)</strong><br>
-      Enables the Scaling parameter.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Face Area Scale (Only on Distribution: Polygon Center or Surface)</strong><br>
-      Adjust the Face Area Scale of each Clone.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Offset Time Seed</strong><br>
-      Adjusts the Offset Time Seed for animated distributions.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Volume Voxel Size</strong><br>
-      Specify the voxel side length for volume distribution.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Volume Density</strong><br>
-      Number of points to sample per unit volume.
-    </div>
-  </li>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Use Custom Object:</strong> Enables the use of the Custom Object as the Base Mesh.</li>
+  <li><strong style="color: var(--color-text);">Custom Object:</strong> Drag and drop your Custom Object here.</li>
+  <li><strong style="color: var(--color-text);">Distance Points Threshold:</strong> By reducing this parameter, you can delete clones that are closest to each other.</li>
+  <li><strong style="color: var(--color-text);">Use Scale on Edge:</strong> (Only on Distribution: Edge) Enables the Scale on Edge Parameter.</li>
+  <li><strong style="color: var(--color-text);">Edge Scale:</strong> (Only on Distribution: Edge) The clones will be scaled in the direction of the edge.</li>
+  <li><strong style="color: var(--color-text);">Enable Scaling:</strong> (Only on Distribution: Polygon Center or Surface) Enables the Scaling parameter.</li>
+  <li><strong style="color: var(--color-text);">Face Area Scale:</strong> (Only on Distribution: Polygon Center or Surface) Adjust the Face Area Scale of each Clone.</li>
+  <li><strong style="color: var(--color-text);">Offset Time Seed:</strong> Adjusts the Offset Time Seed.</li>
+  <li><strong style="color: var(--color-text);">Volume Voxel Size:</strong> Specify the voxel side length.</li>
+  <li><strong style="color: var(--color-text);">Volume Density:</strong> Number of points to sample per unit volume.</li>
 </ul>
 
 <div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/gifs/6_Object/02_Object_Advand-lite.gif" alt="BCloner Object Advanced Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <img src="assets/gifs/06_BCloner-Object/02_Object_Advand-lite.gif" alt="BCloner Object Advanced Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
   <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BCloner Object Advanced Parameters</p>
 </div>
 

@@ -11,59 +11,18 @@
 </div>
 
 <h3>Spline Settings</h3>
-<ul style="list-style: none; padding-left: 1.5rem; margin: 0 0 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Spline/Curve</strong><br>
-      Drag Your Custom Spline/Curve to assign it here.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Delete Spline/Curve</strong><br>
-      Deletes the Original Spline/Curve.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Align</strong><br>
-      If this setting is active, each clone will be arranged with its X axis tangential to the circle. If this setting is not active, each clone will orient itself in accordance with the Cloner's coordinate system.
-    </div>
-  </li>
-</ul>
 
-<h3>Distribution Modes</h3>
-<ul style="list-style: none; padding-left: 1.5rem; margin: 0 0 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Distribution: Count</strong><br>
-      Use the neighboring Count setting to define the number of clone segments. Clone spacing will not be uniform, but dependent upon the spline interpolation (i.e., Natural, Even or Adaptive). This result is more often not desired and can be countered by the following modes.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Distribution: Even</strong><br>
-      Use the neighboring Count setting to define a number of clones. The clones will be arranged with equal intervals along the spline.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Distribution: Step</strong><br>
-      Use the neighboring Step setting to define the interval between clones along the spline. The spline will be covered in its entirety by clones.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Distribution: Vertex</strong><br>
-      A Clone will be arranged on each Spline point. No parameters for modification will be available.
-    </div>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Spline/Curve:</strong> Drag your Custom Spline/Curve.</li>
+  <li><strong style="color: var(--color-text);">Delete Spline/Curve:</strong> Deletes the Original Spline/Curve.</li>
+  <li><strong style="color: var(--color-text);">Align:</strong> If this setting is active, each clone will be arranged with its X axis tangential to the circle. If this setting is not active, each clone will orient itself in accordance with the Cloner's coordinate system.</li>
+  <li><strong style="color: var(--color-text);">Distribution Mode:</strong> Choose the Distribution Type.
+    <ul style="padding-left: 1.5rem; margin-top: 0.5rem; margin-bottom: 0.5rem;">
+      <li><strong style="color: var(--color-text);">Count:</strong> Use the neighboring Count setting to define the number of clone segments. Clone spacing will not be uniform, but dependent upon the spline interpolation (i.e. Natural, Even or Adaptive). This result is more often not desired and can be countered by the following modes.</li>
+      <li><strong style="color: var(--color-text);">Even:</strong> Use the neighboring Count setting to define a number of clones. The clones will be arranged with equal intervals along the spline.</li>
+      <li><strong style="color: var(--color-text);">Step:</strong> Use the neighboring Step setting to define the interval between clones along the spline. The spline will be covered in its entirety by clones.</li>
+      <li><strong style="color: var(--color-text);">Vertex:</strong> A Clone will be arranged on each Spline point. No parameters for modification will be available.</li>
+    </ul>
   </li>
 </ul>
 
@@ -72,50 +31,13 @@
   <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BCloner Spline Distribution Modes</p>
 </div>
 
-<h3>Spline Control Parameters</h3>
-<ul style="list-style: none; padding-left: 1.5rem; margin: 0 0 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Count</strong><br>
-      Use this setting to define the number of clones to be arranged in the Curve Path.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Step</strong><br>
-      Adjust the Step Interval between clones.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Start</strong><br>
-      Use these settings to limit the Start of the arrangement of clones along the spline.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>End</strong><br>
-      Use these settings to limit the End of the arrangement of clones along the spline.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Offset</strong><br>
-      Use this setting to let the clones move along the circle.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Loop</strong><br>
-      If Offset and Rate are set to values not equal to 0%, clones arranged past the end of the spline will be deleted (Loop not active) or seamlessly (without transition) reinserted at the beginning of the spline (Loop active).
-    </div>
-  </li>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Count:</strong> This setting to define the number of clones to be arranged in the Curve Path.</li>
+  <li><strong style="color: var(--color-text);">Step:</strong> Adjust the Step Interval.</li>
+  <li><strong style="color: var(--color-text);">Start:</strong> Use these settings to limit the Start the arrangement of clones along the spline.</li>
+  <li><strong style="color: var(--color-text);">End:</strong> Use these settings to limit the End the arrangement of clones along the spline.</li>
+  <li><strong style="color: var(--color-text);">Offset:</strong> Use this setting to let the clones move along the circle.</li>
+  <li><strong style="color: var(--color-text);">Loop:</strong> If Offset and Rate are set to values not equal to 0%, clones arranged past the end of the spline will be deleted (Loop not active) or seamlessly (without transition) reinserted at the beginning of the spline (Loop active).</li>
 </ul>
 
 <div style="margin: 1.5rem 0; text-align: center;">
@@ -125,70 +47,16 @@
 
 <h3>Advanced Parameters</h3>
 
-<ul style="list-style: none; padding-left: 1.5rem; margin: 0 0 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;">
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Offset Variation</strong><br>
-      Use this setting to randomize the arrangement of clones for a more coincidental look.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Spline Rail</strong><br>
-      Drag Your Custom Spline/Curve as a Spline Rail for influence.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Use Rail as Target</strong><br>
-      Uses the Spline/Curve Rail as Target Rotation for the Clones.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Use Rail as Scale</strong><br>
-      Uses the Spline/Curve Rail as Target Scale for the Clones.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Rate</strong><br>
-      Rate basically functions like Offset, with the exception that the clones will move automatically when the animation is played, without having to set keys. This setting defines the distance the clones should travel per second of animation. Activate Smooth Rotation if any irregular movement should occur.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Rate Variation</strong><br>
-      Use this slider to randomly vary the clones' velocity. If the value defined is high enough, individual clones can even be made to move in reverse. Values less than 0% and greater than 100% can also be defined.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Loop with Offset Time</strong><br>
-      Activates the Loop Mode with Offset Time for animated sequences.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Offset Time</strong><br>
-      Adjust the Offset Time for animation timing.
-    </div>
-  </li>
-  <li style="display: flex; align-items: center; gap: 0.75rem; color: var(--color-text);">
-    <span style="color: var(--color-text-secondary);">•</span>
-    <div>
-      <strong>Random Seed</strong><br>
-      Changes the Random Seed to alter distribution randomness.
-    </div>
-  </li>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Offset Variation:</strong> Use this setting to randomize the arrangement of clones for a more coincidental look.</li>
+  <li><strong style="color: var(--color-text);">Spline Rail:</strong> Drag your Custom Spline/Curve as the Spline Rail.</li>
+  <li><strong style="color: var(--color-text);">Use Rail as Target:</strong> Uses the Spline/Curve Rail as the Target Rotation for the Clones.</li>
+  <li><strong style="color: var(--color-text);">Use Rail as Scale:</strong> Uses the Spline/Curve Rail as the Target Scale for the Clones.</li>
+  <li><strong style="color: var(--color-text);">Rate:</strong> Rate basically functions like Offset, with the exception that the clones will move automatically when the animation is played, without having to set keys. This setting defines the distance the clones should travel per second of animation. Activate Smooth Rotation if any irregular movement should occur.</li>
+  <li><strong style="color: var(--color-text);">Rate Variation:</strong> Use this slider to randomly vary the clones’ velocity. If the value defined is high enough, individual clones can even be made to move in reverse. Values less than 0% and greater than 100% can also be defined.</li>
+  <li><strong style="color: var(--color-text);">Loop with Offset Time:</strong> Activates the Loop Mode with Offset Time.</li>
+  <li><strong style="color: var(--color-text);">Offset Time:</strong> Adjust the Offset Time.</li>
+  <li><strong style="color: var(--color-text);">Random Seed:</strong> Changes the Random Seed.</li>
 </ul>
 
 <div style="margin: 1.5rem 0; text-align: center;">

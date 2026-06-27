@@ -3,38 +3,30 @@
 <!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
 <include src="pages/0_common/0_bcloner-params.html"></include>
 
-<strong>Orientation</strong>
-<p>Use this setting to define the object coordinate axis to which the honeycomb should be perpendicular. The axis defines the plane on which the honeycomb lies. You can choose between: Z (XY), X (ZY) or Y (ZX).</p>
+<p><strong style="color: var(--color-text);">Orientation:</strong> Use this setting to define the object coordinate axis to which the honeycomb should be perpendicular. The axis defines the plane on which the honeycomb lies. You can choose between: Z (XY), X (ZY) or Y (ZX).</p>
 
-<strong>Offset Direction: Height</strong>
-<p>Defines the Height offset of every other vertical row.</p>
+<p><strong style="color: var(--color-text);">Offset Direction: Height:</strong> Defines the Height offset of every other vertical row.</p>
 
-<strong>Offset Direction: Width</strong>
-<p>Defines the Width offset of every other horizontal row.</p>
+<p><strong style="color: var(--color-text);">Offset Direction: Width:</strong> Defines the Width offset of every other horizontal row.</p>
 
-<strong>Offset (Even)</strong>
-<p>This setting can be used to adjust the offset of every Even other Row.</p>
+<p><strong style="color: var(--color-text);">Offset (Even):</strong> This setting can be used to adjust the offset of every Even other Row.</p>
 
-<strong>Offset (Odd)</strong>
-<p>This setting can be used to adjust the offset of every Odd other Row.</p>
+<p><strong style="color: var(--color-text);">Offset (Odd):</strong> This setting can be used to adjust the offset of every Odd other Row.</p>
 
-<strong>Count Width</strong>
-<p>Defines the amount of Clones Width.</p>
+<p><strong style="color: var(--color-text);">Count Width:</strong> Defines the amount of Clones Width.</p>
 
-<strong>Count Height</strong>
-<p>Defines the amount of Clones Height.</p>
+<p><strong style="color: var(--color-text);">Count Height:</strong> Defines the amount of Clones Height.</p>
 
-<strong>Mode: Per Step</strong>
-<p>With this mode, you can determine whether the following parameters Position, Rotation and Scale should apply per clone step. In other words, this mode keeps the distance between clones; it is enabled by default.</p>
+<p><strong style="color: var(--color-text);">Mode:</strong> Choose between the distance between clones or the dimension of the entire clone conglomerate.</p>
 
-<strong>Mode: End Point</strong>
-<p>With this mode, you can determine whether the following parameters Position, Rotation and Scale should apply for the end clone (the values between the start and end clone are then interpolated). In other words, it keeps the distance between the first and end clones, adding clones in the middle.</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Per Step:</strong> With this mode, you can determine whether the following parameters Position, Rotation and Scale should apply per clone step. In other words, this mode keeps the distance between clones, is enabled by default.</li>
+  <li><strong style="color: var(--color-text);">End Point:</strong> With this mode, you can determine whether the following parameters Position, Rotation and Scale should apply for the end clone (The values between the start and end clone are then interpolated), in other words, keeps the distance between the first and end clones, adding clones in the middle.</li>
+</ul>
 
-<strong>Size Width</strong>
-<p>Adjusts the Size Width.</p>
+<p><strong style="color: var(--color-text);">Size Width:</strong> Adjusts the Size Width.</p>
 
-<strong>Size Height</strong>
-<p>Adjusts the Size Height.</p>
+<p><strong style="color: var(--color-text);">Size Height:</strong> Adjusts the Size Height.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
   <img src="assets/gifs/05_BCloner-HoneyComb/01_HoneyComb_Params-lite.gif" alt="HoneyComb Array Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
@@ -45,35 +37,25 @@
 
 <h2>Advanced Parameters</h2>
 
-<strong>Offset Variation (Even)</strong>
-<p>Add Offset Variation in the Offset Animation on the Even Clones.</p>
+<p><strong style="color: var(--color-text);">Offset Variation (Even):</strong> Add Offset Variation in the Offset Animation on the Even Clones.</p>
 
-<strong>Offset Variation (Odd)</strong>
-<p>Add Offset Variation in the Offset Animation on the Odd Clones.</p>
+<p><strong style="color: var(--color-text);">Offset Variation (Odd):</strong> Add Offset Variation in the Offset Animation on the Odd Clones.</p>
 
-<strong>Perpendicular Variation</strong>
-<p>Use this setting to randomly vary the offset of each row in addition to the other honeycomb dimensions (in relation to the Offset Direction value).</p>
+<p><strong style="color: var(--color-text);">Perpendicular Variation:</strong> Use this setting to randomly vary the offset of each row in addition to the other honeycomb dimensions (in relation to the Offset Direction value).</p>
 
-<strong>Variation Seed</strong>
-<p>Adjusts the Variation Seed.</p>
+<p><strong style="color: var(--color-text);">Variation Seed:</strong> Adjusts the Variation Seed.</p>
 
-<strong>Offset Time (Even)</strong>
-<p>Add Offset Time in the Offset Animation on the Even Clones.</p>
+<p><strong style="color: var(--color-text);">Offset Time (Even):</strong> Add Offset Time in the Offset Animation on the Even Clones.</p>
 
-<strong>Offset Time (Odd)</strong>
-<p>Add Offset Time in the Offset Animation on the Odd Clones.</p>
+<p><strong style="color: var(--color-text);">Offset Time (Odd):</strong> Add Offset Time in the Offset Animation on the Odd Clones.</p>
 
-<strong>Offset Time Seed</strong>
-<p>Adjusts the Offset Time Seed.</p>
+<p><strong style="color: var(--color-text);">Offset Time Seed:</strong> Adjusts the Offset Time Seed.</p>
 
-<strong>Distance Points Threshold</strong>
-<p>By reducing this parameter, you can delete the closest clones to each other.</p>
+<p><strong style="color: var(--color-text);">Distance Points Threshold:</strong> By reducing this parameter, you can delete the clones that are closest to each other.</p>
 
-<strong>Use Object Form</strong>
-<p>Enables the option to use Custom Object Form. This parameter deletes any cloner outside of the volume of that custom object mesh.</p>
+<p><strong style="color: var(--color-text);">Use Object Form:</strong> Enables the option to use Custom Object Form. This parameter deletes any cloner outside of the volume of that custom object mesh.</p>
 
-<strong>Object Form</strong>
-<p>Drag any Mesh Object to customize the Grid Array Shape.</p>
+<p><strong style="color: var(--color-text);">Object Form:</strong> Drag any Mesh Object to customize the Grid Array Shape.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
   <img src="assets/gifs/05_BCloner-HoneyComb/02_HoneyComb_Advand-lite.gif" alt="HoneyComb Array Advanced Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
@@ -84,14 +66,11 @@
 
 <p>The BCloners Grid Array, Linear, Radial and HoneyComb have the panel called <strong>Interface Gizmos</strong>. If you open this panel, you see two parameters: <strong>Use Size Gizmos</strong> and <strong>Use Count Gizmos</strong>. If you enable these parameters, you MUST have the BCloner Modifier selected to see correctly the Gizmos in the Viewport.</p>
 
-<strong>Use Gizmos</strong>
-<p>Enable to use the Gizmos.</p>
+<p><strong>Use Gizmos:</strong> Enable to use the Gizmos.</p>
 
-<strong>Use Size Gizmos</strong>
-<p>Enables the Size Gizmos.</p>
+<p><strong>Use Size Gizmos:</strong> Enables the Size Gizmos.</p>
 
-<strong>Use Count Gizmos</strong>
-<p>Enables the Count Gizmos.</p>
+<p><strong>Use Count Gizmos:</strong> Enables the Count Gizmos.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
   <img src="assets/gifs/05_BCloner-HoneyComb/03_HoneyComb_Gizmos-lite.gif" alt="HoneyComb Array Gizmo Controllers" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">

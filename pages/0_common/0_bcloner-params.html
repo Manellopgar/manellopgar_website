@@ -1,14 +1,12 @@
 <h2>Distribution Type</h2>
-<p>This first parameter allows us to choose the Distribution Type with 2 options: <strong>Basic</strong> and <strong>Advanced</strong>. By default, the Basic mode is enabled. For more information about Advanced Distributions, please check the <a href="#advanced-distributions" style="color: var(--color-primary);">Advanced Distributions in Main Menu</a>.</p>
+<p>This first parameter allows us to choose the Distribution Type with 2 options: Basic and Advanced. By default, Basic is enabled. For more information about Advanced Distributions, please check the <a href="#advanced-distributions" style="color: var(--color-primary);">Advanced Distributions</a>.</p>
 
-<strong>Distribution Type:</strong> Basic
-<p>This option is the classic option of BCloners; you will see all the classic options to control and generate the clones.</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Basic:</strong> This option is the classic mode of BCloners. You will see all classic options to control and generate the clones.</li>
+  <li><strong style="color: var(--color-text);">Advanced:</strong> This option enables the Advanced Distribution parameters. Here, the BCloner uses an extra object that contains the Advanced Matrix distribution modifier. In this option, you can control and change the distribution.</li>
+</ul>
 
-<strong>Distribution Type:</strong> Advanced
-<p>This option enables the Advanced Distribution parameters. Here, the BCloner uses an extra object that contains the Advanced Matrix distribution modifier. In this option, you can control and change it.</p>
-
-<strong>Clones from Distribution:</strong> Enable
-<p>Uses the Clones assigned in the Distribution Object.</p>
+<p><strong>Clones from Distribution:</strong> Uses the Clones assigned in the Distribution Object.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
   <img src="assets/images/04_Common-Params-BCloners/00_BCloners_Basic-Adv.png" alt="BCloner - Asset Type" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
@@ -16,20 +14,20 @@
 </div>
 
 <h1>Asset Type</h1>
-<p>This menu allows us to choose the input Asset Type. You can choose between <strong>Self</strong>, <strong>Object</strong>, and <strong>Collection</strong>. Except for BCloner Object, which only has <strong>Object</strong> and <strong>Collection</strong>.</p>
+<p>This menu allows us to choose the input Asset Type. You can choose between Self, Object, and Collection. Note that BCloner Object only has Object and Collection options.</p>
 
-<strong>Asset Type:</strong> Self
-<p>Uses the Self Object as an object for the clone.</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Self:</strong> Uses the Self Object as the object for the clone.</li>
+  <li><strong style="color: var(--color-text);">Object:</strong> Uses the added Custom Object from the Object parameter as the clone.</li>
+</ul>
 
-<strong>Asset Type:</strong> Object
-<p>Uses the added Custom Object to Object parameter as a clone.</p>
+<p><strong style="color: var(--color-text);">Object:</strong> Drag Your Custom Object that is used as Clone.</p>
 
-<p></p><strong>Object:</strong> Drag Your Custom Object that is used as Clone.</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Collection:</strong> Uses the Objects from the added Collection (Collection parameter) as clones. When this mode is selected, more parameters become available to control the generated clones.</li>
+</ul>
 
-<strong>Asset Type:</strong> Collection
-<p>Uses the Objects of the added Collection to Collection parameter as clones. When this mode is selected, you will have more parameters to control the generated clones.</p>
-
-<p><strong>Collection:</strong> Drag Your Custom Collection with the Assets that are used as Clones.</p>
+<p><strong style="color: var(--color-text);">Collection:</strong> Drag Your Custom Collection with the Assets that are used as Clones.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
   <img src="assets/images/04_Common-Params-BCloners/01_BCloners_Asset_Type.png" alt="BCloner - Asset Type" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
@@ -41,34 +39,32 @@
 <h2>Clones Mode</h2>
 <p>Select how the assets from the collection are distributed:</p>
 
-<strong>Clone Mode:</strong> Iterate
-<p>All objects directly subordinate to the cloner object will be cloned one after the other, as they are arranged in the object manager, from top to bottom and then from the front again. You also can change the ID Asset parameter.</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Iterate:</strong> All objects directly subordinate to the cloner object will be cloned one after the other, as they are arranged in the object manager, from top to bottom and then from the front again. You can also change the ID Asset parameter.</li>
+</ul>
 
-<strong>ID Asset</strong>
-<p>Offset the index of each Asset.</p>
+<p><strong style="color: var(--color-text);">ID Asset:</strong> Offset the index of each Asset.</p>
+<p><strong style="color: var(--color-text);">Object:</strong> Uses the added Custom Object from the Object parameter as clone.</p>
 
-<strong>Clone Mode:</strong> Random
-<p>All objects directly subordinate to the cloner object will be used in a random distribution to generate the clones. A Seed value parameter will be displayed in each case, which can be used to vary the random distribution. You also can change the Random Seed parameter.</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Random:</strong> All objects directly subordinate to the cloner object will be used in a random distribution to generate the clones. A Seed value parameter will be displayed in each case, which can be used to vary the random distribution. You can also change the Random Seed parameter.</li>
+</ul>
 
-<strong>Random Seed</strong>
-<p>Randomize the Seed of Clones Mode Random.</p>
+<p><strong style="color: var(--color-text);">Random Seed:</strong> Randomize the Seed of Clones Mode Random.</p>
 
-<strong>Clone Mode:</strong> Blend
-<p>You can blend between two objects with different shapes. This blend mode ensures proper interpolation between two objects with the same amount of vertices; this only works between the first and the last object of the collection. You must add any Effector with Other Parameters added after to work properly. More details in the <em>Other Parameters</em> of Effectors.</p>
-
-<strong>Clone Mode:</strong> Sort
-<p>The Sort mode will only have an effect when using Effectors (for those that support this, the Modify Clone parameter in the Parameters tab must be greater than 0). The corresponding Effector can then vary the position, size, angle, etc. of the clones. More details in the <em>Other Parameters</em> of Effectors.</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Blend:</strong> You can blend between two objects with different shapes. This blend mode ensures proper interpolation between two objects with the same amount of vertices; this only works between the first and the last object of the collection. You must have any Effector with Other Parameters added to work properly. More details in the Other Parameters of Effectors.</li>
+  <li><strong style="color: var(--color-text);">Sort:</strong> The Sort mode will only have an effect when using Effectors (for those that support this, the Modify Clone parameter in the Parameters tab must be greater than 0). The corresponding Effector can then vary the position, size, angle, etc. of the clones. More details in the Other Parameters of Effectors.</li>
+</ul>
 
 <div style="margin: 1.5rem 0; text-align: center;">
   <img src="assets/gifs/01_Common-Params-BCloners/01_BCloner_Modes-lite.gif" alt="BCloner - Separate Assets" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
   <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BCloner - Clones Mode (Used Grid Array as an example)</p>
 </div>
 
-<strong>Separate Assets</strong>
-<p>Allows the use of each child of the collection as a separate Clone. Only works if you have more than 1 Asset in the Custom Collection (Drop Your Assets Here).</p>
+<p><strong>Separate Assets: </strong> Allows the use of each child of the collection as a separate Clone. Only works if you have more than 1 Asset in the Custom Collection (Drop Your Assets Here).</p>
 
-<strong>Reset Coordinates</strong>
-<p>Reset Position, Rotation and Scale to BCloner Origin.</p>
+<p><strong>Reset Coordinates:</strong> Reset Position, Rotation and Scale to BCloner Origin.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
   <img src="assets/gifs/01_Common-Params-BCloners/02_BCloner_Separate-lite.gif" alt="BCloner - Separate Assets" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
@@ -80,29 +76,19 @@
 <h2>Instance Mode</h2>
 <p>This menu allows us to select the Viewport Instance Mode to improve performance.</p>
 
-<strong>Instance Mode:</strong> Instance
-<p>The clones are fully-fledged duplicates of the objects to be duplicated. They consume the same amount of memory as if each clone existed as a separate object.</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Instance:</strong> The clones are fully-fledged duplicates of the objects to be duplicated. They consume the same amount of memory as if each clone existed as a separate object.</li>
+  <li><strong style="color: var(--color-text);">Render Instances:</strong> Realize all Instances to Real Geometry.</li>
+  <li><strong style="color: var(--color-text);">Multi-Instances:</strong> This mode is particularly suitable for all types of vegetation. When it comes to cloning tens of thousands of trees or tufts of grass, for example, this mode is a must. This mode enables the Viewport Mode.</li>
+</ul>
 
-<strong>Instance Mode:</strong> Render Instances
-<p>Realize all Instances to Real Geometry.</p>
-
-<strong>Instance Mode:</strong> Multi-Instances
-<p>This mode is particularly suitable for all types of vegetation. When it comes to cloning tens of thousands of trees or tufts of grass, for example, this mode is a must. This mode enables the Viewport Mode.</p>
-
-<strong>Viewport Mode:</strong> Off
-<p>No instances will be displayed.</p>
-
-<strong>Viewport Mode:</strong> Points
-<p>The instance positions will be displayed with small dots.</p>
-
-<strong>Viewport Mode:</strong> Matrix
-<p>The instance positions will be displayed with small squares (as usual for the matrix object).</p>
-
-<strong>Viewport Mode:</strong> Bounding Box
-<p>The instances will be displayed with their bounding box. This allows the approximate clone sizes to be estimated.</p>
-
-<strong>Viewport Mode:</strong> Object
-<p>The instances will be displayed in full.</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Off:</strong> No instances will be displayed.</li>
+  <li><strong style="color: var(--color-text);">Points:</strong> The instance positions will be displayed with small dots.</li>
+  <li><strong style="color: var(--color-text);">Matrix:</strong> The instance positions will be displayed with small squares (as usual for the matrix object).</li>
+  <li><strong style="color: var(--color-text);">Bounding Box:</strong> The instances will be displayed with their bounding box. This allows the approximate clone sizes to be estimated.</li>
+  <li><strong style="color: var(--color-text);">Object:</strong> The instances will be displayed in full.</li>
+</ul>
 
 <div style="margin: 1.5rem 0; text-align: center;">
   <img src="assets/images/04_Common-Params-BCloners/02_BCloners_Modes.png" alt="BCloner - Viewport Modes" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">

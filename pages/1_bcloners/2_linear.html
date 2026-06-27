@@ -3,23 +3,20 @@
 <!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
 <include src="pages/0_common/0_bcloner-params.html"></include>
 
-<strong>Count</strong>
-<p>You can define the Number of clones that should be created.</p>
+<p><strong style="color: var(--color-text);">Count:</strong> You can define the Number of clones that should be created.</p>
 
-<strong>Mode: Per Step</strong>
-<p>With this mode, you can determine whether the following parameters Position, Rotation and Scale should apply per clone step. In other words, this mode keeps the distance between clones; it is enabled by default.</p>
+<p><strong style="color: var(--color-text);">Mode:</strong> Choose between the distance between clones or the dimension of the entire clone conglomerate.</p>
 
-<strong>Mode: End Point</strong>
-<p>With this mode, you can determine whether the following parameters Position, Rotation and Scale should apply for the end clone (the values between the start and end clone are then interpolated). In other words, it keeps the distance between the first and end clones, adding clones in the middle.</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Per Step:</strong> With this mode, you can determine whether the following parameters Position, Rotation and Scale should apply per clone step. In other words, this mode keeps the distance between clones, is enabled by default.</li>
+  <li><strong style="color: var(--color-text);">End Point:</strong> With this mode, you can determine whether the following parameters Position, Rotation and Scale should apply for the end clone (The values between the start and end clone are then interpolated), in other words, keeps the distance between the first and end clones, adding clones in the middle.</li>
+</ul>
 
-<strong>Position P.XYZ</strong>
-<p>Adjust the position of the clones to be changed for the next clone.</p>
+<p><strong style="color: var(--color-text);">Position P.XYZ:</strong> Adjust the Position of the clones should be changed for the next clone.</p>
 
-<strong>Rotation R.XYZ</strong>
-<p>Adjust the rotation of the clones to be changed for the next clone.</p>
+<p><strong style="color: var(--color-text);">Rotation R.XYZ:</strong> Adjust the Rotation of the clones should be changed for the next clone.</p>
 
-<strong>Scale S.XYZ</strong>
-<p>Adjust the size of the clones to be changed for the next clone.</p>
+<p><strong style="color: var(--color-text);">Scale S.XYZ:</strong> Adjust the Size of the clones should be changed for the next clone.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
   <img src="assets/gifs/03_BCloner-Linear/01_Linear_Params-lite.gif" alt="Linear Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
@@ -28,22 +25,20 @@
 
 <h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
 
-<h2>Advanced Parameters</h2>
+<h3>Advanced Parameters</h3>
 
-<strong>Offset</strong>
-<p>Shifts the first clone in the direction of subsequent clones, which will shift the entire clone series by the clone positions defined in the Offset value.</p>
+<p><strong style="color: var(--color-text);">Offset:</strong> Shifts the first clone in the direction of subsequent clones, which will shift the entire clone series by the clone positions defined in the Offset value.</p>
 
-<strong>Step Mode: Single Value</strong>
-<p>The rotation change should increase evenly from clone to clone.</p>
+<p><strong style="color: var(--color-text);">Mode:</strong> Defines how the rotation change should increase.</p>
 
-<strong>Step Mode: Cumulative Step</strong>
-<p>Steadily increases between the first and last clone starting from 0 (Cumulative). In this case, spiral cloning will result.</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Single Value:</strong> The rotation change should increase evenly from clone to clone.</li>
+  <li><strong style="color: var(--color-text);">Cumulative Step:</strong> Steadily between the first and last clone starting from 0 (Cumulative). In this case, spiral cloning will result.</li>
+</ul>
 
-<strong>Step Size</strong>
-<p>This reduces the step distance between the individual clones, which is tantamount to scaling the entire clone conglomerate (not the clones themselves!) starting from the origin of the BCloner object. You can choose one Step Rotation Axis or combine all.</p>
+<p><strong style="color: var(--color-text);">Step Size:</strong> This reduces the step distance between the individual clones, which is tantamount to scaling the entire clone conglomerate (not the clones themselves!) starting from the origin of the BCloner object. You can choose one Step Rotation Axis or combine all.</p>
 
-<strong>Step Rotation XYZ</strong>
-<p>Use the three following rotation input fields to define the curvature of the clone line. Values of 0 will result in no curvature at all, while increasing values will produce a correspondingly greater curvature.</p>
+<p><strong style="color: var(--color-text);">Step Rotation XYZ:</strong> Use the three following rotation input fields to define the curvature of the clone line. Values of 0 will result in no curvature at all, while increasing values will produce a correspondingly greater curvature.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
   <img src="assets/gifs/03_BCloner-Linear/02_Linear_Advand-lite.gif" alt="Linear Advanced Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
@@ -54,17 +49,14 @@
 
 <p>The BCloners Grid Array, Linear, Radial and HoneyComb have the panel called <strong>Interface Gizmos</strong>. If you open this panel, you see two parameters: <strong>Use Size Gizmos</strong> and <strong>Use Count Gizmos</strong>. If you enable these parameters, you MUST have the BCloner Modifier selected to see correctly the Gizmos in the Viewport.</p>
 
-<strong>Use Gizmos</strong>
-<p>Enable to use the Gizmos.</p>
+<p><strong>Use Gizmos: </strong> Enable to use the Gizmos.</p>
 
-<strong>Use Size Gizmos</strong>
-<p>Enables the Size Gizmos.</p>
+<p><strong>Use Size Gizmos: </strong> Enables the Size Gizmos.</p>
 
-<strong>Use Count Gizmos</strong>
-<p>Enables the Count Gizmos.</p>
+<p><strong>Use Count Gizmos: </strong> Enables the Count Gizmos.</p>
 
 <div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/gifs/03_BCloner-Linear/03_BCloner-Linear_Gizmos-lite.gif" alt="Linear Controller Gizmos" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <img src="assets/gifs/03_BCloner-Linear/03_Linear_Gizmos-lite.gif" alt="Linear Controller Gizmos" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
   <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Linear Controller Gizmos</p>
 </div>
 
