@@ -452,7 +452,10 @@ function applyIframeMode() {
     if (window.self !== window.top) {
         // Estamos dentro de un iframe
         
-        // 1. Ocultar header, sidebar y footer
+        // 1. Añadir clase al body
+        document.body.classList.add('iframe-mode');
+        
+        // 2. Forzar ocultar elementos (por si el CSS no los oculta)
         const header = document.querySelector('.page-header');
         const sidebar = document.querySelector('.sidebar');
         const footer = document.querySelector('.site-footer');
@@ -460,27 +463,6 @@ function applyIframeMode() {
         if (header) header.style.display = 'none';
         if (sidebar) sidebar.style.display = 'none';
         if (footer) footer.style.display = 'none';
-        
-        // 2. Ajustar el layout para que el contenido ocupe todo el ancho
-        const container = document.querySelector('.container');
-        const mainContent = document.querySelector('.main-content');
-        
-        if (container) {
-            container.style.display = 'block';
-            container.style.maxWidth = '100%';
-            container.style.padding = '0';
-            container.style.margin = '0';
-        }
-        
-        if (mainContent) {
-            mainContent.style.width = '100%';
-            mainContent.style.maxWidth = '100%';
-            mainContent.style.margin = '0';
-            mainContent.style.padding = '20px';
-        }
-        
-        // 3. Añadir clase al body para estilos CSS adicionales si los necesitas
-        document.body.classList.add('iframe-mode');
         
         console.log('✅ Modo iframe activado para Superhive');
     }
