@@ -945,16 +945,92 @@ body, .container, .sidebar, .main-content, .nav-link, summary,
     display: none;
 }
 
-/* Estilos específicos cuando está en iframe */
+/* ========================================== 
+/ ESTILOS ESPECÍFICOS PARA IFRAME (SUPERHIVE)
+/ ========================================== */
+
+/* Reset básico cuando está en iframe */
 body.iframe-mode {
-    background: #ffffff;
-    padding: 0;
-    margin: 0;
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
+/* Ocultar header, sidebar y footer */
+body.iframe-mode .page-header,
+body.iframe-mode .sidebar,
+body.iframe-mode .site-footer {
+    display: none !important;
+}
+
+/* Ajustar el container para que ocupe todo el ancho */
+body.iframe-mode .container {
+    display: block !important;
+    max-width: 100% !important;
+    padding: 20px !important;
+    margin: 0 !important;
+    gap: 0 !important;
+}
+
+/* Ajustar el contenido principal */
 body.iframe-mode .main-content {
-    box-shadow: none;
-    border: none;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Ajustar tipografía para iframe */
+body.iframe-mode h1 {
+    font-size: 2rem !important;
+    margin-top: 0 !important;
+}
+
+body.iframe-mode h2 {
+    font-size: 1.75rem !important;
+}
+
+body.iframe-mode h3 {
+    font-size: 1.4rem !important;
+}
+
+/* Asegurar que las imágenes se vean bien */
+body.iframe-mode img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Asegurar que los iframes y videos se vean bien */
+body.iframe-mode iframe,
+body.iframe-mode video {
+    max-width: 100% !important;
+}
+
+/* Modo oscuro en iframe (si el usuario lo tiene activado) */
+[data-theme="dark"].iframe-mode {
+    background: #0b1120 !important;
+}
+
+[data-theme="dark"].iframe-mode .main-content {
+    background: transparent !important;
+}
+
+/* Responsive para iframe en móviles */
+@media screen and (max-width: 768px) {
+    body.iframe-mode .container {
+        padding: 10px !important;
+    }
+    
+    body.iframe-mode h1 {
+        font-size: 1.75rem !important;
+    }
+    
+    body.iframe-mode h2 {
+        font-size: 1.5rem !important;
+    }
 }
 
 /* ========================================== */
