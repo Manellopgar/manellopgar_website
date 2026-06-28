@@ -945,6 +945,18 @@ body, .container, .sidebar, .main-content, .nav-link, summary,
     display: none;
 }
 
+/* Estilos específicos cuando está en iframe */
+body.iframe-mode {
+    background: #ffffff;
+    padding: 0;
+    margin: 0;
+}
+
+body.iframe-mode .main-content {
+    box-shadow: none;
+    border: none;
+}
+
 /* ========================================== */
 /* FIN DE ESTILOS BASE. CSS COMPLETO.       */
 /* ========================================== */
