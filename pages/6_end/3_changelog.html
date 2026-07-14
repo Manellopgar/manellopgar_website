@@ -1,5 +1,29 @@
 <h1>List of Changelogs</h1>
 
+<h1>Changelog 1.5.1 - 26-07-14</h1>
+<p>B4D Tools 1.5.0 has been updated for Blender 5.2 compatibility and bug fixes. However, upgrading to <strong>1.5.1</strong> is highly recommended, as it includes critical updates exclusive to the Blender 5.2 LTS version.</p>
+
+<p>This release refactors core code to ensure full compatibility with Blender 5.2. The codebase has been reduced and optimized to simplify future maintenance and improve overall performance.</p>
+
+<h3>Object BTracerToMESH</h3>
+<p><strong>Material socket:</strong> Renamed to <strong>Custom Material</strong> to ensure consistent naming conventions across the addon.</p>
+
+<h3>Mapping ColorToInstances</h3>
+<p><strong>Material socket:</strong> The texture fix socket has been renamed from "Custom Material" to <strong>FixTex Material</strong> to simplify code management.</p>
+
+<h3>BTracer Tool</h3>
+<p><strong>Default Material:</strong> Updated to include useful custom attributes ready for immediate use.</p>
+<p><strong>Collection Parameter:</strong> Renamed "Trace Collection" to <strong>Collection</strong> to align with the naming conventions of other tools.</p>
+
+<h3>BFracture Tool</h3>
+<p><strong>Collection Parameter:</strong> Renamed "BFracture Collection" to <strong>Collection</strong> for consistent naming.</p>
+
+<h3>Effector Random and Noise Texture</h3>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li>Fixed the <strong>Random Seed</strong> parameter in Noise modes.</li>
+  <li>Fixed the <strong>UV Mapping</strong> for Noise Textures.</li>
+</ul>
+
 <h3>Changelog 1.5.0 - 26-06-24</h3>
 <p><em>Note: B4D Tools 1.5.0 is NOT COMPATIBLE with previous versions. The new BCloners distributions and the fixed Min/Max parameters on Effectors involve significant changes that do not work properly with old setups.</em></li>
 
