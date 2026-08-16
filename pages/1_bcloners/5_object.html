@@ -24,6 +24,23 @@
   <li><strong style="color: var(--color-text);">Volume:</strong> Randomly dispersed Clones within an object's volume.</li>
 </ul>
 
+<h3>Alignment & Distribution Parameters</h3>
+<p>The following parameters control how clones are aligned and distributed across the base object.</p>
+
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Up Vector:</strong> Activating the Align Clone option clearly aligns a clone's Z axis but not the rotation around it. You can choose between None, +X, -X, +Y, -Y, +Z or -Z.</li>
+  <li><strong style="color: var(--color-text);">Count:</strong> (Only on Distribution: Surface or Volume) Set the Number of Clones that will be generated.</li>
+  <li><strong style="color: var(--color-text);">Offset:</strong> (Only on Distribution: Edge) Moves the clones along the edge. Values less than 0% or greater than 100% can also be defined, whereby the movement of the clones will not be limited to the edges.</li>
+  <li><strong style="color: var(--color-text);">Seed:</strong> (Only on Distribution: Surface or Volume) Changes the Seed that affects the position of each Clone in the Distribution.</li>
+  <li><strong style="color: var(--color-text);">Align Clone:</strong> If this setting is active, each clone will be arranged with its X axis tangential to the Normal Face of the Object. If this setting is not active, each clone will orient itself in accordance with the Cloner's coordinate system.</li>
+  <li><strong style="color: var(--color-text);">Selection:</strong> Set a Custom Selection. You can use Input Attribute Toggle.</li>
+</ul>
+
+<div style="margin: 1.5rem 0; text-align: center;">
+  <img src="assets/gifs/06_BCloner-Object/01_Object_Params-lite.gif" alt="BCloner Object Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BCloner Object Parameters</p>
+</div>
+
 <h3>How to Control the Instances Scattering with Vertex Paint</h3>
 <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
   <li>First, ensure you have a subdivided object. In this example, a subdivided Suzanne is used.</li>
@@ -71,23 +88,6 @@
 <div style="margin: 1.5rem 0; text-align: center;">
   <img src="assets/gifs/06_BCloner-Object/04_Object_Vertex_Paint.gif" alt="Vertex Paint Scattering Animation" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
   <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BCloner Object combined with Vertex Paint</p>
-</div>
-
-<h3>Alignment & Distribution Parameters</h3>
-<p>The following parameters control how clones are aligned and distributed across the base object.</p>
-
-<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li><strong style="color: var(--color-text);">Up Vector:</strong> Activating the Align Clone option clearly aligns a clone's Z axis but not the rotation around it. You can choose between None, +X, -X, +Y, -Y, +Z or -Z.</li>
-  <li><strong style="color: var(--color-text);">Count:</strong> (Only on Distribution: Surface or Volume) Set the Number of Clones that will be generated.</li>
-  <li><strong style="color: var(--color-text);">Offset:</strong> (Only on Distribution: Edge) Moves the clones along the edge. Values less than 0% or greater than 100% can also be defined, whereby the movement of the clones will not be limited to the edges.</li>
-  <li><strong style="color: var(--color-text);">Seed:</strong> (Only on Distribution: Surface or Volume) Changes the Seed that affects the position of each Clone in the Distribution.</li>
-  <li><strong style="color: var(--color-text);">Align Clone:</strong> If this setting is active, each clone will be arranged with its X axis tangential to the Normal Face of the Object. If this setting is not active, each clone will orient itself in accordance with the Cloner's coordinate system.</li>
-  <li><strong style="color: var(--color-text);">Selection:</strong> Set a Custom Selection. You can use Input Attribute Toggle.</li>
-</ul>
-
-<div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/gifs/06_BCloner-Object/01_Object_Params-lite.gif" alt="BCloner Object Parameters" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">BCloner Object Parameters</p>
 </div>
 
 <h3>Advanced Parameters</h3>
