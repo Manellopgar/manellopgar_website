@@ -1,36 +1,59 @@
 <h1>Effector Sound</h1>
-<p>As the name suggests, this Effector modifies the Clones based on the Sound Amplitude of any loaded Sound file. <em>Note: In the next update, this will be refactored with Blender 5.2 new features!</em></p>
 
-<p><strong>Sound Baked Object:</strong> Drag Your Custom Object as Bake Object Sound.</p>
+<p><strong style="color: var(--color-text);">Collection Probes:</strong> Add your Custom Collection with Sound Probes.</p>
 
-<div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/gifs/18_Effector-Sound/02_Effector_Sound-Empty-lite.gif" alt="Effector Sound - Empty Controller" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Effector Sound - Empty Controller</p>
-</div>
+<p><strong style="color: var(--color-text);">Distribution:</strong> Choose the Distribution of each Probe Sound.</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Iterate:</strong> The Probe ranges will affect the clones alternately based on their buffer numbers. Example: If 2 Probe ranges exist, clone #0 is affected by Probe range 1, #1 by Probe range 2, #3 by Probe range 1, and so on.</li>
+  <li><strong style="color: var(--color-text);">Distribute:</strong> Each Probe range will latch onto and affect a coherent part of the clones (with consecutive buffer numbers). For 2 Probe ranges, the first will affect the first half and the second the second half of the clones.</li>
+  <li><strong style="color: var(--color-text);">Blend:</strong> The different effects of the Probe ranges will be blended steplessly.</li>
+</ul>
 
+<p><strong style="color: var(--color-text);">Use Curve Factor:</strong> Compatible with these BCloners: Grid Array, Linear, Radial, HoneyComb, and Spline. Uses the factor of the internal curves that use these BCloners.</p>
+
+<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
 <include src="pages/0_common/1a_effectors-strength-select.html"></include>
 
+<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
 <include src="pages/0_common/1b_effectors-min-max.html"></include>
 
+<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
 <include src="pages/0_common/1c_effectors-use-PSR-params.html"></include>
 
-<div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/gifs/18_Effector-Sound/03_Effector_Sound-Example-lite.gif" alt="Effector Sound - Example" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Effector Sound - Example</p>
-</div>
-
+<!-- AQUÍ SE INYECTARÁ AUTOMÁTICAMENTE EL CONTENIDO DE 0_bcloner-params.html -->
 <include src="pages/0_common/1d_effectors-other-params.html"></include>
 
 <h3 style="border-bottom: 1px solid var(--color-border); margin: 2rem 0; height: 1px; line-height: 0;"></h3>
 
-<h2>Special Case: Effector Sound</h2>
-<p>This effector utilizes a two-state button mechanism:</p>
-<ol style="padding-left: 1.5rem; margin-bottom: 1rem;">
-  <li>Clicking the button opens a file browser window where you must select the audio file.</li>
-  <li>Click the button again to close the browser and return the interface to its original state.</li>
-</ol>
+<h1>Probe Sound</h1>
 
-<div style="margin: 1.5rem 0; text-align: center;">
-  <img src="assets/gifs/18_Effector-Sound/01_Effector_Sound-2states-lite.gif" alt="Two States of Sound Effector" style="max-width: 100%; height: auto; display: inline-block; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-  <p style="margin-top: 0.75rem; font-size: 0.85rem; font-style: italic; color: var(--color-text-secondary); text-align: center;">Two States of Sound Effector</p>
-</div>
+<p><strong style="color: var(--color-text);">Sound Source:</strong> Add your custom Empty with Effector Sound Source Modifier.</p>
+
+<p><strong style="color: var(--color-text);">Logarithmic Scale:</strong> This setting only affects the Amplitude graph's display. Normally, amplitude is displayed logarithmically so the lower frequencies, which can be heard best by the human ear, are given more room than the higher frequencies. The amplitude display (0%) and the logarithmic display (100%) can be blended steplessly.</p>
+
+<p><strong style="color: var(--color-text);">Probe Strength:</strong> The amount of strength based on the audio loudness.</p>
+
+<p><strong style="color: var(--color-text);">Channels:</strong> If you have a stereo sound file, this setting can be used to define if both or only one channel should be taken into consideration by the Effector. Mono channels are not affected by this setting.</p>
+<ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+  <li><strong style="color: var(--color-text);">Both:</strong> (Value: 0)</li>
+  <li><strong style="color: var(--color-text);">Left:</strong> (Value: 0)</li>
+  <li><strong style="color: var(--color-text);">Right:</strong> (Value: 0)</li>
+</ul>
+
+<p><strong style="color: var(--color-text);">Low:</strong> Set the Low Cut of the Frequency Range.</p>
+
+<p><strong style="color: var(--color-text);">High:</strong> Set the High Cut of the Frequency Range.</p>
+
+<p><strong style="color: var(--color-text);">Bin Size:</strong> Adjust the Size of the Bin where the Field information is stored.</p>
+
+<p><strong style="color: var(--color-text);">Time Offset:</strong> Offset the Sound Time position.</p>
+
+<p><strong style="color: var(--color-text);">Time Range:</strong> Enables the Scene Time to move the Sound Position.</p>
+
+<p><strong style="color: var(--color-text);">FFT Size:</strong> Number of samples to process in the discrete Fourier transformation at once. Higher values have higher frequency but lower time resolution, and vice versa.</p>
+
+<p><strong style="color: var(--color-text);">Window Function:</strong> Applies a tapering function to the windowed samples to minimize discontinuities at the edges, improving frequency resolution and reducing artifacts.</p>
+
+<p><strong style="color: var(--color-text);">Min:</strong> Adjust the Minimum value of Sound Amplitude.</p>
+
+<p><strong style="color: var(--color-text);">Max:</strong> Adjust the Maximum value of Sound Amplitude.</p>
